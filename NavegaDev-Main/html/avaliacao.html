@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avalie Nosso Site - H2N Technology</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="avaliacao.css">
+    
+</head>
+<body>
+    <div class="nav-bar fixed-top">
+        <div class="nav-bar">
+            <header class="container">
+                <ul class="nav nav-pills justify-content-center py-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link text-white">Cursos</a></li>
+                    <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                    <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                    <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                </ul>
+            </header> 
+        </div>
+    </div>        
+
+    <div class="voltar">
+        <a class="btn btn-secondary btn-s" href="sobre.html" role="button">Voltar</a>
+    </div>
+
+    <div class="feedback-section">
+        <h2>Formulário de Avaliação Detalhada</h2>
+        <form id="detailedFeedbackForm">
+            <div class="mb-3">
+               <label for="nome" class="form-label">Seu Nome (Opcional):</label>
+               <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo">
+           </div>
+
+           <div class="mb-3">
+               <label for="email" class="form-label">Seu Email (Opcional):</label>
+               <input type="email" class="form-control" id="email" name="email" placeholder="seu.email@example.com">
+           </div>
+
+           <div class="mb-3">
+               <label for="satisfacaoGeral" class="form-label">Qual sua satisfação geral com o site?</label>
+               <select class="form-select" id="satisfacaoGeral" name="satisfacaoGeral" required>
+                <option value="">Selecione...</option>
+                <option value="5">Excelente (5 estrelas)</option>
+                <option value="4">Muito Bom (4 estrelas)</option>
+                <option value="3">Bom (3 estrelas)</option>
+                <option value="2">Regular (2 estrelas)</option>
+                <option value="1">Ruim (1 estrela)</option>
+               </select>
+           </div>
+
+           <div class="mb-3">
+             <label for="gostou" class="form-label">O que você mais gostou em nosso site?</label>
+             <textarea class="form-control" id="gostou" name="gostou" placeholder="Ex: layout, conteúdo, facilidade de uso..." rows="4"></textarea>
+           </div>
+
+           <div class="mb-3">
+             <label for="melhorar" class="form-label">O que poderíamos melhorar?</label>
+             <textarea class="form-control" id="melhorar" name="melhorar" placeholder="Ex: navegação, velocidade, mais tipos de conteúdo..." rows="4"></textarea>
+           </div>
+
+           <div class="mb-3">
+             <label for="encontrou" class="form-label">Você encontrou o que procurava?</label>
+             <select class="form-select" id="encontrou" name="encontrou" required>
+                 <option value="">Selecione...</option>
+                 <option value="sim">Sim</option>
+                 <option value="nao">Não</option>
+                 <option value="parcialmente">Parcialmente</option>
+             </select>
+           </div>
+
+           <div class="mb-3">
+             <label for="sugestao" class="form-label">Sua sugestão para o site (opcional):</label>
+             <textarea class="form-control" id="sugestao" name="sugestao" placeholder="Ex: novas funcionalidades, tópicos para artigos, etc." rows="4"></textarea>
+           </div>
+
+            <div id="feedbackMessage" class="mt-3"></div>
+
+            <button type="submit" class="btn btn-primary">Enviar Avaliação Detalhada</button>
+        </form>
+    </div>
+
+    <div class="feedback-section star-rating-container">
+        <h2>Avaliação Rápida</h2>
+        <p class="intro-text">Avalie de forma rápida nosso site! Ajude-nos a manter a qualidade do site e aprimorar ainda mais o H2N-tech.</p>
+
+        <div class="rating-block">
+            <h3>Avalie a Usabilidade do Site</h3>
+            <div class="stars" data-content-id="usabilidade-site">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="thanks-message" id="thanks-usabilidade-site"></div>
+            <div class="comment-optional" id="comment-usabilidade-site" style="display:none;">
+                <label for="comment-text-usabilidade-site">Deixe um comentário (opcional):</label>
+                <textarea id="comment-text-usabilidade-site" class="form-control" placeholder="Seu feedback adicional..."></textarea>
+                <button onclick="submitStarComment('usabilidade-site')">Enviar Comentário</button>
+                <div id="comment-feedback-usabilidade-site" class="comment-feedback-message mt-2"></div>
+            </div>
+        </div>
+
+        <div class="rating-block">
+            <h3>Avalie as funcionalidades em geral do site</h3>
+            <div class="stars" data-content-id="funcionalidades-site">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="thanks-message" id="thanks-funcionalidades-site"></div>
+            <div class="comment-optional" id="comment-funcionalidades-site" style="display:none;">
+                <label for="comment-text-funcionalidades-site">Deixe um comentário (opcional):</label>
+                <textarea id="comment-text-funcionalidades-site" class="form-control" placeholder="Seu feedback adicional..."></textarea>
+                <button onclick="submitStarComment('funcionalidades-site')">Enviar Comentário</button>
+                <div id="comment-feedback-funcionalidades-site" class="comment-feedback-message mt-2"></div>
+            </div>
+        </div>
+
+        <div class="rating-block">
+            <h3>Avalie a clareza das informações do site</h3>
+            <div class="stars" data-content-id="clareza-informacoes">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="thanks-message" id="thanks-clareza-informacoes"></div>
+            <div class="comment-optional" id="comment-clareza-informacoes" style="display:none;">
+                <label for="comment-text-clareza-informacoes">Deixe um comentário (opcional):</label>
+                <textarea id="comment-text-clareza-informacoes" class="form-control" placeholder="Seu feedback adicional..."></textarea>
+                <button onclick="submitStarComment('clareza-informacoes')">Enviar Comentário</button>
+                <div id="comment-feedback-clareza-informacoes" class="comment-feedback-message mt-2"></div>
+            </div>
+        </div>
+
+        <div class="rating-block">
+            <h3>Avalie a Impressão geral do site</h3>
+            <div class="stars" data-content-id="impressao-geral">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="thanks-message" id="thanks-impressao-geral"></div>
+            <div class="comment-optional" id="comment-impressao-geral" style="display:none;">
+                <label for="comment-text-impressao-geral">Deixe um comentário (opcional):</label>
+                <textarea id="comment-text-impressao-geral" class="form-control" placeholder="Seu feedback adicional..."></textarea>
+                <button onclick="submitStarComment('impressao-geral')">Enviar Comentário</button>
+                <div id="comment-feedback-impressao-geral" class="comment-feedback-message mt-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container mt-5">
+       <div class="row py-4 border-top text-muted">
+        <div class="col-md-3">
+            <h5>Navegação</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5>Futuro Profissional</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5>Busque Ajuda</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3 d-flex flex-column justify-content-between" style="min-height: 100%;">
+            <div>
+                <h5>Sobre o H2N-Tech</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                </ul>
+            </div>
+            <p class="mt-5 mb-0">&copy; H2N Technology</p>
+        </div>
+       </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Lógica para o Formulário de Avaliação Detalhada
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('detailedFeedbackForm');
+            const feedbackMessageDiv = document.getElementById('feedbackMessage');
+            const satisfacaoGeral = document.getElementById('satisfacaoGeral');
+            const encontrou = document.getElementById('encontrou');
+
+            form.addEventListener('submit', function(event) {
+                // Previne o envio padrão do formulário
+                event.preventDefault();
+
+                // Limpa mensagens anteriores
+                feedbackMessageDiv.innerHTML = '';
+                feedbackMessageDiv.className = 'mt-3'; // Remove classes de estilo anteriores
+
+                let isValid = true;
+                let errorMessage = '';
+
+                // Validação para 'satisfacaoGeral'
+                if (satisfacaoGeral.value === "") {
+                    isValid = false;
+                    errorMessage += 'Por favor, selecione sua satisfação geral com o site.<br>';
+                    satisfacaoGeral.classList.add('is-invalid'); // Adiciona classe de erro do Bootstrap
+                } else {
+                    satisfacaoGeral.classList.remove('is-invalid');
+                }
+
+                // Validação para 'encontrou'
+                if (encontrou.value === "") {
+                    isValid = false;
+                    errorMessage += 'Por favor, informe se você encontrou o que procurava.<br>';
+                    encontrou.classList.add('is-invalid');
+                } else {
+                    encontrou.classList.remove('is-invalid');
+                }
+
+                if (isValid) {
+                    // Se tudo estiver válido
+                    feedbackMessageDiv.classList.add('feedback-message', 'success');
+                    feedbackMessageDiv.innerHTML = 'Obrigado! Sua avaliação foi enviada com sucesso!';
+                    form.reset(); // Limpa o formulário após o envio
+                    // Você pode adicionar aqui a lógica para enviar os dados para um servidor,
+                    // por exemplo, usando fetch() ou XMLHttpRequest.
+                    // Ex: setTimeout(() => window.location.href = 'avaliacao.html', 2000);
+                } else {
+                    // Se houver erros
+                    feedbackMessageDiv.classList.add('feedback-message', 'error');
+                    feedbackMessageDiv.innerHTML = '<strong>Atenção:</strong><br>' + errorMessage;
+                }
+            });
+        });
+
+        // Lógica para a Avaliação por Estrelas
+        document.querySelectorAll('.stars').forEach(starsContainer => {
+            const contentId = starsContainer.getAttribute('data-content-id');
+            const thankYouMessage = document.getElementById(`thanks-${contentId}`);
+            const commentSection = document.getElementById(`comment-${contentId}`);
+            let currentRating = 0; // Para armazenar a avaliação atual
+
+            starsContainer.addEventListener('mouseover', function(e) {
+                if (e.target.classList.contains('star')) {
+                    const value = parseInt(e.target.dataset.value);
+                    highlightStars(starsContainer, value);
+                }
+            });
+
+            starsContainer.addEventListener('mouseout', function(e) {
+                highlightStars(starsContainer, currentRating); // Volta para a avaliação atual
+            });
+
+            starsContainer.addEventListener('click', function(e) {
+                if (e.target.classList.contains('star')) {
+                    const rating = parseInt(e.target.dataset.value);
+                    currentRating = rating; // Define a avaliação atual
+                    highlightStars(starsContainer, rating);
+
+                    console.log(`Avaliação de ${rating} estrelas para ${contentId}`);
+                    thankYouMessage.textContent = `Obrigado por sua avaliação de ${rating} estrelas!`;
+                    commentSection.style.display = 'block'; // Mostra o campo de comentário opcional
+
+                    // AQUI: Você enviaria a avaliação para o seu servidor
+                    // Ex: fetch(`/api/rate-content/${contentId}`, {
+                    //      method: 'POST',
+                    //      headers: { 'Content-Type': 'application/json' },
+                    //      body: JSON.stringify({ rating: rating, contentId: contentId })
+                    // });
+                }
+            });
+
+            function highlightStars(container, value) {
+                container.querySelectorAll('.star').forEach(star => {
+                    if (parseInt(star.dataset.value) <= value) {
+                        star.classList.add('filled');
+                    } else {
+                        star.classList.remove('filled');
+                    }
+                });
+            }
+        });
+
+        function submitStarComment(contentId) {
+            const commentTextarea = document.getElementById(`comment-text-${contentId}`);
+            const commentText = commentTextarea.value;
+            const commentFeedbackDiv = document.getElementById(`comment-feedback-${contentId}`);
+
+            // Limpa mensagens anteriores
+            commentFeedbackDiv.innerHTML = '';
+            commentFeedbackDiv.className = 'comment-feedback-message mt-2'; // Reset classes
+
+            if (commentText.trim() === '') {
+                // Se o campo de comentário estiver vazio, exibe uma mensagem de erro
+                commentFeedbackDiv.classList.add('error');
+                commentFeedbackDiv.innerHTML = 'Por favor, escreva um comentário antes de enviar.';
+                commentTextarea.classList.add('is-invalid'); // Adiciona classe de erro do Bootstrap
+            } else {
+                // Se o comentário for válido
+                console.log(`Comentário para ${contentId}: "${commentText}"`);
+                commentFeedbackDiv.classList.add('success');
+                commentFeedbackDiv.innerHTML = 'Comentário enviado com sucesso! Obrigado pelo seu feedback.';
+                commentTextarea.classList.remove('is-invalid'); // Remove classe de erro
+                commentTextarea.value = ''; // Limpa o campo
+                
+                // Opcional: Esconder a seção de comentário após um tempo ou manter visível
+                // setTimeout(() => {
+                //      document.getElementById(`comment-${contentId}`).style.display = 'none';
+                //      document.getElementById(`thanks-${contentId}`).textContent = 'Obrigado por seu feedback!';
+                // }, 3000); // Esconde após 3 segundos
+                
+                // AQUI: Você enviaria o comentário para o seu servidor
+                // Ex: fetch(`/api/submit-star-comment/${contentId}`, {
+                //      method: 'POST',
+                //      headers: { 'Content-Type': 'application/json' },
+                //      body: JSON.stringify({ comment: commentText, contentId: contentId })
+                // });
+            }
+        }
+    </script>
+</body>
+</html>

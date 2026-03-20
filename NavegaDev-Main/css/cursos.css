@@ -1,0 +1,28 @@
+/* ===========================
+   cursos.css - Página de Cursos
+   =========================== */
+ 
+.texto {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+ 
+.texto h2 {
+    padding-bottom: 10px;
+}
+ 
+.texto h5 {
+    padding-bottom: 10px;
+}
+ 
+.custom-card {
+    width: 19.8rem;
+    transition: transform 0.3s;
+}
+ 
+.custom-card:hover {
+    transform: scale(1.03);
+}
+ 

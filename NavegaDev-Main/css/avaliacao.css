@@ -1,0 +1,91 @@
+
+.voltar {
+    padding-top: 100px;
+    padding-left: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.feedback-section {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.feedback-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #004F9F;
+}
+
+.feedback-message.error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.feedback-message.success {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.comment-feedback-message {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.comment-feedback-message.success { background-color: #d4edda; color: #28a745; border: 1px solid #c3e6cb; }
+.comment-feedback-message.error { background-color: #f8d7da; color: #dc3545; border: 1px solid #f5c6cb; }
+
+.star-rating-container { border-top: 1px solid #eee; padding-top: 40px; }
+
+.rating-block {
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fefefe;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.rating-block h3 { color: #052442; margin-bottom: 15px; font-size: 1.3em; }
+
+.stars {
+    font-size: 2.8em;
+    color: #ccc;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 15px;
+}
+
+.stars .star { display: inline-block; margin: 0 3px; }
+.stars .star.filled { color: #ffc107; }
+.stars .star:hover { color: #ffca2c; }
+
+.thanks-message { margin-top: 10px; font-style: italic; color: #666; min-height: 20px; }
+
+.comment-optional { margin-top: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.comment-optional label { display: block; margin-bottom: 8px; font-weight: bold; color: #444; text-align: left; }
+.comment-optional textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; min-height: 80px; font-size: 0.9em; }
+.comment-optional button { background-color: #0d355e; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px; transition: background-color 0.3s ease; }
+.comment-optional button:hover { background-color: #092a4a; }
+
+.page-title { color: #004F9F; text-align: center; margin-top: 40px; margin-bottom: 30px; }
+.intro-text { text-align: center; margin-bottom: 40px; font-size: 1.1em; color: #555; padding: 0 15px; }

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionário</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #fff;
+            padding-top: 80px; /* Added to give space below the fixed navbar */
+        }
+
+        .nav-bar {
+            background-color: #052442;
+        }
+
+        .text-custom {
+            color: #004F9F;
+        }
+
+        .texto {
+            line-height: 1.6;
+            padding: 20px 15px;
+        }
+
+        h4 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .botao {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background-color: #0d355e;
+            border-color: #0d355e;
+            margin-bottom: 20px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #004F9F;
+            border-color: #004F9F;
+        }
+
+        .imagem {
+            padding-top: 50px;
+        }
+
+        .pergunta {
+            margin-bottom: 20px;
+        }
+
+        .resultado {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Estilos para Questionário */
+        .quiz-section {
+            background-color: #e9ecef;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .quiz-section .form-check {
+            margin-bottom: 10px;
+        }
+
+        .quiz-section .form-check-label {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .quiz-section button {
+            margin-top: 20px;
+        }
+
+        .voltar {
+            padding-top: 10px;
+            margin-left: 10px;
+        }
+
+        /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
+        .footer .nav-link {
+            text-align: left; /* Garante alinhamento à esquerda */
+        }
+        
+        /* Ajuste para garantir que a lista em si não tenha padding que a desloque */
+        .footer .nav {
+            padding-left: 0; /* Remove padding padrão de UL */
+        }
+
+        #quizResult {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar fixed-top">
+        <header class="container">
+            <ul class="nav nav-pills justify-content-center py-3">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link text-white">Cursos</a></li>
+                <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link text-white" >Saiba Mais</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+            </ul>
+        </header> 
+    </div>
+
+    <div class="voltar">
+        <a class="btn btn-secondary btn-s" href="saibamais.html" role="button">Voltar</a>
+    </div>
+
+    <div class="texto container">
+        <section id="questionario-preferencias" class="content-section pt-4">
+            <h2 class="text-center text-custom mb-4">Questionário de Orientação de Área</h2>
+            <h5 class="text-center text-custom">Responda a algumas perguntas rápidas para descobrir qual área de T.I. combina mais com você.</h5>
+
+            <div class="quiz-section container">
+                <form id="careerQuiz">
+                    <div class="mb-4 pergunta">
+                        <h5>1. Qual tipo de desafio mais te atrai?</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="dev" id="q1_dev">
+                            <label class="form-check-label" for="q1_dev">Resolver problemas lógicos e criar novas funcionalidades.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="sec" id="q1_sec">
+                            <label class="form-check-label" for="q1_sec">Proteger sistemas contra ameaças e vulnerabilidades.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="data" id="q1_data">
+                            <label class="form-check-label" for="q1_data">Analisar grandes volumes de informações para encontrar padrões.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="devops" id="q1_devops">
+                            <label class="form-check-label" for="q1_devops">Automatizar processos e otimizar a infraestrutura.</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 pergunta">
+                        <h5>2. Com qual das seguintes atividades você se identifica mais?</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="dev" id="q2_dev">
+                            <label class="form-check-label" for="q2_dev">Escrever código para softwares ou aplicativos.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="sec" id="q2_sec">
+                            <label class="form-check-label" for="q2_sec">Identificar falhas de segurança e implementar defesas.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="data" id="q2_data">
+                            <label class="form-check-label" for="q2_data">Criar gráficos e relatórios a partir de dados complexos.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="devops" id="q2_devops">
+                            <label class="form-check-label" for="q2_devops">Configurar servidores e ambientes de nuvem.</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 pergunta">
+                        <h5>3. Qual tipo de tecnologia te desperta mais curiosidade?</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="dev" id="q3_dev">
+                            <label class="form-check-label" for="q3_dev">Novas linguagens de programação e frameworks web/mobile.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="sec" id="q3_sec">
+                            <label class="form-check-label" for="q3_sec">Ferramentas de hacking ético e sistemas de monitoramento de segurança.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="data" id="q3_data">
+                            <label class="form-check-label" for="q3_data">Inteligência Artificial, Machine Learning e Big Data.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="devops" id="q3_devops">
+                            <label class="form-check-label" for="q3_devops">Containers (Docker), orquestração (Kubernetes) e provedores de nuvem (AWS, Azure).</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 pergunta">
+                        <h5>4. Você se vê...</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="dev" id="q4_dev">
+                            <label class="form-check-label" for="q4_dev">Criando a experiência do usuário de um site ou aplicativo.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="sec" id="q4_sec">
+                            <label class="form-check-label" for="q4_sec">Investigando incidentes de segurança ou auditorias.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="data" id="q4_data">
+                            <label class="form-check-label" for="q4_data">Fazendo previsões baseadas em tendências de dados.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="devops" id="q4_devops">
+                            <label class="form-check-label" for="q4_devops">Garantindo que sistemas e aplicações estejam sempre online e performando bem.</label>
+                        </div>
+                    </div>
+                    <div class="mb-4 pergunta">
+                        <h5>5. Em qual ambiente você se sente mais produtivo?</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="dev" id="q5_dev">
+                            <label class="form-check-label" for="q5_dev">Programando por horas para resolver bugs ou criar recursos.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="sec" id="q5_sec">
+                            <label class="form-check-label" for="q5_sec">Monitorando sistemas e respondendo rapidamente a ameaças.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="data" id="q5_data">
+                            <label class="form-check-label" for="q5_data">Analisando dados para gerar conclusões e insights.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="devops" id="q5_devops">
+                            <label class="form-check-label" for="q5_devops">Ajustando servidores, pipelines e processos de entrega contínua.</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 pergunta">
+                        <h5>6. O que mais te motiva em um projeto de T.I.?</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q6" value="dev" id="q6_dev">
+                            <label class="form-check-label" for="q6_dev">Criar algo novo do zero com código.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q6" value="sec" id="q6_sec">
+                            <label class="form-check-label" for="q6_sec">Evitar falhas e proteger o sistema contra ataques.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q6" value="data" id="q6_data">
+                            <label class="form-check-label" for="q6_data">Resolver mistérios usando análise e interpretação de dados.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q6" value="devops" id="q6_devops">
+                            <label class="form-check-label" for="q6_devops">Fazer com que tudo funcione perfeitamente em segundo plano.</label>
+                        </div>
+                    </div>
+                    <div class="mb-4 pergunta">
+                        <h5>7. Qual dessas ferramentas você tem mais curiosidade em aprender?</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q7" value="dev" id="q7_dev">
+                            <label class="form-check-label" for="q7_dev">Visual Studio Code, React, JavaScript.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q7" value="sec" id="q7_sec">
+                            <label class="form-check-label" for="q7_sec">Kali Linux, Wireshark, ferramentas de pentest.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q7" value="data" id="q7_data">
+                            <label class="form-check-label" for="q7_data">Python, Jupyter Notebook, Power BI.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q7" value="devops" id="q7_devops">
+                            <label class="form-check-label" for="q7_devops">Docker, Jenkins, GitHub Actions, AWS CLI.</label>
+                        </div>
+                    </div>
+                    <div class="mb-4 pergunta">
+                        <h5>8. Você prefere trabalhar em tarefas...</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q8" value="dev" id="q8_dev">
+                            <label class="form-check-label" for="q8_dev">Que exijam criatividade e construção de interfaces.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q8" value="sec" id="q8_sec">
+                            <label class="form-check-label" for="q8_sec">Que lidem com riscos e exigem atenção a falhas.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q8" value="data" id="q8_data">
+                            <label class="form-check-label" for="q8_data">Que envolvam lógica, cálculos e interpretação de dados.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q8" value="devops" id="q8_devops">
+                            <label class="form-check-label" for="q8_devops">Que exijam agilidade, organização e automação.</label>
+                        </div>
+                    </div>
+                    <div class="mb-4 pergunta">
+                        <h5>9. Quando você aprende algo novo, o que te ajuda mais?</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q9" value="dev" id="q9_dev">
+                            <label class="form-check-label" for="q9_dev">Criar projetos práticos para testar meus conhecimentos.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q9" value="sec" id="q9_sec">
+                            <label class="form-check-label" for="q9_sec">Explorar falhas e desafios reais em ambientes simulados.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q9" value="data" id="q9_data">
+                            <label class="form-check-label" for="q9_data">Analisar dados de exemplos e interpretar gráficos.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q9" value="devops" id="q9_devops">
+                            <label class="form-check-label" for="q9_devops">Mexer com configurações reais em servidores e cloud.</label>
+                        </div>
+                    </div>
+                    <div class="mb-4 pergunta">
+                        <h5>10. Como você se vê contribuindo em uma equipe?</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q10" value="dev" id="q10_dev">
+                            <label class="form-check-label" for="q10_dev">Criando a interface e funcionalidades de sistemas.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q10" value="sec" id="q10_sec">
+                            <label class="form-check-label" for="q10_sec">Detectando falhas ou reforçando a segurança de aplicações.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q10" value="data" id="q10_data">
+                            <label class="form-check-label" for="q10_data">Oferecendo análises detalhadas para tomadas de decisão.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q10" value="devops" id="q10_devops">
+                            <label class="form-check-label" for="q10_devops">Garantindo que o ambiente técnico esteja estável e escalável.</label>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-lg w-100" onclick="calculateResult()">Ver Meu Perfil</button>
+                </form>
+
+                <div id="quizResult" class="resultado mt-4 alert" role="alert">
+                </div>
+            </div>
+        </section>
+
+        <footer class="container mt-5 footer">
+            <div class="row py-4 border-top text-muted">
+                <div class="col-md-3">
+                    <h5>Navegação</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                        <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                        <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                        <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                        <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Futuro Profissional</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                        <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                        <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                        <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                        <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Busque Ajuda</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                        <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5>Sobre o H2N-Tech</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                            <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        </ul>
+                    </div>
+                    <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function calculateResult() {
+                const responses = {
+                    dev: 0,
+                    sec: 0,
+                    data: 0,
+                    devops: 0
+                };
+
+                let allAnswered = true;
+                // Loop ajustado para 10 perguntas, conforme o HTML
+                for (let i = 1; i <= 10; i++) { 
+                    const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                    if (selectedOption) {
+                        responses[selectedOption.value]++;
+                    } else {
+                        allAnswered = false;
+                        break;
+                    }
+                }
+
+                const quizResultDiv = document.getElementById("quizResult");
+                quizResultDiv.style.display = "block";
+
+                if (!allAnswered) {
+                    quizResultDiv.className = "alert alert-danger";
+                    quizResultDiv.innerHTML = "Por favor, responda a todas as perguntas para ver o resultado.";
+                    return;
+                }
+
+                let maxScore = -1;
+                let bestAreas = [];
+
+                for (const area in responses) {
+                    if (responses[area] > maxScore) {
+                        maxScore = responses[area];
+                        bestAreas = [area];
+                    } else if (responses[area] === maxScore && maxScore > 0) {
+                        bestAreas.push(area);
+                    }
+                }
+
+                let message = "";
+                quizResultDiv.className = "alert alert-success"; // Default success class
+
+                if (bestAreas.length > 1) {
+                    const formattedAreas = bestAreas.map(area => {
+                        switch(area) {
+                            case "dev": return "Desenvolvimento (Dev)";
+                            case "sec": return "Cibersegurança (Security)";
+                            case "data": return "Ciência/Análise de Dados (Data)";
+                            case "devops": return "DevOps";
+                            default: return area;
+                        }
+                    }).join(" ou ");
+                    message = `Suas respostas indicam que você pode se interessar pelas áreas de **${formattedAreas}**. Explore um pouco mais cada uma para ver qual te atrai mais!`;
+                } else {
+                    switch(bestAreas[0]) {
+                        case "dev":
+                            message = "Você combina com a área de Desenvolvimento (Dev)! Ideal para quem gosta de criar soluções, softwares e aplicativos.";
+                            break;
+                        case "sec":
+                            message = "Você combina com a área de Cibersegurança (Security)! Perfeita para quem tem paixão por proteger sistemas e dados.";
+                            break;
+                        case "data":
+                            message = "Você combina com a área de Ciência/Análise de Dados (Data)! Indicada para quem curte explorar e extrair insights de grandes volumes de informações.";
+                            break;
+                        case "devops":
+                            message = "Você combina com a área de DevOps! Ideal para quem gosta de otimizar processos, automatizar e garantir a infraestrutura de TI.";
+                            break;
+                        default:
+                            message = "Não foi possível determinar uma área específica. Tente responder novamente!";
+                            quizResultDiv.className = "alert alert-warning"; // Aviso para caso não haja pontuação
+                    }
+                }
+                document.getElementById("quizResult").innerHTML = message;
+            }
+        </script>
+
+        <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    </body>
+</html>

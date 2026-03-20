@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEFET/RJ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <style>
+        body {
+         background-color: #ffff;
+         padding-top: 70px; /* Mantém o espaço para a navbar fixa */
+        }
+
+        .nav-bar {
+            background-color: #052442;
+            width: 100%; /* Mudança para 100% para que ocupe toda a largura */
+            height: 70px;
+        }
+
+        .form-control-dark {
+            border-color: var(--bs-gray);
+        }
+
+        .form-control-dark:focus {
+            border-color: #fff;
+            box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+        }
+
+        .text-small {
+            font-size: 85%;
+        }
+
+        .dropdown-toggle:not(:focus) {
+            outline: 0;
+        }
+
+        .texto {
+            line-height: 1.6;
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            color: #004F9F;
+        }
+
+        h2 {
+            padding-bottom: 30px;
+        }
+
+        h5 {
+            padding-bottom: 10px;
+        }
+
+        .btn-secondary {
+            background-color: #0d355e;
+        }
+
+        .voltar {
+            padding-top: 10px;
+            margin-left: 20px; /* Adicionado para alinhar com o padding do .texto */
+        }
+
+        .img {
+            width: 100%; /* Mudança para largura 100% */
+            max-width: 640px; /* Definindo o tamanho máximo */
+            height: auto;
+            margin: 0 auto; /* Centralizar a imagem */
+        }
+
+        /* Media Query para telas menores */
+        @media (max-width: 768px) {
+            .nav-bar {
+                height: auto;
+            }
+
+            .img {
+                max-width: 100%; /* A imagem ocupa toda a largura em telas pequenas */
+            }
+
+            .texto {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .voltar {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+       <div class="nav-bar fixed-top">
+        <div class="nav-bar">
+            <header class="container">
+                <ul class="nav nav-pills justify-content-center py-3">
+                  <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                  <li class="nav-item"><a href="cursos.html" class="nav-link active" aria-current="page">Cursos</a></li>
+                  <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                  <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                  <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                  <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                  <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                </ul>
+              </header>
+        </div>
+        </div>
+        <div class="voltar">
+            <a class="btn btn-secondary btn-s" href="ads.html" role="button">Voltar</a>
+        </div>
+
+        <div class="img">
+            <img src="img/logo_cefet.jpg" class="d-block w-100 h-100" alt="Logo CEFET/RJ">
+        </div>
+
+    <div class="texto">
+        <h4 class="text-#004F9F mt-4">Análise e Desenvolvimento de Sistemas - CEFET/RJ</h4>
+        <h5 class="text-#004F9F">O curso de Análise e Desenvolvimento de Sistemas (ADS) do Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ)
+        oferece uma formação tecnológica focada em capacitar profissionais para atuar no ciclo completo de desenvolvimento de software. O objetivo é formar
+        analistas e desenvolvedores que consigam compreender, projetar, implementar e manter sistemas computacionais eficientes e inovadores para as demandas do mercado.</h5>
+        <h5 class="text-#004F9F">A graduação em ADS no CEFET/RJ aborda desde a fase de levantamento de requisitos e análise de negócios até a codificação, testes e implantação de sistemas.
+        A grade curricular é abrangente, incluindo lógica de programação, banco de dados, engenharia de software, linguagens de programação modernas, desenvolvimento web e mobile,
+        e segurança da informação. O curso valoriza a prática, com atividades em laboratórios equipados e a execução de projetos que simulam desafios reais do mercado de TI.</h5>
+        <h5 class="text-#004F9F">Com um corpo docente qualificado e uma infraestrutura tecnológica atualizada, o CEFET/RJ proporciona um ambiente de aprendizado dinâmico.
+        Os alunos são incentivados a desenvolver o pensamento crítico, a capacidade de resolução de problemas e o trabalho em equipe, habilidades essenciais para a área de TI.
+        O curso também promove a participação em atividades extracurriculares, como hackathons e projetos de inovação.</h5>
+        <h5 class="text-#004F9F">O mercado de trabalho para analistas e desenvolvedores de sistemas está em constante crescimento, e o CEFET/RJ prepara seus alunos para essas oportunidades,
+        com uma formação alinhada às últimas tendências e tecnologias. A ênfase na prática e na aplicabilidade dos conhecimentos faz com que os egressos do curso sejam profissionais
+        altamente procurados por empresas de tecnologia, consultorias e startups.</h5>
+        <h5 class="text-#004F9F">Escolher Análise e Desenvolvimento de Sistemas no CEFET/RJ é optar por uma carreira dinâmica e com vastas possibilidades,
+        contribuindo para a transformação digital e para a criação de soluções tecnológicas que impactam diretamente o dia a dia das pessoas e empresas.</h5>
+    </div>
+        <!-- Seção do Mapa com Legenda -->
+        <div class="container-mapa container mt-5 text-center">
+            <h2 class="texto">Mapa CEFET</h2>
+
+            <!-- Aqui entra o iframe -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7478.27661432572!2d-43.224849686132366!3d-22.91281685026299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sCefet!5e0!3m2!1spt-BR!2sbr!4v1752450474824!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <p class="mt-2 textoGlobalNormal">
+                Este mapa oferece uma visão panorâmica da área, integrando recursos do Google Maps.
+            </p>
+        </div>
+
+         <footer class="container mt-5 footer">
+          <div class="row py-4 border-top text-muted">
+            <div class="col-md-3">
+                <h5>Navegação</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Futuro Profissional</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Busque Ajuda</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column justify-content-between">
+                <div>
+                    <h5>Sobre o H2N-Tech</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                    </ul>
+                </div>
+                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+            </div>
+          </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

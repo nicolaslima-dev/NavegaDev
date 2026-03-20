@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado de Trabalho em TI - H2N Technology</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            /* Ajuste o padding-top para o tamanho da sua navbar. 70px é a altura da sua navbar + um pouco de folga. */
+            padding-top: 80px; 
+        }
+        .nav-bar {
+            background-color: #052442;
+            width: 100%;
+            height: 70px;
+            /* Removido fixed-top daqui pois será adicionado diretamente no HTML para maior clareza */
+        }
+        .btn-secondary,
+        .btn-primary { /* Adicionado .btn-primary aqui */
+            background-color: #0d355e !important; /* Cor do botão Voltar */
+            border-color: #0d355e !important; /* Garante que a borda também seja da mesma cor */
+            color: #fff !important; /* Garante que o texto do botão seja branco */
+        }
+
+        /* Ajuste para o hover dos botões padronizados */
+        .btn-secondary:hover,
+        .btn-primary:hover {
+            background-color: #092a4a !important; /* Um tom ligeiramente mais escuro no hover */
+            border-color: #092a4a !important;
+        }
+
+        .voltar {
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        .titulo-site{
+        margin-top: -15px;
+        }
+        
+        /* Ajustes específicos para esta seção de título/subtítulo */
+        .section-title {
+            color: #0d355e;
+            /* Removido margin-top: 9px; para que o padding-top do body controle o espaço inicial */
+            /* Removido o margin-bottom daqui para usar classes Bootstrap no HTML */
+        }
+
+        .texto {
+            white-space: pre-line;
+            color: #004F9F;
+            /* Removido o margin-top e margin-bottom daqui para usar classes Bootstrap no HTML */
+        }
+        
+        /* ... outros estilos ... */
+
+        .form-control-dark {
+            border-color: var(--bs-gray);
+        }
+        .form-control-dark:focus {
+            border-color: #fff;
+            box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+        }
+        .text-small {
+            font-size: 85%;
+        }
+        .dropdown-toggle:not(:focus) {
+            outline: 0;
+        }
+        a {
+            text-align: center;
+        }
+        .container {
+            padding-bottom: 10px;
+        }
+        
+        .noticia_direcionamento {
+            padding-bottom: 50px;
+        }
+        .carousel {
+            padding-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .carousel-caption h5 {
+                font-size: 1.2em;
+            }
+            .carousel-caption p {
+                font-size: 0.9em;
+            }
+        }
+        /* Estilos específicos para esta página */
+        .accordion-button {
+            background-color: #0d355e;
+            color: white;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #004F9F;
+            color: white;
+            box-shadow: none;
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 53, 94, 0.25);
+        }
+        .nav-link.active-mercado-trabalho {
+            background-color: #004F9F !important;
+            color: white !important;
+        }
+        .tab-content .card-body {
+            color: #333;
+        }
+
+        /* Estilos para o Modal dos Quizzes */
+        .quiz-option {
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        .quiz-option:hover {
+            background-color: #f8f9fa;
+        }
+        .quiz-option.selected {
+            background-color: #e9ecef;
+            border-color: #007bff;
+        }
+        .quiz-option.correct {
+            background-color: #d4edda; /* Verde claro */
+            border-color: #28a745; /* Verde escuro */
+        }
+        .quiz-option.incorrect {
+            background-color: #f8d7da; /* Vermelho claro */
+            border-color: #dc3545; /* Vermelho escuro */
+        }
+        .quiz-option.disabled-click { /* Para desativar cliques após seleção */
+            pointer-events: none;
+        }
+        /* Seu CSS existente para a marca d'água (se for o caso) */
+.footer-custom .text-muted {
+    color: #6c757d !important; /* Força a cor para o copyright */
+}
+
+/* --- Ajustes para alinhamento dos títulos e links no footer --- */
+
+/* Garante que os títulos não tenham margens laterais que os desalinhem */
+.titulo-footer {
+    margin-left: 0;
+    padding-left: 0;
+    /* Se houver algum espaçamento extra que você queira remover */
+    /* text-align: left; /* Garante alinhamento à esquerda, se necessário */
+}
+
+/* Ajusta as listas de navegação */
+.nav.flex-column {
+    /* Remove padding padrão da UL que pode empurrar os LIs para a direita */
+    padding-left: 0; 
+    /* Remove margem padrão da UL que pode empurrar os LIs para a direita */
+    margin-left: 0; 
+}
+
+/* Garante que os itens da lista estejam sem padding/margin lateral */
+.nav-item {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* O .nav-link px-0 já faz muito do trabalho, mas podemos reforçar */
+.nav-link.px-0 {
+    padding-left: 0 !important; /* Garante que não haja padding à esquerda */
+    padding-right: 0 !important; /* Garante que não haja padding à direita */
+    text-align: left; /* Garante que o texto dos links seja alinhado à esquerda */
+}
+/* Estilos para a caixa de análise de sucesso */
+.alert-analysis-success {
+    background-color: #d4edda; /* Fundo verde claro, como o quiz-option.correct */
+    color: #155724;             /* Cor do texto para contraste com o verde claro */
+    border-color: #28a745;      /* Borda verde escuro, como o quiz-option.correct */
+}
+
+/* Garante que o título dentro do alerta também tenha a cor correta */
+.alert-analysis-success .alert-heading {
+    color: #155724; 
+}
+    </style>
+</head>
+<body>
+    <div class="nav-bar fixed-top"> <header class="container">
+            <ul class="nav nav-pills justify-content-center py-3">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link text-white">Cursos</a></li>
+                <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li> 
+                <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                
+            </ul>
+        </header>
+    </div>
+    <div class="voltar">
+        <a class="btn btn-secondary btn-s" href="saibamais.html" role="button">Voltar</a>
+    </div>
+
+    <main class="container my-5">
+        <div class="titulo-site">
+        <h1 class="text-center section-title mb-2"> Compreendendo as Etapas do Processo Seletivo</h1>
+        <h5 class="text-center texto mt-1 mb-5">
+            Bem-vindo à sua jornada no dinâmico mercado de trabalho em Tecnologia da Informação!
+            Aqui você encontrará as ferramentas e informações essenciais para impulsionar sua carreira. 
+            Entender as etapas do processo seletivo e se preparar adequadamente é fundamental para alcançar seus objetivos.
+        </h5>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <ul class="nav nav-tabs justify-content-center" id="jobMarketTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="resume-tab" data-bs-toggle="tab" data-bs-target="#resume-content" type="button" role="tab" aria-controls="resume-content" aria-selected="true">Análise de Currículos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="technical-tab" data-bs-toggle="tab" data-bs-target="#technical-content" type="button" role="tab" aria-controls="technical-content" aria-selected="false">Teste Técnico</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="behavioral-tab" data-bs-toggle="tab" data-bs-target="#behavioral-content" type="button" role="tab" aria-controls="behavioral-content" aria-selected="false">Entrevista Comportamental</button>
+                    </li>
+                </ul>
+                <div class="tab-content border border-top-0 p-3" id="jobMarketTabContent">
+                    <div class="tab-pane fade show active" id="resume-content" role="tabpanel" aria-labelledby="resume-tab">
+                        <h3 class="text-center section-title mb-2">Otimizando Seu Currículo para o Mercado de TI</h3>
+                        <p class="mb-3">Seu currículo é seu cartão de visitas! Aprenda a destacá-lo com as informações certas e as palavras-chave que os recrutadores de TI buscam.</p>
+                        
+                        <h5>Recursos Interativos:</h5>
+                        <div class="accordion" id="accordionResume">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingResume1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResume1" aria-expanded="false" aria-controls="collapseResume1">
+                                        Checklist para um Currículo Vencedor
+                                    </button>
+                                </h2>
+                                <div id="collapseResume1" class="accordion-collapse collapse" aria-labelledby="headingResume1" data-bs-parent="#accordionResume">
+                                    <div class="accordion-body">
+                                        <p>Marque os itens que você já incluiu no seu currículo:</p>
+                                        <form>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkKeyword">
+                                                <label class="form-check-label" for="checkKeyword">
+                                                    Palavras-chave da área (ex: Python, Java, Cloud, Agile)?
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkObjective">
+                                                <label class="form-check-label" for="checkObjective">
+                                                    Objetivo profissional claro e alinhado à vaga?
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkProjects">
+                                                <label class="form-check-label" for="checkProjects">
+                                                    Projetos pessoais ou acadêmicos relevantes com links (GitHub, portfólio)?
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkMetrics">
+                                                <label class="form-check-label" for="checkMetrics">
+                                                    Resultados e conquistas quantificáveis (se possível)?
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkFormat">
+                                                <label class="form-check-label" for="checkFormat">
+                                                    Formato limpo, organizado e fácil de ler?
+                                                </label>
+                                            </div>
+                                            <button type="button" class="btn btn-primary mt-3" onclick="generateChecklistFeedback()">Ver Feedback</button>
+                                            <div id="feedbackResult" class="mt-3"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingResume2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResume2" aria-expanded="false" aria-controls="collapseResume2">
+                                        Exemplos de Currículos (Antes e Depois)
+                                    </button>
+                                </h2>
+                                <div id="collapseResume2" class="accordion-collapse collapse" aria-labelledby="headingResume2" data-bs-parent="#accordionResume">
+                                    <div class="accordion-body">
+                                        <div class="row text-start">
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-danger">❌ Antes (Currículo Fraco)</h5>
+                                                        <ul>
+                                                            <li>Sem palavras-chave técnicas</li>
+                                                            <li>Objetivo genérico: “Buscar uma oportunidade na empresa”</li>
+                                                            <li>Sem projetos ou links</li>
+                                                            <li>Texto denso, pouco espaçamento</li>
+                                                            <li>Layout confuso e desorganizado</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-success">✅ Depois (Currículo Ideal)</h5>
+                                                        <ul>
+                                                            <li>Inclui termos técnicos como “Python”, “MySQL”, “HTML5”</li>
+                                                            <li>Objetivo: “Atuar como estagiário em desenvolvimento backend, contribuindo com projetos em Python”</li>
+                                                            <li>Projetos com links: GitHub e portfólio</li>
+                                                            <li>Resultados claros: “Reduzi tempo de resposta em 30%”</li>
+                                                            <li>Layout limpo, com boa hierarquia e organização</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row text-start mt-4">
+                                            
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-danger">❌ Antes: Experiência genérica</h5>
+                                                        <ul>
+                                                            <li>“Trabalhei com TI por 2 anos”</li>
+                                                            <li>Sem detalhamento de funções</li>
+                                                            <li>Sem tecnologias ou ferramentas mencionadas</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-success">✅ Depois: Experiência estratégica</h5>
+                                                        <ul>
+                                                            <li>“Desenvolvi APIs REST com Node.js e MongoDB em projeto de integração”</li>
+                                                            <li>Descreve impacto e entregas</li>
+                                                            <li>Mostra ferramentas reais utilizadas</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-danger">❌ Antes: Curso citado de forma vaga</h5>
+                                                        <ul>
+                                                            <li>“Curso de Informática”</li>
+                                                            <li>Sem carga horária ou instituição</li>
+                                                            <li>Sem vínculo com a área desejada</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-success">✅ Depois: Formação com contexto</h5>
+                                                        <ul>
+                                                            <li>“Curso de HTML5, CSS3 e JavaScript – 40h (SENAI)”</li>
+                                                            <li>Apresenta instituição reconhecida</li>
+                                                            <li>Relaciona com a área de atuação (front-end)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-danger">❌ Antes: Layout desorganizado</h5>
+                                                        <ul>
+                                                            <li>Sem margens ou espaçamento</li>
+                                                            <li>Fonte pequena e poluída</li>
+                                                            <li>Informações mal divididas</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-success">✅ Depois: Visual profissional</h5>
+                                                        <ul>
+                                                            <li>Boas margens, uso de espaçamento e hierarquia</li>
+                                                            <li>Fontes claras, 1 página (ou 2 no máx.)</li>
+                                                            <li>Dividido por tópicos: Perfil, Experiência, Projetos, etc.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="technical-content" role="tabpanel" aria-labelledby="technical-tab">
+                        <h4 class="text-center mt-3 mb-4 texto">Preparação para Testes Técnicos em TI</h4>
+                        <p class="mb-3">Os testes técnicos avaliam suas habilidades na prática. Prepare-se para desafios de lógica, programação e conhecimento específico da área.</p>
+                        
+                        <h5>Recursos Interativos:</h5>
+                        <div class="accordion" id="accordionTechnical">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTechnical1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTechnical1" aria-expanded="false" aria-controls="collapseTechnical1">
+                                        Miniquizzes de Autoavaliação
+                                    </button>
+                                </h2>
+                                <div id="collapseTechnical1" class="accordion-collapse collapse" aria-labelledby="headingTechnical1" data-bs-parent="#accordionTechnical">
+                                    <div class="accordion-body">
+                                        <p>Teste seus conhecimentos com nossos miniquizzes:</p>
+                                        <ul>
+                                            
+                                            <li><a href="#" class="texto" data-bs-toggle="modal" data-bs-target="#logicQuizModal">Quiz de Lógica de Programação</a></li>
+                                            <li><a href="#" class="texto" data-bs-toggle="modal" data-bs-target="#sqlQuizModal">Quiz de SQL Básico</a></li>
+                                            <li><a href="#" class="texto" data-bs-toggle="modal" data-bs-target="#networksQuizModal">Quiz de Conceitos de Redes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTechnical2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTechnical2" aria-expanded="false" aria-controls="collapseTechnical2">
+                                        Plataformas para Prática de Código
+                                    </button>
+                                </h2>
+                                <div id="collapseTechnical2" class="accordion-collapse collapse" aria-labelledby="headingTechnical2" data-bs-parent="#accordionTechnical">
+                                    <div class="accordion-body">
+                                        <p>Recomendamos as seguintes plataformas para você praticar e aprimorar suas habilidades:</p>
+                                        <ul>
+                                            <li><a href="https://scratchbrasil.org.br/" target="_blank" class="texto">Scratch</a> - Aprenda linguagem de programação de uma maneira gamificada.</li>
+                                            <li><a href="https://www.hackerrank.com/" target="_blank" class="texto">HackerRank</a> - Plataforma com diversos desafios e tutoriais.</li>
+                                            <li><a href="https://www.codewars.com/" target="_blank" class="texto">Codewars</a> - Aprenda e pratique com desafios divertidos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="behavioral-content" role="tabpanel" aria-labelledby="behavioral-tab">
+                        <h4 class="text-center mt-3 mb-4 texto">Dominando a Entrevista Comportamental</h4>
+                        <p class="mb-3">Soft skills são tão importantes quanto as técnicas! Prepare-se para demonstrar suas habilidades de comunicação, trabalho em equipe e resolução de problemas.</p>
+                        
+                        <h5>Recursos Interativos:</h5>
+                        <div class="accordion" id="accordionBehavioral">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBehavioral1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBehavioral1" aria-expanded="false" aria-controls="collapseBehavioral1">
+                                        Simulador de Perguntas STAR
+                                    </button>
+                                </h2>
+                                 <div id="collapseBehavioral1" class="accordion-collapse collapse" aria-labelledby="headingBehavioral1" data-bs-parent="#accordionBehavioral">
+    <div class="accordion-body">
+        <p>Pratique suas respostas usando o método STAR (Situação, Tarefa, Ação, Resultado).</p>
+        <div class="card p-3 mb-3">
+            <p><strong>Pergunta Exemplo:</strong> "Descreva uma situação em que você teve que lidar com um prazo apertado."</p>
+            <textarea id="behavioralResponseTextarea" class="form-control" rows="4" placeholder="Sua resposta usando o método STAR"></textarea>
+            <button type="button" class="btn btn-primary mt-2" onclick="analyzeBehavioralResponse()">Analisar Resposta</button>
+            <div id="behavioralFeedback" class="mt-3">
+                </div>
+        </div>
+        <p><small><strong>Dica STAR:</strong> Estruture sua resposta descrevendo a Situação, a Tarefa que você tinha, as Ações que tomou e os Resultados alcançados.</small></p>
+    </div>
+      </div>
+                            </div>
+                            <div class="accordion-item">
+    <h2 class="accordion-header" id="headingBehavioral2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBehavioral2" aria-expanded="false" aria-controls="collapseBehavioral2">
+            Flashcards de Perguntas Frequentes
+        </button>
+    </h2>
+    <div id="collapseBehavioral2" class="accordion-collapse collapse" aria-labelledby="headingBehavioral2" data-bs-parent="#accordionBehavioral">
+        <div class="accordion-body">
+            <h5 class="text-center mb-3">Pratique suas respostas para as perguntas mais comuns!</h5>
+            <div class="card p-4 shadow-sm flashcard-container">
+                <div id="flashcardQuestion" class="h5 text-center mb-4"></div>
+                <div id="flashcardAnswer" class="text-center mb-4" style="display: none;"></div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="button" class="btn btn-info" id="revealAnswerBtn">Revelar Resposta</button>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-secondary" id="prevFlashcardBtn" disabled>Anterior</button>
+                    <span class="align-self-center"><span id="currentFlashcardIndex">1</span>/<span id="totalFlashcards"></span></span>
+                    <button type="button" class="btn btn-primary" id="nextFlashcardBtn">Próximo</button>
+                </div>
+            </div>
+            <p class="text-center mt-3"><small>Clique em "Revelar Resposta" para ver um exemplo de abordagem.</small></p>
+        </div>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+             <h3 class="text-center section-title mb-2">Assista a dicas e exemplos de Entrevistas</h3>
+             <p class="text-center mb-3">Aprenda na prática! Assista a simulações de entrevistas e analise as melhores abordagens.</p>
+
+            <div class="col-lg-10">
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="text-center card-title texto">Entrevista real para uma vaga de programador</h5>
+            <p class="text-center card-text">Veja como funciona uma entrevista técnica e comportamental para uma vaga de Programador.</p>
+            
+            <div class="d-flex justify-content-center">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zgWLE39vBww?si=-s22GmVr23nP9xVC" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <h6 class="text-center mt-3 texto">Análise e Feedback:</h6>
+            <p class="text-center card-text">Este vídeo demonstra a importância de articular bem suas experiências. <br>Observe como o candidato explica seus projetos pessoais e lida com perguntas sobre trabalho em equipe.</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="text-center card-title texto"> Dicas para passar em uma entrevista</h5>
+            <p class="text-center card-text">Acompanhe dicas sobre o que os recrutadores avaliam e maneiras<br> ideais para se comportar em uma entrevista.</p>
+            
+            <div class="d-flex justify-content-center">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YxmGKWf7RqU?si=Pis_KXgka3VBFK7D" 
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                </div>
+            </div>
+            
+            <h6 class="text-center mt-3 texto">Análise e Feedback:</h6>
+            <p class="text-center card-text">Observe a clareza nas explicações e a forma como o candidato aborda problemas complexos. <br>A comunicação técnica é crucial nesta área.</p>
+        </div>
+    </div>
+</div>
+        </div>
+
+    
+    <div class="modal fade" id="logicQuizModal" tabindex="-1" aria-labelledby="logicQuizModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logicQuizModalLabel">Quiz de Lógica de Programação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="logicQuizContent">
+                        <h4 id="logicQuestionText"></h4>
+                        <div id="logicOptionsContainer" class="mt-3">
+                            
+                        </div>
+                        <div id="logicFeedbackContainer" class="mt-3">
+                            
+                        </div>
+                    </div>
+                    <div id="logicQuizResult" style="display: none;">
+                        <h4 class="text-center">Quiz Concluído!</h4>
+                        <p class="text-center">Sua pontuação: <span id="logicScoreDisplay"></span> de <span id="logicTotalQuestionsDisplay"></span></p>
+                        <div id="logicResultFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="logicNextQuestionBtn">Próxima Pergunta</button>
+                    <button type="button" class="btn btn-success" id="logicRestartQuizBtn" style="display: none;">Reiniciar Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="sqlQuizModal" tabindex="-1" aria-labelledby="sqlQuizModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sqlQuizModalLabel">Quiz de SQL Básico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="sqlQuizContent">
+                        <h4 id="sqlQuestionText"></h4>
+                        <div id="sqlOptionsContainer" class="mt-3">
+                            
+                        </div>
+                        <div id="sqlFeedbackContainer" class="mt-3">
+                            
+                        </div>
+                    </div>
+                    <div id="sqlQuizResult" style="display: none;">
+                        <h4 class="text-center">Quiz Concluído!</h4>
+                        <p class="text-center">Sua pontuação: <span id="sqlScoreDisplay"></span> de <span id="sqlTotalQuestionsDisplay"></span></p>
+                        <div id="sqlResultFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="sqlNextQuestionBtn">Próxima Pergunta</button>
+                    <button type="button" class="btn btn-success" id="sqlRestartQuizBtn" style="display: none;">Reiniciar Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="networksQuizModal" tabindex="-1" aria-labelledby="networksQuizModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="networksQuizModalLabel">Quiz de Conceitos de Redes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="networksQuizContent">
+                        <h4 id="networksQuestionText"></h4>
+                        <div id="networksOptionsContainer" class="mt-3">
+                            
+                        </div>
+                        <div id="networksFeedbackContainer" class="mt-3">
+                            
+                        </div>
+                    </div>
+                    <div id="networksQuizResult" style="display: none;">
+                        <h4 class="text-center">Quiz Concluído!</h4>
+                        <p class="text-center">Sua pontuação: <span id="networksScoreDisplay"></span> de <span id="networksTotalQuestionsDisplay"></span></p>
+                        <div id="networksResultFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="networksNextQuestionBtn">Próxima Pergunta</button>
+                    <button type="button" class="btn btn-success" id="networksRestartQuizBtn" style="display: none;">Reiniciar Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer class="container mt-5">
+    <div class="row py-4 border-top text-muted">
+        <div class="col-md-3">
+            <h5 class="titulo-footer">Navegação</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5 class="titulo-footer">Futuro Profissional</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5 class="titulo-footer">Busque Ajuda</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5 class="titulo-footer">Sobre o H2N-Tech</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row pt-3 pb-2 text-center text-muted border-top mt-3">
+        <div class="col-12">
+            <p class="mb-0">&copy; H2N Technology</p>
+        </div>
+    </div>
+</footer>  
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ... (Seu código JavaScript existente, incluindo analyzeBehavioralResponse, createQuizManager, flashcardManager, etc.) ...
+
+function generateChecklistFeedback() {
+    const feedbackResultDiv = document.getElementById('feedbackResult');
+    feedbackResultDiv.innerHTML = ''; // Limpa feedbacks anteriores
+
+    // Obtém o estado de cada checkbox
+    const checkKeyword = document.getElementById('checkKeyword').checked;
+    const checkObjective = document.getElementById('checkObjective').checked;
+    const checkProjects = document.getElementById('checkProjects').checked;
+    const checkMetrics = document.getElementById('checkMetrics').checked;
+    const checkFormat = document.getElementById('checkFormat').checked;
+
+    let score = 0;
+    let messages = [];
+
+    if (checkKeyword) {
+        score++;
+        messages.push("✅ Ótimo! O uso de palavras-chave aumenta a visibilidade do seu currículo para recrutadores e sistemas ATS.");
+    } else {
+        messages.push("⚠️ Dica: Inclua palavras-chave relevantes da área (ex: Python, Java, Cloud, Agile) para destacar suas habilidades.");
+    }
+
+    if (checkObjective) {
+        score++;
+        messages.push("✅ Excelente! Um objetivo profissional claro direciona sua aplicação e mostra foco.");
+    } else {
+        messages.push("⚠️ Dica: Adicione um objetivo profissional conciso e alinhado à vaga desejada.");
+    }
+
+    if (checkProjects) {
+        score++;
+        messages.push("✅ Muito bom! Projetos demonstram sua capacidade prática e proatividade.");
+    } else {
+        messages.push("⚠️ Dica: Inclua projetos pessoais ou acadêmicos relevantes, com links para GitHub ou portfólio, se tiver.");
+    }
+
+    if (checkMetrics) {
+        score++;
+        messages.push("✅ Fantástico! Quantificar resultados** destaca seu impacto e valor para a empresa.");
+    } else {
+        messages.push("⚠️ Dica: Sempre que possível, inclua resultados e conquistas quantificáveis para mostrar seu impacto.");
+    }
+
+    if (checkFormat) {
+        score++;
+        messages.push("✅ Perfeito! Um formato limpo e organizado** facilita a leitura e causa uma boa primeira impressão.");
+    } else {
+        messages.push("⚠️ Dica: Garanta que seu currículo tenha um formato limpo, organizado e fácil de ler.");
+    }
+
+    let overallFeedback = '';
+    let alertClass = '';
+
+    // Define a mensagem geral e a classe de estilo do alerta com base na pontuação
+    if (score === 5) {
+        overallFeedback = "🎉 Parabéns! Seu currículo está completo e com grandes chances de sucesso!";
+        alertClass = 'alert-success'; // Bootstrap verde para sucesso
+    } else if (score >= 3) {
+        overallFeedback = "👍 Bom trabalho! Seu currículo já tem uma boa base, mas alguns ajustes podem torná-lo ainda mais forte.";
+        alertClass = 'alert-info'; // Bootstrap azul para informação/progresso
+    } else {
+        overallFeedback = "✍️ Hora de aprimorar! Revise os pontos indicados para ter um currículo mais competitivo.";
+        alertClass = 'alert-warning'; // Bootstrap amarelo para atenção
+    }
+
+    // Constrói o HTML final para o feedback
+    let feedbackHtml = `
+        <div class="alert ${alertClass} alert-dismissible fade show" role="alert">
+            <h4 class="alert-heading">Feedback do Currículo:</h4>
+            <p>${overallFeedback}</p>
+            <hr>
+            <ul>
+                ${messages.map(msg => `<li>${msg}</li>`).join('')}
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    `;
+
+    feedbackResultDiv.innerHTML = feedbackHtml;
+    // Rola a página para o feedback para que o usuário veja
+    feedbackResultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ... (Restante do seu código, como os event listeners para DOMContentLoaded, quizzes e flashcards) ...
+
+    function analyzeBehavioralResponse() {
+    const userResponseTextarea = document.getElementById('behavioralResponseTextarea');
+    const feedbackDiv = document.getElementById('behavioralFeedback');
+    
+    feedbackDiv.innerHTML = ''; // Limpa mensagens anteriores
+
+    const userResponse = userResponseTextarea.value.trim();
+
+    // 1. Validação de resposta vazia
+    if (userResponse === '') {
+        feedbackDiv.innerHTML = `
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading">Atenção!</h4>
+                <p>Por favor, digite sua resposta antes de analisar.</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+        feedbackDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return; 
+    }
+
+    // 2. Mensagem de carregamento
+    feedbackDiv.innerHTML = `
+        <div class="alert alert-info" role="alert">
+            <h4 class="alert-heading">Analisando sua resposta...</h4>
+            <p>Isso pode levar alguns segundos. Estamos verificando a estrutura STAR.</p>
+        </div>
+    `;
+    feedbackDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Simula o processamento com um pequeno atraso (ex: 2 segundos)
+    setTimeout(() => {
+        let analysisResultHtml = '';
+        let customAlertClass = ''; // Esta variável armazenará a classe de cor
+        let buttonCloseClass = ''; // Para o botão de fechar (se precisar ser branco)
+
+        const lowerCaseResponse = userResponse.toLowerCase();
+
+        const hasSituacao = lowerCaseResponse.includes('situação') || lowerCaseResponse.includes('contexto') || lowerCaseResponse.includes('ocasião');
+        const hasTarefa = lowerCaseResponse.includes('tarefa') || lowerCaseResponse.includes('objetivo') || lowerCaseResponse.includes('desafio');
+        const hasAcao = lowerCaseResponse.includes('ação') || lowerCaseResponse.includes('eu fiz') || lowerCaseResponse.includes('decidi') || lowerCaseResponse.includes('implementei');
+        const hasResultado = lowerCaseResponse.includes('resultado') || lowerCaseResponse.includes('consequência') || lowerCaseResponse.includes('impacto') || lowerCaseResponse.includes('concluí');
+
+        let feedbackMessages = [];
+        let score = 0;
+
+        if (hasSituacao) {
+            feedbackMessages.push('Sua resposta descreve uma Situação clara.');
+            score++;
+        } else {
+            feedbackMessages.push('Tente detalhar mais a Situação ou o contexto inicial.');
+        }
+
+        if (hasTarefa) {
+            feedbackMessages.push('A Tarefa ou desafio que você enfrentou está bem definida.');
+            score++;
+        } else {
+            feedbackMessages.push('Certifique-se de descrever claramente a Tarefa ou seu objetivo na situação.');
+        }
+
+        if (hasAcao) {
+            feedbackMessages.push('Suas Ações são evidentes e demonstram sua iniciativa.');
+            score++;
+        } else {
+            feedbackMessages.push('Detalhe mais as Ações específicas que você tomou.');
+        }
+
+        if (hasResultado) {
+            feedbackMessages.push('O Resultado das suas ações está presente, mostrando o impacto.');
+            score++;
+        } else {
+            feedbackMessages.push('Inclua os Resultados concretos de suas ações para fechar a resposta.');
+        }
+
+        // Determina as classes de estilo do alerta com base na pontuação
+        if (score === 4) {
+            customAlertClass = 'alert-analysis-success'; // Usa a nova classe CSS personalizada
+            analysisResultHtml += '<h4 class="alert-heading">Análise Concluída: Excelente!</h4>';
+            analysisResultHtml += '<p>Sua resposta STAR está completa e muito bem estruturada.</p>';
+            buttonCloseClass = ''; // Botão de fechar padrão (escuro) para fundo claro
+        } else if (score >= 2) {
+            customAlertClass = 'alert-warning'; // Mantém o amarelo padrão do Bootstrap
+            analysisResultHtml += '<h4 class="alert-heading">Análise Concluída: Bom progresso!</h4>';
+            analysisResultHtml += '<p>Sua resposta já possui elementos STAR, mas há pontos para aprimoramento:</p>';
+            buttonCloseClass = '';
+        } else {
+            customAlertClass = 'alert-danger'; // Mantém o vermelho padrão do Bootstrap
+            analysisResultHtml += '<h4 class="alert-heading">Análise Concluída: Precisa de atenção.</h4>';
+            analysisResultHtml += '<p>Sua resposta pode ser aprimorada. Revise a dica STAR e tente novamente:</p>';
+            buttonCloseClass = 'btn-close-white'; // Botão de fechar branco para fundo escuro
+        }
+
+        // Adiciona as mensagens de feedback detalhadas
+        analysisResultHtml += '<hr>';
+        analysisResultHtml += '<ul>' + feedbackMessages.map(msg => `<li>${msg}</li>`).join('') + '</ul>';
+        
+        // Exibe o resultado final na interface com as classes de estilo corretas
+        feedbackDiv.innerHTML = `
+            <div class="alert ${customAlertClass} alert-dismissible fade show" role="alert">
+                ${analysisResultHtml}
+                <button type="button" class="btn-close ${buttonCloseClass}" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+        feedbackDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    }, 2000); // 2000 milissegundos = 2 segundos de atraso simulado
+}
+        /* --- Funções Auxiliares Comuns para Quizzes --- */
+// Usei prefixos para evitar conflito de IDs e variáveis
+function createQuizManager(prefix, questions) {
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let selectedOption = null;
+    let feedbackShown = false; // Nova flag para controlar o estado do feedback
+
+    const quizContent = document.getElementById(`${prefix}QuizContent`);
+    const questionText = document.getElementById(`${prefix}QuestionText`);
+    const optionsContainer = document.getElementById(`${prefix}OptionsContainer`);
+    const feedbackContainer = document.getElementById(`${prefix}FeedbackContainer`);
+    const quizResult = document.getElementById(`${prefix}QuizResult`);
+    const scoreDisplay = document.getElementById(`${prefix}ScoreDisplay`);
+    const totalQuestionsDisplay = document.getElementById(`${prefix}TotalQuestionsDisplay`);
+    const resultFeedback = document.getElementById(`${prefix}ResultFeedback`);
+    const nextQuestionBtn = document.getElementById(`${prefix}NextQuestionBtn`);
+    const restartQuizBtn = document.getElementById(`${prefix}RestartQuizBtn`);
+
+    function startQuiz() {
+        currentQuestionIndex = 0;
+        score = 0;
+        selectedOption = null;
+        feedbackShown = false; // Resetar a flag
+
+        quizContent.style.display = 'block';
+        quizResult.style.display = 'none';
+        nextQuestionBtn.style.display = 'block';
+        restartQuizBtn.style.display = 'none';
+        feedbackContainer.innerHTML = '';
+        
+        loadQuestion();
+    }
+
+    function loadQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        questionText.textContent = `Pergunta ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
+        optionsContainer.innerHTML = '';
+        feedbackContainer.innerHTML = '';
+        selectedOption = null;
+        feedbackShown = false; // Resetar a flag ao carregar nova pergunta
+
+        // Remover a classe 'disabled-click' de todas as opções antes de adicionar novas
+        document.querySelectorAll(`#${prefix}OptionsContainer .quiz-option`).forEach(option => {
+            option.classList.remove('disabled-click');
+        });
+
+
+        questions[currentQuestionIndex].options.forEach((option, index) => {
+            const optionDiv = document.createElement('div');
+            optionDiv.classList.add('quiz-option');
+            optionDiv.textContent = option;
+            optionDiv.dataset.index = index;
+            // O evento de clique agora só seleciona a opção
+            optionDiv.addEventListener('click', () => selectOption(optionDiv, index));
+            optionsContainer.appendChild(optionDiv);
+        });
+
+        nextQuestionBtn.textContent = (currentQuestionIndex === questions.length - 1) ? 'Ver Resultado' : 'Verificar Resposta'; // Texto inicial do botão
+        nextQuestionBtn.disabled = true; // Desabilita até uma opção ser selecionada
+    }
+
+    function selectOption(selectedDiv, selectedIndex) {
+        // Se o feedback já foi mostrado para esta pergunta, não permitir novas seleções
+        if (feedbackShown) return; 
+
+        document.querySelectorAll(`#${prefix}OptionsContainer .quiz-option`).forEach(option => {
+            option.classList.remove('selected', 'correct', 'incorrect');
+        });
+
+        selectedDiv.classList.add('selected');
+        selectedOption = selectedIndex;
+        nextQuestionBtn.textContent = (currentQuestionIndex === questions.length - 1) ? 'Ver Resultado' : 'Verificar Resposta'; // Garante o texto correto
+        nextQuestionBtn.disabled = false; // Habilita o botão para verificar a resposta
+    }
+
+    // NOVA FUNÇÃO PARA AVANÇAR APÓS O FEEDBACK
+    function advanceQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    // Modificada para exibir feedback e esperar pelo clique do usuário para avançar
+    function processAnswer() {
+        if (selectedOption === null) {
+            alert('Por favor, selecione uma opção antes de verificar.');
+            return;
+        }
+
+        const currentQuestion = questions[currentQuestionIndex];
+        const isCorrect = (selectedOption === currentQuestion.correctAnswerIndex);
+        
+        // Aplica feedback visual às opções e desabilita cliques
+        document.querySelectorAll(`#${prefix}OptionsContainer .quiz-option`).forEach((optionDiv, index) => {
+            if (index === currentQuestion.correctAnswerIndex) {
+                optionDiv.classList.add('correct');
+            } else if (index === selectedOption && !isCorrect) {
+                optionDiv.classList.add('incorrect');
+            }
+            optionDiv.classList.add('disabled-click'); // Desabilita cliques após a seleção
+        });
+
+        // Exibe o feedback textual
+        feedbackContainer.innerHTML = `
+            <div class="alert ${isCorrect ? 'alert-success' : 'alert-danger'} mt-3">
+                ${isCorrect ? '✅ Correto!' : '❌ Incorreto.'}
+                <br>
+                <strong>Explicação:</strong> ${currentQuestion.rationale}
+            </div>
+        `;
+
+        if (isCorrect) {
+            score++;
+        }
+
+        feedbackShown = true; // Define a flag de feedback como true
+        nextQuestionBtn.textContent = (currentQuestionIndex === questions.length - 1) ? 'Ver Resultado Final' : 'Próxima Pergunta'; // Altera o texto do botão
+        nextQuestionBtn.disabled = false; // Reabilita o botão para o usuário avançar
+    }
+
+    function showResult() {
+        quizContent.style.display = 'none';
+        quizResult.style.display = 'block';
+        nextQuestionBtn.style.display = 'none';
+        restartQuizBtn.style.display = 'block';
+
+        scoreDisplay.textContent = score;
+        totalQuestionsDisplay.textContent = questions.length;
+
+        if (score === questions.length) {
+            resultFeedback.innerHTML = `<div class="alert alert-success text-center">🎉 Parabéns! Você acertou todas as perguntas!</div>`;
+        } else if (score >= questions.length / 2) {
+            resultFeedback.innerHTML = `<div class="alert alert-info text-center">Muito bem! Você teve um bom desempenho. Continue praticando!</div>`;
+        } else {
+            resultFeedback.innerHTML = `<div class="alert alert-warning text-center">Continue estudando! Você pode melhorar sua pontuação.</div>`;
+        }
+    }
+
+    // Modificando o event listener do botão "Próxima Pergunta"
+    nextQuestionBtn.addEventListener('click', () => {
+        if (!feedbackShown) { // Se o feedback ainda não foi mostrado
+            processAnswer(); // Processa a resposta e mostra o feedback
+        } else { // Se o feedback já foi mostrado, significa que o usuário clicou para avançar
+            advanceQuestion(); // Avança para a próxima pergunta
+        }
+    });
+
+    restartQuizBtn.addEventListener('click', startQuiz);
+
+    return { startQuiz }; // Retorna a função para iniciar o quiz
+}
+        /* --- DADOS DOS QUIZZES --- */
+
+const logicQuizQuestions = [
+    {
+        question: "Se 'todos os A são B' e 'nenhum B é C', o que podemos concluir sobre A e C?",
+        options: [ "Todos os A são C.", "Nenhum A é C.", "Alguns A são C.", "Alguns B são A." ],
+        correctAnswerIndex: 1,
+        rationale: "Se todos os A pertencem ao grupo B, e nenhum item do grupo B pode ser C, então é logicamente impossível que qualquer A seja C."
+    },
+    {
+        question: "Qual é o resultado da expressão booleana: `(TRUE AND FALSE) OR (NOT FALSE)`?",
+        options: [ "TRUE", "FALSE", "Erro de sintaxe", "Depende da linguagem de programação" ],
+        correctAnswerIndex: 0,
+        rationale: "A expressão 'TRUE AND FALSE' resulta em FALSE. A expressão 'NOT FALSE' resulta em TRUE. Portanto, 'FALSE OR TRUE' resulta em TRUE."
+    },
+    {
+        question: "Se a afirmação 'Se chove, então a rua fica molhada' é verdadeira, e 'a rua não está molhada' é uma constatação, o que podemos concluir?",
+        options: [ "Choveu.", "Não choveu.", "Pode ter chovido ou não.", "A premissa é falsa." ],
+        correctAnswerIndex: 1,
+        rationale: "Se a rua não está molhada, então a condição 'choveu' não pode ter ocorrido, pois isso contradiria a premissa de que 'se chove, a rua fica molhada'."
+    },
+    {
+        question: "Em um circuito lógico, se a entrada A é 1 e a entrada B é 0, qual é a saída de uma porta XOR (OU Exclusivo)?",
+        options: [ "0", "1", "Depende da polaridade", "Erro de circuito" ],
+        correctAnswerIndex: 1,
+        rationale: "A porta XOR (Exclusive OR) produz uma saída 1 se e somente se suas entradas são diferentes. Com A=1 e B=0, as entradas são diferentes, resultando em 1."
+    },
+    {
+        question: "Qual das seguintes proposições é uma tautologia?",
+        options: [ "P AND (NOT P)", "P OR (NOT P)", "P IMPLIES Q", "(P AND Q) IMPLIES P" ],
+        correctAnswerIndex: 1,
+        rationale: "Uma tautologia é uma proposição que é sempre verdadeira, independentemente dos valores de verdade de suas proposições componentes. 'P OR (NOT P)' é sempre verdadeira, pois P é verdadeiro ou P é falso."
+    },
+    {
+        question: "Se 'todo desenvolvedor usa Git' e 'Maria é desenvolvedora', o que podemos afirmar?",
+        options: [ "Maria pode não usar Git.", "Maria usa Git.", "Git é usado apenas por desenvolvedores.", "A afirmação é inválida." ],
+        correctAnswerIndex: 1,
+        rationale: "Este é um exemplo de silogismo dedutivo válido. Se todos os membros de um grupo (desenvolvedores) possuem uma característica (usam Git) e um indivíduo pertence a esse grupo, então o indivíduo possui essa característica."
+    },
+    {
+        question: "Qual o valor de Y no algoritmo: 'X = 5, Y = X + 2, X = Y - 1'?",
+        options: [ "4", "6", "7", "5" ],
+        correctAnswerIndex: 2,
+        rationale: "Primeiro, X é 5. Depois, Y recebe X + 2, então Y = 5 + 2 = 7. A última operação (X = Y - 1) altera X, mas não Y, que já foi definido."
+    },
+    {
+        question: "Se (P OR Q) é verdadeiro e P é falso, o que podemos concluir sobre Q?",
+        options: [ "Q é falso.", "Q é verdadeiro.", "Não se pode concluir nada sobre Q.", "Pode ser verdadeiro ou falso." ],
+        correctAnswerIndex: 1,
+        rationale: "Para que a disjunção 'P OR Q' seja verdadeira, pelo menos uma das proposições (P ou Q) deve ser verdadeira. Se P é falso, então Q obrigatoriamente precisa ser verdadeiro."
+    },
+    {
+        question: "Qual é a negação da afirmação 'Todo software é perfeito'?",
+        options: [ "Nenhum software é perfeito.", "Algum software é perfeito.", "Algum software não é perfeito.", "O software não é bom." ],
+        correctAnswerIndex: 2,
+        rationale: "A negação de uma proposição universal afirmativa ('Todo S é P') é uma proposição particular negativa ('Algum S não é P')."
+    },
+    {
+        question: "Se um loop 'while' tem a condição `(contador < 5)` e `contador` começa em 0 e é incrementado em 1 a cada iteração, quantas vezes o loop será executado?",
+        options: [ "4 vezes", "5 vezes", "6 vezes", "Infinitas vezes" ],
+        correctAnswerIndex: 1,
+        rationale: "O loop será executado quando contador for 0, 1, 2, 3 e 4. Quando contador se torna 5, a condição '5 < 5' é falsa, e o loop termina. Isso resulta em 5 execuções."
+    }
+];
+
+const sqlQuizQuestions = [
+    {
+        question: "Qual comando SQL é usado para extrair dados de um banco de dados?",
+        options: ["UPDATE", "INSERT", "SELECT", "DELETE"],
+        correctAnswerIndex: 2,
+        rationale: "O comando SELECT é o principal comando SQL para recuperar dados de uma ou mais tabelas em um banco de dados."
+    },
+    {
+        question: "Qual cláusula é usada com SELECT para filtrar registros com base em uma condição?",
+        options: ["GROUP BY", "ORDER BY", "WHERE", "HAVING"],
+        correctAnswerIndex: 2,
+        rationale: "A cláusula WHERE é usada para filtrar registros, extraindo apenas aqueles que satisfazem uma condição especificada."
+    },
+    {
+        question: "Qual tipo de JOIN retorna apenas as linhas que têm correspondências em ambas as tabelas?",
+        options: ["LEFT JOIN", "RIGHT JOIN", "FULL JOIN", "INNER JOIN"],
+        correctAnswerIndex: 3,
+        rationale: "Um INNER JOIN retorna apenas as linhas que têm valores correspondentes em ambas as tabelas que estão sendo unidas."
+    },
+    {
+        question: "Qual comando SQL é usado para criar uma nova tabela em um banco de dados?",
+        options: ["ADD TABLE", "NEW TABLE", "CREATE TABLE", "MAKE TABLE"],
+        correctAnswerIndex: 2,
+        rationale: "O comando CREATE TABLE é uma instrução DDL (Data Definition Language) usada para definir a estrutura de uma nova tabela no banco de dados."
+    },
+    {
+        question: "Para contar o número total de linhas em uma tabela, qual função de agregação você usaria?",
+        options: ["SUM()", "AVG()", "COUNT()", "MAX()"],
+        correctAnswerIndex: 2,
+        rationale: "A função COUNT() é usada para retornar o número de linhas que correspondem a um critério especificado. COUNT(*) conta todas as linhas."
+    },
+    {
+        question: "Qual cláusula é usada para agrupar o conjunto de resultados por uma ou mais colunas?",
+        options: ["ORDER BY", "WHERE", "GROUP BY", "DISTINCT"],
+        correctAnswerIndex: 2,
+        rationale: "A cláusula GROUP BY é usada em conjunto com funções de agregação para agrupar linhas que têm os mesmos valores em colunas especificadas em um conjunto de linhas de resumo."
+    },
+    {
+        question: "Qual comando SQL é usado para modificar dados existentes em um banco de dados?",
+        options: ["ALTER", "MODIFY", "CHANGE", "UPDATE"],
+        correctAnswerIndex: 3,
+        rationale: "O comando UPDATE é uma instrução DML (Data Manipulation Language) usada para alterar os dados de uma ou mais linhas existentes em uma tabela."
+    },
+    {
+        question: "Para remover uma tabela inteira de um banco de dados, qual comando você usaria?",
+        options: ["DELETE TABLE", "REMOVE TABLE", "DROP TABLE", "TRUNCATE TABLE"],
+        correctAnswerIndex: 2,
+        rationale: "O comando DROP TABLE é uma instrução DDL (Data Definition Language) usada para remover completamente uma tabela de um banco de dados, incluindo seus dados e sua definição."
+    },
+    {
+        question: "Qual cláusula é usada para limitar o número de linhas retornadas por uma consulta?",
+        options: ["TOP", "LIMIT", "ROWNUM", "FETCH"],
+        correctAnswerIndex: 1,
+        rationale: "A cláusula LIMIT (usada em MySQL, PostgreSQL, SQLite) ou OFFSET/FETCH (SQL Server 2012+) é usada para restringir o número de linhas no conjunto de resultados. LIMIT é o mais comum para esta finalidade em vários sistemas."
+    },
+    {
+        question: "O que significa 'SQL'?",
+        options: ["Standard Query Language", "Structured Question Language", "Strong Query Logic", "Structured Query Language"],
+        correctAnswerIndex: 3,
+        rationale: "SQL é a sigla para 'Structured Query Language', uma linguagem de domínio específico projetada para gerenciar dados em sistemas de gerenciamento de banco de dados relacionais."
+    }
+];
+
+const networksQuizQuestions = [
+    {
+        question: "Qual camada do modelo OSI é responsável pela entrega de pacotes de um host de origem para um host de destino em redes diferentes?",
+        options: ["Camada Física", "Camada de Enlace", "Camada de Rede", "Camada de Transporte"],
+        correctAnswerIndex: 2,
+        rationale: "A Camada de Rede (Camada 3) é responsável pelo roteamento lógico dos pacotes e endereçamento IP, permitindo a comunicação entre redes diferentes."
+    },
+    {
+        question: "Qual protocolo é amplamente utilizado para navegação na web e transferência de hipertexto?",
+        options: ["FTP (File Transfer Protocol)", "SMTP (Simple Mail Transfer Protocol)", "HTTP (Hypertext Transfer Protocol)", "SSH (Secure Shell)"],
+        correctAnswerIndex: 2,
+        rationale: "HTTP é o protocolo fundamental para a World Wide Web, utilizado para a comunicação entre navegadores e servidores web."
+    },
+    {
+        question: "Qual dispositivo de rede é usado para conectar diferentes redes e encaminhar pacotes entre elas com base em endereços IP?",
+        options: ["Hub", "Switch", "Roteador", "Modem"],
+        correctAnswerIndex: 2,
+        rationale: "Um roteador é um dispositivo de Camada de Rede (Camada 3) que encaminha pacotes entre redes distintas, usando endereços IP para determinar o melhor caminho."
+    },
+    {
+        question: "Qual é a finalidade principal do DNS (Domain Name System)?",
+        options: ["Criptografar dados transmitidos pela internet.", "Atribuir endereços IP dinamicamente a dispositivos.", "Traduzir nomes de domínio legíveis por humanos em endereços IP.", "Gerenciar o fluxo de tráfego em uma rede local (LAN)."],
+        correctAnswerIndex: 2,
+        rationale: "O DNS funciona como uma 'lista telefônica' da internet, convertendo nomes de sites (como www.exemplo.com) em endereços IP numéricos que os computadores usam para se comunicar."
+    },
+    {
+        question: "Qual protocolo da Camada de Transporte é orientado à conexão e garante a entrega confiável e ordenada dos dados?",
+        options: ["UDP (User Datagram Protocol)", "IP (Internet Protocol)", "TCP (Transmission Control Protocol)", "ICMP (Internet Control Message Protocol)"],
+        correctAnswerIndex: 2,
+        rationale: "TCP é um protocolo orientado à conexão que estabelece uma conexão antes de transmitir dados, garantindo a entrega confiável, ordenada e com controle de fluxo e congestionamento."
+    },
+    {
+        question: "O que é um endereço MAC (Media Access Control)?",
+        options: ["Um endereço lógico usado para roteamento entre redes.", "Um endereço físico único atribuído a cada interface de rede.", "O nome de domínio de um website.", "Um número de porta usado para identificar serviços de aplicação."],
+        correctAnswerIndex: 1,
+        rationale: "O endereço MAC é um identificador físico e único de 48 bits (6 bytes) gravado no hardware da placa de rede (NIC), usado na Camada de Enlace de Dados para identificar dispositivos em uma rede local."
+    },
+    {
+        question: "Qual o principal objetivo de um firewall em uma rede de computadores?",
+        options: ["Aumentar a velocidade da conexão à internet.", "Armazenar backups de dados importantes.", "Proteger a rede contra acessos não autorizados e ataques maliciosos.", "Distribuir endereços IP automaticamente aos dispositivos."],
+        correctAnswerIndex: 2,
+        rationale: "Um firewall é um sistema de segurança de rede que monitora e controla o tráfego de rede de entrada e saída com base em regras de segurança predeterminadas, protegendo contra ameaças."
+    },
+    {
+        question: "Em qual camada do modelo TCP/IP o protocolo HTTP opera?",
+        options: ["Camada de Rede", "Camada de Transporte", "Camada de Aplicação", "Camada de Enlace"],
+        correctAnswerIndex: 2,
+        rationale: "No modelo TCP/IP, a Camada de Aplicação (a camada superior) engloba as funcionalidades das camadas de Aplicação, Apresentação e Sessão do modelo OSI. Protocolos como HTTP, FTP, SMTP e DNS operam nesta camada."
+    },
+    {
+        question: "Qual o nome do processo de converter um nome de domínio (ex: www.google.com) em um endereço IP?",
+        options: ["Roteamento", "Encaminhamento", "Resolução de Nomes (Name Resolution)", "Mapeamento de Rede"],
+        correctAnswerIndex: 2,
+        rationale: "A resolução de nomes é o processo de traduzir nomes de domínio (humanamente legíveis) em endereços IP (numéricos) que os computadores podem usar para se comunicar, sendo a principal função do DNS."
+    },
+    {
+        question: "Uma rede local (LAN) se refere a uma rede que:",
+        options: ["Abrange uma grande área geográfica, como um país ou continente.", "Conecta dispositivos em uma área limitada, como uma casa, escritório ou campus.", "É usada exclusivamente por governos e forças armadas.", "Permite apenas a comunicação unidirecional."],
+        correctAnswerIndex: 1,
+        rationale: "Uma LAN (Local Area Network) é uma rede de computadores que interconecta computadores em uma área limitada, como uma residência, escola, laboratório universitário ou prédio de escritórios."
+    }
+];
+
+        /* --- INSTANCIANDO OS QUIZZES --- */
+        // Usamos a função createQuizManager para cada quiz, passando um prefixo único
+        // e o array de perguntas correspondente.
+
+        const logicQuizManager = createQuizManager('logic', logicQuizQuestions);
+        const sqlQuizManager = createQuizManager('sql', sqlQuizQuestions);
+        const networksQuizManager = createQuizManager('networks', networksQuizQuestions);
+
+        // Quando cada modal é mostrado, iniciamos o quiz correspondente
+        document.getElementById('logicQuizModal').addEventListener('shown.bs.modal', logicQuizManager.startQuiz);
+        document.getElementById('sqlQuizModal').addEventListener('shown.bs.modal', sqlQuizManager.startQuiz);
+        document.getElementById('networksQuizModal').addEventListener('shown.bs.modal', networksQuizManager.startQuiz);
+
+        /* --- Flashcard Manager --- */
+const flashcardQuestions = [
+    {
+        question: "Fale sobre você.",
+        answer: "Comece com um breve resumo da sua trajetória profissional, seus pontos fortes e o que você busca. Ex: 'Sou um desenvolvedor front-end com 3 anos de experiência, apaixonado por criar interfaces intuitivas. Nos últimos projetos, foquei em React e busco agora uma empresa que valorize inovação e desenvolvimento contínuo.'"
+    },
+    {
+        question: "Por que você quer trabalhar nesta empresa?",
+        answer: "Pesquise a fundo a empresa! Mencione algo específico: a cultura, um projeto recente, valores ou tecnologias que eles usam. Ex: 'Acompanho o trabalho da [Nome da Empresa] há um tempo, especialmente o projeto X, e me identifico com a cultura de inovação e o foco em [mencione um valor específico, como impacto social ou tecnologia de ponta].'"
+    },
+    {
+        question: "Onde você se vê daqui a 5 anos?",
+        answer: "Mostre ambição e alinhamento com a área. Evite respostas genéricas. Ex: 'Em 5 anos, me vejo como um especialista em [sua área de interesse, ex: arquitetura de software/data science], liderando projetos e contribuindo ativamente para o crescimento da empresa, talvez mentorando novos talentos. Busco um lugar onde eu possa continuar aprendendo e me desafiando.'"
+    },
+    {
+        question: "Qual sua maior fraqueza?",
+        answer: "Escolha uma fraqueza real, mas que você esteja trabalhando para melhorar, e mostre como. Ex: 'Antigamente, eu tinha dificuldade em delegar tarefas por querer controlar tudo. Mas estou ativamente melhorando isso, confiando mais na equipe e usando ferramentas de gestão de projetos para otimizar o fluxo de trabalho.'"
+    },
+    {
+        question: "Descreva uma situação em que você cometeu um erro e como lidou com ela.",
+        answer: "Use o método STAR (Situação, Tarefa, Ação, Resultado). Foco na aprendizagem e resolução. Ex: 'Uma vez, cometi um erro em um código que atrasou uma funcionalidade (Situação). Minha tarefa era corrigir e evitar que acontecesse novamente (Tarefa). Imediatamente, comuniquei o erro à equipe, revisei o código com um colega para identificar a causa e implementamos um processo de revisão de pares (Ação). Como resultado, corrigimos a falha rapidamente e melhoramos nossa qualidade de código, reduzindo erros futuros (Resultado).'"
+    },
+    {
+        question: "Como você lida com feedback negativo?",
+        answer: "Mostre maturidade e abertura ao aprendizado. Ex: 'Considero o feedback, mesmo que negativo, uma oportunidade valiosa de crescimento. Sou grato por ele, pois me ajuda a identificar pontos cegos. Sempre busco entender a perspectiva, pedir exemplos se necessário, e criar um plano de ação para aplicar as melhorias.'"
+    },
+    {
+        question: "Qual sua expectativa salarial?",
+        answer: "Pesquise a média de mercado para a posição e seu nível de experiência. Apresente uma faixa. Ex: 'Minha expectativa está na faixa de R$X.XXX a R$Y.YYY, que considero compatível com minhas qualificações e com a média do mercado para essa posição e nível de experiência. Mas estou aberto a negociar com base no pacote total de benefícios.'"
+    },
+    {
+        question: "Você tem alguma pergunta para nós?",
+        answer: "Sempre faça perguntas! Demonstra interesse. Pergunte sobre a cultura da equipe, os desafios da posição, o processo de onboarding, ou oportunidades de desenvolvimento. Ex: 'Qual é o maior desafio que a equipe enfrenta atualmente?' ou 'Como a empresa apoia o desenvolvimento profissional dos seus colaboradores?'"
+    }
+];
+
+let currentFlashcardIndex = 0;
+
+const flashcardQuestionEl = document.getElementById('flashcardQuestion');
+const flashcardAnswerEl = document.getElementById('flashcardAnswer');
+const revealAnswerBtn = document.getElementById('revealAnswerBtn');
+const prevFlashcardBtn = document.getElementById('prevFlashcardBtn');
+const nextFlashcardBtn = document.getElementById('nextFlashcardBtn');
+const currentFlashcardIndexDisplay = document.getElementById('currentFlashcardIndex');
+const totalFlashcardsDisplay = document.getElementById('totalFlashcards');
+
+function loadFlashcard(index) {
+    const flashcard = flashcardQuestions[index];
+    flashcardQuestionEl.textContent = flashcard.question;
+    flashcardAnswerEl.textContent = flashcard.answer;
+    flashcardAnswerEl.style.display = 'none'; // Hide answer initially
+    revealAnswerBtn.style.display = 'block'; // Show reveal button
+
+    // Update index display
+    currentFlashcardIndexDisplay.textContent = index + 1;
+
+    // Enable/disable navigation buttons
+    prevFlashcardBtn.disabled = index === 0;
+    nextFlashcardBtn.disabled = index === flashcardQuestions.length - 1;
+}
+
+function revealAnswer() {
+    flashcardAnswerEl.style.display = 'block';
+    revealAnswerBtn.style.display = 'none';
+}
+
+// Event Listeners for Flashcards
+revealAnswerBtn.addEventListener('click', revealAnswer);
+
+prevFlashcardBtn.addEventListener('click', () => {
+    if (currentFlashcardIndex > 0) {
+        currentFlashcardIndex--;
+        loadFlashcard(currentFlashcardIndex);
+    }
+});
+
+nextFlashcardBtn.addEventListener('click', () => {
+    if (currentFlashcardIndex < flashcardQuestions.length - 1) {
+        currentFlashcardIndex++;
+        loadFlashcard(currentFlashcardIndex);
+    }
+});
+
+// Initialize flashcards when the accordion item is shown
+document.getElementById('collapseBehavioral2').addEventListener('shown.bs.collapse', () => {
+    totalFlashcardsDisplay.textContent = flashcardQuestions.length;
+    currentFlashcardIndex = 0; // Reset to the first card when accordion opens
+    loadFlashcard(currentFlashcardIndex);
+});
+    </script>
+</body>
+</html>

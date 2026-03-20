@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saiba Mais</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .nav-bar {
+            background-color: #052442;
+        }
+
+        .text-custom {
+            color: #004F9F;
+        }
+
+        .texto {
+            line-height: 1.6;
+            padding: 20px 15px;
+            padding-top: 100px; /* Adicionado para dar espaço abaixo da navbar fixa */
+        }
+
+        h4 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .btn-secondary {
+            margin-right: 10px; /* Adiciona um pequeno espaçamento à direita dos botões */
+            background-color: #0d355e;
+            padding: 10px 15px; /* Ajustado para um padding mais padrão de botão */
+            font-size: 0.9rem; /* Opcional: ajustar tamanho da fonte do botão */
+        }
+
+        .btn-secondary:hover {
+            background-color: #092a4a; /* Um tom ligeiramente mais escuro no hover */
+        }
+
+        /* Ajuste para a imagem de compartilhamento */
+        .card-actions img {
+            width: 24px; /* Tamanho da imagem */
+            height: 24px;
+            margin-left: 5px; /* Espaçamento entre o botão e a imagem */
+            vertical-align: middle; /* Alinha a imagem verticalmente com o botão */
+        }
+
+        /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
+        .footer .nav-link {
+            text-align: left; /* Garante alinhamento à esquerda */
+        }
+
+        /* Ajuste para garantir que a lista em si não tenha padding que a desloque */
+        .footer .nav {
+            padding-left: 0; /* Remove padding padrão de UL */
+        }
+
+        /* Novo estilo para o container do botão e imagem dentro do card */
+        .card-actions {
+            display: flex; /* Usa flexbox */
+            align-items: center; /* Alinha itens verticalmente no centro */
+            margin-top: auto; /* Empurra para a parte inferior do card */
+            padding-top: 15px; /* Espaçamento acima das ações */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar fixed-top">
+        <header class="container">
+            <ul class="nav nav-pills justify-content-center py-3">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link text-white">Cursos</a></li>
+                <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link active" aria-current="page">Saiba Mais</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="texto container">
+        <h2 class="text-center text-custom mt-4">Saiba Mais Sobre as Áreas de Estudo em Programação!</h2>
+        <section id="trilhas-aprendizagem" class="content-section pt-4">
+            <h5 class="text-center text-custom">Aqui você encontra roteiros sugeridos para iniciar ou aprimorar sua jornada em diferentes carreiras de TI. Lembre-se que o aprendizado é contínuo!</h5>
+
+            <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title text-custom"><i class="fas fa-road"></i> Trilha para Desenvolvedor(a) Front-end</h4>
+                            <p class="card-text">Comece do básico e construa interfaces incríveis!</p>
+                            <ul>
+                                <li><strong>Fundamentos:</strong> HTML5, CSS3 (Flexbox, Grid), JavaScript (ES6+).</li>
+                                <li><strong>Frameworks/Bibliotecas:</strong> React, Angular ou Vue.js.</li>
+                                <li><strong>Ferramentas:</strong> Git, npm/yarn, VS Code.</li>
+                                <li><strong>Recursos:</strong> Cursos da Alura, freeCodeCamp, The Odin Project.</li>
+                                <li><strong>Projetos:</strong> Crie um portfólio com sites responsivos e SPAs.</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="https://www.alura.com.br/cursos-online-front-end" target="_blank" class="btn btn-secondary btn-sm">Ver Trilha Detalhada</a>
+                                <img src="img/compartilhar.png" class="img-fluid rounded" alt="Compartilhar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title text-custom"><i class="fas fa-road"></i> Trilha para Desenvolvedor(a) Back-End</h4>
+                            <p class="card-text">Desenvolva as habilidades para defender o mundo digital.</p>
+                            <ul>
+                                <li><strong>Fundamentos:</strong> Node.js (JavaScript), Python (Django/Flask), Java (Spring Boot), PHP (Laravel), C# (ASP.NET Core) HTTP/HTTPS, REST, Banco de Dados (SQL e NoSQL).</li>
+                                <li><strong>Frameworks/Bibliotecas:</strong> Express, Django, Spring, Sequelize, Prisma, Hibernate.</li>
+                                <li><strong>Ferramentas:</strong> Git, npm/yarn, VS Code.</li>
+                                <li><strong>Recursos:</strong> Cursos da Alura, Rocketseat, The Odin Project, freeCodeCamp.</li>
+                                <li><strong>Projetos:</strong> Crie APIs REST com autenticação, CRUDs completos, e deploy em plataformas como Render, Vercel ou AWS.</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="https://www.cursoemvideo.com/cursos/" target="_blank" class="btn btn-secondary btn-sm">Ver Mais Trilhas</a>
+                                <img src="img/compartilhar.png" class="img-fluid rounded" alt="Compartilhar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title text-custom"><i class="fas fa-road"></i> Trilha para Cientista de Dados</h4>
+                            <p class="card-text">Transforme dados em conhecimento e insights acionáveis.</p>
+                            <ul>
+                                <li><strong>Matemática e Estatística:</strong> Álgebra Linear, Cálculo, Probabilidade.</li>
+                                <li><strong>Programação:</strong> Python (com bibliotecas Pandas, NumPy, Scikit-learn) ou R.</li>
+                                <li><strong>Bancos de Dados:</strong> SQL, NoSQL.</li>
+                                <li><strong>Machine Learning:</strong> Conceitos, modelos (regressão, classificação, clustering).</li>
+                                <li><strong>Recursos:</strong> Coursera (especializações em Data Science), Kaggle (competições).</li>
+                                <li><strong>Projetos:</strong> Análise de dados reais, construção de modelos de ML.</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="https://www.datascienceacademy.com.br/" target="_blank" class="btn btn-secondary btn-sm">Ver Trilha Detalhada</a>
+                                <img src="img/compartilhar.png" class="img-fluid rounded" alt="Compartilhar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title text-custom"><i class="fas fa-road"></i> Trilha para Cibersegurança</h4>
+                            <p class="card-text">Desenvolva as habilidades para defender o mundo digital.</p>
+                            <ul>
+                                <li><strong>Fundamentos de Redes:</strong> TCP/IP, modelos OSI/TCP.</li>
+                                <li><strong>Sistemas Operacionais:</strong> Linux, Windows Server.</li>
+                                <li><strong>Conceitos de Segurança:</strong> Criptografia, Firewalls, Segurança de Aplicações.</li>
+                                <li><strong>Ferramentas:</strong> Nmap, Wireshark, Kali Linux (para prática ética).</li>
+                                <li><strong>Certificações:</strong> CompTIA Security+, Certified Ethical Hacker (CEH).</li>
+                                <li><strong>Recursos:</strong> TryHackMe, Hack The Box (plataformas de laboratório).</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="https://www.udemy.com/topic/cyber-security/" target="_blank" class="btn btn-secondary btn-sm">Ver Mais Trilhas</a>
+                                <img src="img/compartilhar.png" class="img-fluid rounded" alt="Compartilhar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title text-custom"><i class="fas fa-road"></i> Programas mais utilizados!</h4>
+                            <p class="card-text">Recomendações dos profissionais</p>
+                            <ul>
+                                <li><strong></strong>Clique aqui para visualizar os softwares e ferramentas mais usados no dia a dia, tanto em ambientes educacionais quanto profissionais. Nesta seção, você encontrará uma lista com descrições e finalidades de programas como editores de texto, planilhas, navegadores, plataformas de videoconferência, editores de imagem, entre outros. Ideal para quem está começando ou deseja se atualizar sobre os recursos mais comuns da tecnologia atual.</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="programas.html"class="btn btn-secondary btn-sm">Programas mais utilizados</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title text-custom"><i class="fas fa-road"></i> Questionário sobre áreas da programação!</h4>
+                            <p class="card-text">Veja qual sua área adequada!</p>
+                            <ul>
+                                <li><strong></strong>Responda a algumas perguntas simples sobre suas preferências, habilidades e interesses. No final, você receberá uma sugestão de trilha para explorar a carreira em T.I. que mais combina com você — com dicas de estudos, tecnologias e até ideias de projetos!</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="questionario.html"  class="btn btn-secondary btn-sm">Realize o Quiz!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title text-custom"><i class="fas fa-road"></i> Acesse nossa página sobre o Mercado de Trabalho!</h4>
+                            <p class="card-text">Descubra o mundo profissional que espera por você!</p>
+                            <ul>
+                                <li>Nesta seção, você encontrará informações essenciais sobre as diversas carreiras no setor energético hidrogênio: perfis profissionais, tendências de contratação, habilidades mais requisitadas e oportunidades de inserção no mercado de trabalho.</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="mercado_trabalho.html" class="btn btn-secondary btn-sm">Mercado de Trabalho</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title text-custom"><i class="fas fa-road"></i> Acesse o Glossário do site</h4>
+                            <p class="card-text">Entenda cada termo, cada conceito.</p>
+                            <ul>
+                                <li>Aqui, você encontra definições claras e acessíveis de palavras-chave e expressões técnicas relacionadas ao hidrogênio como fonte de energia. Uma base fundamental para navegar com confiança por conteúdos mais avançados.</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="glossario.html" class="btn btn-secondary btn-sm">Glossário Completo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+         <footer class="container mt-5 footer">
+        <div class="row py-4 border-top text-muted">
+            <div class="col-md-3">
+                <h5>Navegação</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Futuro Profissional</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Busque Ajuda</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column justify-content-between">
+                <div>
+                    <h5>Sobre o H2N-Tech</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                    </ul>
+                </div>
+                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

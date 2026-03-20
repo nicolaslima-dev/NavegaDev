@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dúvidas Frequentes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #fff;
+            padding-top: 80px; /* IMPORTANTE: Adicionado para dar espaço abaixo da navbar fixa */
+        }
+
+        .nav-bar {
+            background-color: #052442;
+        }
+
+        .text-custom {
+            color: #004F9F;
+        }
+
+        .texto {
+            line-height: 1.6;
+            padding: 20px 15px;
+        }
+
+        h4 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .botao {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn-secondary {
+            background-color: #0d355e;
+            border-color: #0d355e;
+            margin-bottom: 20px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #004F9F;
+            border-color: #004F9F;
+        }
+
+        .imagem {
+            padding-top: 50px;
+        }
+
+        /* Estilos adicionais que podem estar em outras páginas, mas mantidos para referência */
+        .pergunta {
+            margin-bottom: 20px;
+        }
+
+        .resultado {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .quiz-section {
+            background-color: #e9ecef;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .quiz-section .form-check {
+            margin-bottom: 10px;
+        }
+
+        .quiz-section .form-check-label {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .quiz-section button {
+            margin-top: 20px;
+        }
+
+        .voltar {
+            padding-top: 10px;
+            margin-left: 10px;
+        }
+        
+        /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
+        .footer .nav-link {
+            text-align: left; /* Garante alinhamento à esquerda */
+        }
+        
+        /* Ajuste para garantir que a lista em si não tenha padding que a desloque */
+        .footer .nav {
+            padding-left: 0; /* Remove padding padrão de UL */
+        }
+
+        #quizResult {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            display: none; 
+        }
+
+        /* Estilos específicos para a página 'Dúvidas Frequentes' */
+        .accordion {
+            margin-top: 20px; /* Ajustado para um espaçamento melhor após o título */
+        }
+        /* Estilo para a mensagem de feedback geral */
+        #mensagem-feedback {
+            margin-top: 10px;
+            display: block; /* Garante que ocupe sua própria linha */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav-bar fixed-top">
+        <header class="container">
+            <ul class="nav nav-pills justify-content-center py-3">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link text-white">Cursos</a></li>
+                <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                <li class="nav-item"><a href="duvidas.html" class="nav-link active" aria-current="page">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+            </ul>
+        </header> 
+    </div>
+
+    
+
+    <div class="texto container">
+        <h2 class="text-center text-custom mt-4">Dúvidas Frequentes!</h2>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h4 class="text-custom mt-4">Qual área da programação tem os melhores salários?</h4>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong></strong><h5 class="text-custom">Áreas como ciência de dados, inteligência artificial, cibersegurança e back-end geralmente oferecem salários mais altos, especialmente conforme o profissional adquire experiência. Mas isso também varia bastante de acordo com a empresa, localização e nível de especialização.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h4 class="text-custom mt-4">Qual curso devo fazer para começar na programação?</h4>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong></strong> <h5 class="text-custom">Cursos de introdução à lógica de programação e linguagens como Python ou JavaScript são ótimos para começar. Depois, você pode seguir para cursos mais específicos, como desenvolvimento web, mobile, ciência de dados, entre outros.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <h4 class="text-custom mt-4">Faculdade ou curso técnico: o que vale mais a pena?</h4>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong></strong> <h5 class="text-custom">Depende do seu objetivo. A faculdade oferece uma base mais teórica e pode abrir portas em grandes empresas. Já os cursos técnicos ou livres (como bootcamps) focam na prática e têm uma duração menor, sendo ideais para quem quer entrar no mercado mais rapidamente.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        <h4 class="text-custom mt-4">É possível mudar de carreira para programação mesmo depois de adulto?</h4>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong></strong><h5 class="text-custom">Com certeza! A programação é uma das áreas mais acessíveis para quem quer fazer transição de carreira. Existem muitos casos de pessoas que começaram aos 30, 40 anos (ou mais) e estão trabalhando com tecnologia hoje.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        <h4 class="text-custom mt-4">Preciso saber inglês para trabalhar com programação?</h4>
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong></strong><h5 class="text-custom">Não é obrigatório para começar, mas faz muita diferença. A maioria da documentação, tutoriais e até entrevistas em empresas internacionais são em inglês. Começar a estudar o idioma desde cedo pode abrir muitas portas.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="text-custom mt-4">Compartilhe sua dúvida!</h4>
+        <form id="duvidaForm" novalidate> 
+            <div class="mb-3">
+                <label for="emailDuvidaInput" class="form-label">Endereço de Email</label>
+                <input type="email" class="form-control" id="emailDuvidaInput" placeholder="name@example.com">
+                <div class="invalid-feedback" id="emailDuvidaFeedback"></div>
+            </div>
+            <div class="mb-3">
+                <label for="textoDuvidaTextarea" class="form-label">Sua Dúvida </label>
+                <textarea class="form-control" id="textoDuvidaTextarea" rows="3"></textarea>
+                <div class="invalid-feedback" id="textoDuvidaFeedback"></div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <button type="submit" class="btn btn-secondary btn-s">Enviar</button>
+                <span id="mensagem-feedback" class="fw-bold" style="display: none;"></span>
+            </div>
+        </form>
+    </div>
+
+    <footer class="container mt-5 footer">
+        <div class="row py-4 border-top text-muted">
+            <div class="col-md-3">
+                <h5>Navegação</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Futuro Profissional</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Busque Ajuda</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column justify-content-between">
+                <div>
+                    <h5>Sobre o H2N-Tech</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                    </ul>
+                </div>
+                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Adiciona um listener para o evento 'submit' do formulário
+        document.getElementById('duvidaForm').addEventListener('submit', function(event) {
+            // Previne o envio padrão do formulário para que possamos fazer a validação
+            event.preventDefault(); 
+
+            const emailInput = document.getElementById('emailDuvidaInput');
+            const textoDuvidaTextarea = document.getElementById('textoDuvidaTextarea');
+            const mensagemFeedbackSpan = document.getElementById('mensagem-feedback');
+
+            let isValid = true; // Flag para controlar se o formulário é válido
+
+            // --- Função auxiliar para mostrar/esconder feedback ---
+            function showFeedback(element, messageElement, isFieldValid) {
+                if (isFieldValid) {
+                    element.classList.remove('is-invalid');
+                    element.classList.add('is-valid'); // Opcional: Adicionar classe de sucesso
+                    messageElement.textContent = ''; // Limpa a mensagem de erro
+                } else {
+                    element.classList.add('is-invalid');
+                    element.classList.remove('is-valid');
+                    // Define a mensagem de erro com base no data attribute
+                    messageElement.textContent = messageElement.dataset.errorMessage; 
+                }
+            }
+
+            // --- Limpa feedback anterior antes de revalidar ---
+            mensagemFeedbackSpan.style.display = "none";
+            mensagemFeedbackSpan.className = "fw-bold"; // Limpa classes de cor
+
+            // --- Validação do campo de E-mail ---
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex simples para email
+            if (!emailInput.value.trim() || !emailRegex.test(emailInput.value)) {
+                showFeedback(emailInput, document.getElementById('emailDuvidaFeedback'), false);
+                isValid = false;
+            } else {
+                showFeedback(emailInput, document.getElementById('emailDuvidaFeedback'), true);
+            }
+
+            // --- Validação do campo de Dúvida (textarea) ---
+            if (textoDuvidaTextarea.value.trim() === '') {
+                showFeedback(textoDuvidaTextarea, document.getElementById('textoDuvidaFeedback'), false);
+                isValid = false;
+            } else {
+                showFeedback(textoDuvidaTextarea, document.getElementById('textoDuvidaFeedback'), true);
+            }
+
+            // --- Lógica final de feedback e envio ---
+            if (isValid) {
+                // Se tudo estiver válido, exibe a mensagem de sucesso
+                mensagemFeedbackSpan.textContent = "Dúvida enviada com sucesso! Em breve, entraremos em contato.";
+                mensagemFeedbackSpan.classList.add('text-success'); // Adiciona cor verde
+                mensagemFeedbackSpan.style.display = "inline";
+
+                // Opcional: Limpa os campos após o envio bem-sucedido
+                emailInput.value = "";
+                textoDuvidaTextarea.value = "";
+
+                // (Opcional) Esconde a mensagem após 5 segundos
+                setTimeout(() => {
+                    mensagemFeedbackSpan.style.display = "none";
+                }, 5000);
+
+            } else {
+                // Se houver algum erro, exibe uma mensagem geral de erro (se desejar)
+                // ou simplesmente permite que as mensagens de feedback de campo apareçam.
+                // Como as mensagens de feedback de campo já são visíveis, esta linha abaixo
+                // pode ser omitida ou usada para um feedback mais genérico se preferir.
+                // mensagemFeedbackSpan.textContent = "Por favor, corrija os erros no formulário.";
+                // mensagemFeedbackSpan.classList.add('text-danger');
+                // mensagemFeedbackSpan.style.display = "inline";
+            }
+        });
+
+        // --- Define as mensagens de erro personalizadas usando data attributes ---
+        // Isso facilita a manutenção das mensagens de erro.
+        document.getElementById('emailDuvidaFeedback').dataset.errorMessage = 'Por favor, insira um e-mail válido (ex: seuemail@dominio.com).';
+        document.getElementById('textoDuvidaFeedback').dataset.errorMessage = 'Por favor, descreva sua dúvida.';
+    </script>
+</body>
+</html>

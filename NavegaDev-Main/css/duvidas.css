@@ -1,0 +1,34 @@
+body {
+    padding-top: 80px;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+
+#mensagem-feedback {
+    margin-top: 10px;
+    display: block;
+}
+
+.quiz-section {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.quiz-section .form-check { margin-bottom: 10px; }
+.quiz-section .form-check-label { font-size: 1.1em; color: #333; }
+.quiz-section button { margin-top: 20px; }
+
+#quizResult {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: none;
+}

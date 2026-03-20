@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .nav-bar {
+            background-color: #052442;
+        }
+
+        .text-custom {
+            color: #004F9F;
+        }
+
+        .texto {
+            line-height: 1.6;
+            padding: 20px 15px;
+        }
+
+        h4 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .botao {
+            margin-top: 30px;
+        }
+
+        .btn-secondary {
+            background-color: #0d355e;
+        }
+
+        .imagem {
+            padding-top: 50px;
+        }
+
+        .form-control, .form-select {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        body {
+            padding-top: 70px;
+        }
+        /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
+        .footer .nav-link {
+            text-align: left; /* Garante alinhamento à esquerda */
+        }
+        
+/* Ajuste para garantir que a lista em si não tenha padding que a desloque */
+        .footer .nav {
+            padding-left: 0; /* Remove padding padrão de UL */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar fixed-top">
+        <header class="container">
+            <ul class="nav nav-pills justify-content-center py-3">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link text-white">Cursos</a></li>
+                <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link active" aria-current="page">Sobre Nós</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="texto">
+            <h2 class="text-center text-custom mt-4">Sobre Nós</h2>
+
+            <h4 class="text-custom mt-4">Quem somos e por que criamos este site!</h4>
+            <h5 class="text-custom">
+                Somos Hugo Giffoni, Nicolas Lima e Nilton Junio, estudantes da área de computação que entendem bem os desafios de quem está começando a planejar sua trajetória no ensino superior. A escolha de uma faculdade pode ser confusa, especialmente com tantas opções, modalidades e promessas que nem sempre refletem a realidade.
+            </h5>
+            <h5 class="text-custom">
+                Pensando nisso, criamos este site como uma ferramenta prática para ajudar outros estudantes a tomarem decisões mais informadas e seguras sobre onde estudar. Nosso foco é na área da computação — cursos como Ciência da Computação, Engenharia da Computação, Sistemas de Informação, Análise e Desenvolvimento de Sistemas, entre outros.
+            </h5>
+            <h5 class="text-custom">
+                Aqui, você vai encontrar comparações entre instituições, análise de grade curricular, comentários sobre infraestrutura, avaliação de professores e oportunidades no mercado de trabalho. Além disso, reunimos uma breve explicação dos cursos, facilitando uma visão mais realista do que cada curso oferece.
+            </h5>
+            <h5 class="text-custom">
+                Nosso conteúdo é construído com base em pesquisa, experiência própria e a colaboração de outros estudantes. Acreditamos que, com informação acessível e clara, todo mundo pode fazer escolhas mais inteligentes para o futuro profissional.
+            </h5>
+            <h5 class="text-custom">
+                Se você está em dúvida sobre qual caminho seguir na computação, esse site foi feito para você.
+            </h5>
+
+            <h4 class="text-custom mt-4">Entre em Contato!</h4>
+            <form id="contactForm" novalidate>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Endereço de Email</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="seuemail@exemplo.com" required>
+                    <div class="invalid-feedback" id="emailFeedback">Por favor, insira um e-mail válido.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Digite seu nome completo" required>
+                    <div class="invalid-feedback" id="nameFeedback">Por favor, insira seu nome.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="phoneInput" class="form-label">Número de Telefone (opcional)</label>
+                    <input type="tel" class="form-control" id="phoneInput" placeholder="(XX) XXXXX-XXXX">
+                </div>
+
+                <div class="mb-3">
+                    <label for="reasonSelect" class="form-label">Motivo do Contato</label>
+                    <select class="form-select mb-3" id="reasonSelect" aria-label="Selecione o motivo do contato" required>
+                        <option value="" selected disabled>Selecione uma opção...</option>
+                        <option value="duvida_curso">Dúvida sobre um curso específico</option>
+                        <option value="sugestao_melhoria">Sugestão de melhoria para o site</option>
+                        <option value="problema_tecnico">Problema técnico ou erro no site</option>
+                        <option value="parceria">Proposta de parceria</option>
+                        <option value="outros">Outros assuntos</option>
+                    </select>
+                    <div class="invalid-feedback" id="reasonFeedback">Por favor, selecione um motivo.</div>
+                </div>
+
+                <div class="voltar">
+                    <button type="submit" class="btn btn-secondary btn-s">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="py-4">
+            <h4 class="text-custom mt-4">Avalie Nosso Site</h4>
+            <p class="intro-text">A sua opinião é fundamental para nós! Ajude-nos a melhorar sua experiência e oferecer o melhor conteúdo e funcionalidades.</p>
+            <a class="btn btn-secondary btn-s" href="avaliacao.html" role="button">Realize a Avaliação</a>
+        </div>
+    </div>
+
+   <footer class="container mt-5 footer">
+        <div class="row py-4 border-top text-muted">
+            <div class="col-md-3">
+                <h5>Navegação</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Futuro Profissional</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Busque Ajuda</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column justify-content-between">
+                <div>
+                    <h5>Sobre o H2N-Tech</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                    </ul>
+                </div>
+                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            const emailInput = document.getElementById('emailInput');
+            const nameInput = document.getElementById('nameInput');
+            const reasonSelect = document.getElementById('reasonSelect');
+
+            let isValid = true; // Assume que o formulário é válido inicialmente
+
+            // Função para exibir feedback de validação
+            function showFeedback(element, messageElement, isValid) {
+                if (isValid) {
+                    element.classList.remove('is-invalid');
+                    element.classList.add('is-valid'); // Opcional: Adicionar classe de sucesso
+                    messageElement.textContent = ''; // Limpa a mensagem
+                } else {
+                    element.classList.add('is-invalid');
+                    element.classList.remove('is-valid');
+                    messageElement.textContent = messageElement.dataset.errorMessage; // Usa a mensagem do data attribute
+                }
+            }
+
+            // Validação de E-mail
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex simples para email
+            if (!emailInput.value.trim() || !emailRegex.test(emailInput.value)) {
+                showFeedback(emailInput, document.getElementById('emailFeedback'), false);
+                isValid = false;
+            } else {
+                showFeedback(emailInput, document.getElementById('emailFeedback'), true);
+            }
+
+            // Validação de Nome
+            if (nameInput.value.trim() === '') {
+                showFeedback(nameInput, document.getElementById('nameFeedback'), false);
+                isValid = false;
+            } else {
+                showFeedback(nameInput, document.getElementById('nameFeedback'), true);
+            }
+
+            // Validação de Motivo
+            if (reasonSelect.value === '') {
+                showFeedback(reasonSelect, document.getElementById('reasonFeedback'), false);
+                isValid = false;
+            } else {
+                showFeedback(reasonSelect, document.getElementById('reasonFeedback'), true);
+            }
+
+            // Se alguma validação falhar, impede o envio do formulário
+            if (!isValid) {
+                event.preventDefault();
+            } else {
+                // Se o formulário for válido, redireciona para a página de contato
+                event.preventDefault(); // Impede o envio padrão para que possamos redirecionar
+                window.location.href = "contato.html";
+            }
+        });
+
+        // Adiciona as mensagens de erro personalizadas como data attributes
+        document.getElementById('emailFeedback').dataset.errorMessage = 'Por favor, insira um e-mail válido (ex: seuemail@dominio.com).';
+        document.getElementById('nameFeedback').dataset.errorMessage = 'Por favor, insira seu nome completo.';
+        document.getElementById('reasonFeedback').dataset.errorMessage = 'Por favor, selecione um motivo de contato.';
+    </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gráfico ENEM por Curso</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+    }
+
+    .container-grafico {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    select {
+      display: block;
+      margin: 0 auto 2rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+    .btn-secondary,
+        .btn-primary { /* Adicionado .btn-primary aqui */
+            background-color: #0d355e !important; /* Cor do botão Voltar */
+            border-color: #0d355e !important; /* Garante que a borda também seja da mesma cor */
+            color: #fff !important; /* Garante que o texto do botão seja branco */
+        }
+     /* Ajuste para o hover dos botões padronizados */
+        .btn-secondary:hover,
+        .btn-primary:hover {
+            background-color: #092a4a !important; /* Um tom ligeiramente mais escuro no hover */
+            border-color: #092a4a !important;
+        }
+    .voltar {
+      
+      padding-top: 10px;
+      margin-left: 10px;
+    }
+    /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
+        .footer .nav-link {
+            text-align: left; /* Garante alinhamento à esquerda */
+        }
+        
+/* Ajuste para garantir que a lista em si não tenha padding que a desloque */
+        .footer .nav {
+            padding-left: 0; /* Remove padding padrão de UL */
+        }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (ATUALIZADO COM COR #052442) -->
+<div class="nav-bar" style="background-color: #052442;">
+  <header class="container">
+    <ul class="nav nav-pills justify-content-center py-3">
+      <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+      <li class="nav-item"><a href="cursos.html" class="nav-link active" aria-current="page">Cursos</a></li>
+      <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+      <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+      <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+      <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+      <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+    </ul>
+  </header>
+</div>
+<div class="voltar">
+  <a class="btn btn-secondary btn-s" href="cursos.html" role="button">Voltar</a>
+</div>
+
+
+  <!-- CONTEÚDO PRINCIPAL (GRÁFICO) -->
+  <main class="container-grafico">
+    <h2>Notas do ENEM por Curso</h2>
+    <select id="cursoSelect">
+      <option value="bsi">Sistemas de Informação</option>
+      <option value="ccomp">Ciência da Computação</option>
+      <option value="eng_comp">Engenharia de Software</option>
+      <option value="ads">Analise Desenvolvimento Sist.</option>
+    </select>
+
+    <canvas id="enemChart"></canvas>
+  </main>
+
+  <!-- FOOTER (SEU FOOTER ORIGINAL) -->
+<footer class="container mt-5 footer">
+        <div class="row py-4 border-top text-muted">
+            <div class="col-md-3">
+                <h5>Navegação</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Futuro Profissional</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Busque Ajuda</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column justify-content-between">
+                <div>
+                    <h5>Sobre o H2N-Tech</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                    </ul>
+                </div>
+                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+            </div>
+        </div>
+    </footer>
+
+  <!-- SCRIPT DO GRÁFICO -->
+  <script>
+    const dadosPorCurso = {
+      "bsi": [
+        { ano: 2015, nota: 680 },
+        { ano: 2016, nota: 695 },
+        { ano: 2017, nota: 710 },
+        { ano: 2018, nota: 700 },
+        { ano: 2019, nota: 730 },
+        { ano: 2020, nota: 695 },
+        { ano: 2021, nota: 710 },
+        { ano: 2022, nota: 720 },
+        { ano: 2023, nota: 780 },
+        { ano: 2024, nota: 750 },
+        
+      ],
+      "ccomp": [
+        { ano: 2015, nota: 680 },
+        { ano: 2016, nota: 690 },
+        { ano: 2017, nota: 700 },
+        { ano: 2018, nota: 730 },
+        { ano: 2019, nota: 745 },
+        { ano: 2020, nota: 765 },
+        { ano: 2021, nota: 780 },
+        { ano: 2022, nota: 760 },
+        { ano: 2023, nota: 750 },
+        { ano: 2024, nota: 790 },
+      ],
+      "eng_comp": [
+        { ano: 2015, nota: 680 },
+        { ano: 2016, nota: 695 },
+        { ano: 2017, nota: 710 },
+        { ano: 2018, nota: 700 },
+        { ano: 2019, nota: 720 },
+        { ano: 2020, nota: 730 },
+        { ano: 2021, nota: 740 },
+        { ano: 2022, nota: 750 },
+        { ano: 2023, nota: 760 },
+        { ano: 2024, nota: 745 },
+      ],
+      "ads": [
+        { ano: 2015, nota: 680 },
+        { ano: 2016, nota: 695 },
+        { ano: 2017, nota: 710 },
+        { ano: 2018, nota: 700 },
+        { ano: 2019, nota: 710 },
+        { ano: 2020, nota: 695 },
+        { ano: 2021, nota: 705 },
+        { ano: 2022, nota: 680 },
+        { ano: 2023, nota: 685 },
+        { ano: 2024, nota: 700 },
+      ],
+    };
+
+    const ctx = document.getElementById("enemChart").getContext("2d");
+    let chart;
+
+    function renderChart(curso) {
+      const data = dadosPorCurso[curso];
+      const labels = data.map(d => d.ano);
+      const notas = data.map(d => d.nota);
+
+      if (chart) chart.destroy();
+
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [{
+            label: `Notas ENEM - ${curso}`,
+            data: notas,
+            borderColor: '#4f46e5',
+            backgroundColor: 'rgba(79,70,229,0.2)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 5,
+            pointHoverRadius: 7
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            tooltip: {
+              enabled: true
+            },
+            legend: {
+              display: true,
+              position: 'top'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: false
+            }
+          }
+        }
+      });
+    }
+
+    const select = document.getElementById("cursoSelect");
+    select.addEventListener("change", (e) => {
+      renderChart(e.target.value);
+    });
+
+    renderChart(select.value);
+  </script>
+</body>
+</html>

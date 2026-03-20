@@ -1,0 +1,61 @@
+/* ===========================
+   instituicao.css - Páginas de Faculdades/Instituições
+   (cefet_ads, cefet_bsi, cefet_ccomp, cefet_eng_comp, faeterj_ads, etc.)
+   =========================== */
+
+body {
+    padding-top: 70px;
+}
+
+.texto {
+    line-height: 1.6;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    color: #004F9F;
+}
+
+h2 {
+    padding-bottom: 30px;
+}
+
+h5 {
+    padding-bottom: 10px;
+}
+
+.voltar {
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+.img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.container-mapa {
+    margin-top: 2rem;
+}
+
+.container-mapa iframe {
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .img {
+        max-width: 100%;
+    }
+
+    .texto {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .voltar {
+        text-align: center;
+    }
+}

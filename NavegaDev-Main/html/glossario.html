@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glossário de T.I. - H2N Technology</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #fff; /* Seu background principal */
+            color: #333; /* Cor de texto padrão */
+            padding-top: 80px; /* Add padding to the body to prevent content from being hidden behind the fixed navbar */
+        }
+
+        .nav-bar {
+            background-color: #052442; /* Cor da sua navbar */
+        }
+         .btn-secondary,
+        .btn-primary { /* Adicionado .btn-primary aqui */
+            background-color: #0d355e !important; /* Cor do botão Voltar */
+            border-color: #0d355e !important; /* Garante que a borda também seja da mesma cor */
+            color: #fff !important; /* Garante que o texto do botão seja branco */
+        }
+
+        /* Ajuste para o hover dos botões padronizados */
+        .btn-secondary:hover,
+        .btn-primary:hover {
+            background-color: #092a4a !important; /* Um tom ligeiramente mais escuro no hover */
+            border-color: #092a4a !important;
+        }
+
+        .voltar {
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        .text-custom {
+            color: #004F9F; /* Sua cor de destaque para textos */
+        }
+
+        .glossary-nav-item .nav-link {
+            color: #052442; /* Cor dos links de navegação alfabética */
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .glossary-nav-item .nav-link:hover {
+            background-color: #e2f0ff; /* Um azul claro para o hover */
+            color: #052442; /* Mantém a cor do texto no hover */
+        }
+
+        .glossary-section {
+            background-color: #fff; /* Fundo branco para as seções */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave para destacar */
+            margin-bottom: 30px;
+            border: 1px solid #eee; /* Borda sutil */
+        }
+
+        .glossary-section h2 {
+            border-bottom: 2px solid #004F9F; /* Borda com sua cor de destaque */
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            color: #004F9F; /* Cor dos títulos de seção (letras A-Z ou categorias) */
+            text-align: center; /* Centraliza os títulos de seção */
+        }
+
+        .term-item {
+            margin-bottom: 20px;
+            border-left: 4px solid #004F9F; /* Linha lateral com sua cor de destaque */
+            padding-left: 15px;
+            background-color: #fcfcfc; /* Um fundo leve para cada termo */
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .term-item dt {
+            font-weight: bold;
+            color: #052442; /* Cor mais escura para o termo */
+            font-size: 1.15em;
+            margin-bottom: 5px;
+        }
+
+        .term-item dd {
+            margin-left: 0;
+            color: #555; /* Cor para a definição */
+        }
+
+        .related-term {
+            color: #004F9F; /* Mesma cor dos links do site */
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .related-term:hover {
+            color: #003a7a; /* Um tom mais escuro da sua cor de link no hover */
+        }
+
+        /* Estilo para a introdução */
+        .intro-text {
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 15px;
+        }
+
+        /* Estilos do seu footer para consistência */
+        .footer-custom {
+            background-color: #f8f9fa; /* Um cinza claro para o footer */
+            border-top: 1px solid #e9ecef;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        .footer-custom .nav-link {
+            color: #6c757d; /* Cor dos links do footer */
+        }
+        .footer-custom .text-muted {
+            color: #6c757d !important; /* Força a cor para o copyright */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar fixed-top">
+        <header class="container">
+            <ul class="nav nav-pills justify-content-center py-3">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link text-white">Cursos</a></li>
+                <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                 
+            </ul>
+        </header>    
+    </div>
+     <div class="voltar">
+        <a class="btn btn-secondary btn-s" href="saibamais.html" role="button">Voltar</a>
+    </div>
+    <div class="container py-4">
+        <h1 class="text-center text-custom mb-4">Glossário do Mundo Tecnológico.</h1>
+        <h5 class="text-center text-custom">Explore os termos e conceitos mais importantes do mundo da Tecnologia da Informação, explicados de forma clara e objetiva.</h5>
+
+        <div class="d-flex flex-wrap justify-content-center mb-5">
+            <ul class="nav nav-pills">
+                <li class="nav-item glossary-nav-item"><a href="#A" class="nav-link">A</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#B" class="nav-link">B</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#C" class="nav-link">C</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#D" class="nav-link">D</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#E" class="nav-link">E</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#F" class="nav-link">F</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#G" class="nav-link">G</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#H" class="nav-link">H</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#I" class="nav-link">I</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#J" class="nav-link">J</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#K" class="nav-link">K</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#L" class="nav-link">L</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#M" class="nav-link">M</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#N" class="nav-link">N</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#O" class="nav-link">O</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#P" class="nav-link">P</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#Q" class="nav-link">Q</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#R" class="nav-link">R</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#S" class="nav-link">S</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#T" class="nav-link">T</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#U" class="nav-link">U</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#V" class="nav-link">V</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#W" class="nav-link">W</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#X" class="nav-link">X</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#Y" class="nav-link">Y</a></li>
+                <li class="nav-item glossary-nav-item"><a href="#Z" class="nav-link">Z</a></li>
+            </ul>
+        </div>
+
+        <div class="glossary-section" id="A">
+            <h2 class="text-custom">A</h2>
+            <dl>
+                <div class="term-item">
+                    <dt>Algoritmo</dt>
+                    <dd>Uma sequência finita e bem definida de instruções lógicas para resolver um problema ou realizar uma tarefa específica. É a base para a criação de programas de computador.</dd>
+                </div>
+                <div class="term-item">
+                    <dt>API (Application Programming Interface)</dt>
+                    <dd>Um conjunto de definições e protocolos que permite a diferentes softwares se comunicarem e trocarem dados. Pense nela como uma "ponte" que conecta sistemas.</dd>
+                </div>
+                <div class="term-item">
+                    <dt>Autenticação</dt>
+                    <dd>Processo de verificar a identidade de um usuário, sistema ou dispositivo. Geralmente envolve a apresentação de credenciais (como nome de usuário e senha).</dd>
+                </div>
+            </dl>
+        </div>
+
+        <div class="glossary-section" id="B">
+            <h2 class="text-custom">B</h2>
+            <dl>
+                <div class="term-item">
+                    <dt>Backup</dt>
+                    <dd>Cópia de dados armazenada em um local diferente do original, para recuperação em caso de perda, corrupção ou exclusão acidental dos dados primários.</dd>
+                </div>
+                <div class="term-item">
+                    <dt>Blockchain</dt>
+                    <dd>Tecnologia de registro distribuído que armazena transações em "blocos" encadeados e criptograficamente seguros, tornando-os imutáveis e transparentes.</dd>
+                </div>
+            </dl>
+        </div>
+
+        <div class="glossary-section" id="C">
+            <h2 class="text-custom">C</h2>
+            <dl>
+                <div class="term-item">
+                    <dt>Cloud Computing</dt>
+                    <dd>Entrega de recursos de computação sob demanda — desde aplicativos até armazenamento de dados e poder de processamento — pela internet, com pagamento conforme o uso. Veja também <span class="related-term">SaaS</span> e <span class="related-term">IaaS</span>.</dd>
+                </div>
+                <div class="term-item">
+                    <dt>Criptografia</dt>
+                    <dd>Processo de codificar informações para protegê-las de acessos não autorizados. Transforma dados em um formato ilegível, que só pode ser decifrado com uma chave.</dd>
+                </div>
+                <div class="term-item">
+                    <dt>Cybersecurity</dt>
+                    <dd>Conjunto de tecnologias, processos e controles projetados para proteger sistemas, redes e dados de ataques digitais, danos ou acessos não autorizados.</dd>
+                </div>
+            </dl>
+        </div>
+        <section class="glossary-section" id="D">
+    <h2 class="text-custom">D</h2>
+    <dl>
+        <div class="term-item"><dt>DevOps</dt><dd>Integra desenvolvimento e operações para acelerar entregas de software com qualidade.</dd></div>
+        <div class="term-item"><dt>Docker</dt><dd>Plataforma de containers para empacotar aplicativos e suas dependências.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="E">
+    <h2 class="text-custom">E</h2>
+    <dl>
+        <div class="term-item"><dt>Edge Computing</dt><dd>Processamento de dados mais próximo da origem para reduzir latência.</dd></div>
+        <div class="term-item"><dt>Escalabilidade</dt><dd>Capacidade de um sistema lidar com aumento de carga.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="F">
+    <h2 class="text-custom">F</h2>
+    <dl>
+        <div class="term-item"><dt>Front-end</dt><dd>Parte visual com a qual o usuário interage em um sistema.</dd></div>
+        <div class="term-item"><dt>Framework</dt><dd>Conjunto de ferramentas que facilita o desenvolvimento de software.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="G">
+    <h2 class="text-custom">G</h2>
+    <dl>
+        <div class="term-item"><dt>Git</dt><dd>Sistema de controle de versões usado no desenvolvimento de software.</dd></div>
+        <div class="term-item"><dt>Governança de TI</dt><dd>Estrutura que alinha a TI aos objetivos da organização.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="H">
+    <h2 class="text-custom">H</h2>
+    <dl>
+        <div class="term-item"><dt>HTML</dt><dd>Linguagem de marcação usada na criação de páginas web.</dd></div>
+        <div class="term-item"><dt>HTTP / HTTPS</dt><dd>Protocolos de comunicação utilizados na internet.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="I">
+    <h2 class="text-custom">I</h2>
+    <dl>
+        <div class="term-item"><dt>IA (Inteligência Artificial)</dt><dd>Simulação de processos humanos por máquinas.</dd></div>
+        <div class="term-item"><dt>Infraestrutura de TI</dt><dd>Conjunto de recursos de hardware, software e rede.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="L">
+    <h2 class="text-custom">L</h2>
+    <dl>
+        <div class="term-item"><dt>Linux</dt><dd>Sistema operacional de código aberto amplamente usado.</dd></div>
+        <div class="term-item"><dt>Load Balancer</dt><dd>Distribui o tráfego entre servidores para otimizar performance.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="M">
+    <h2 class="text-custom">M</h2>
+    <dl>
+        <div class="term-item"><dt>Machine Learning</dt><dd>Subcampo da IA que permite aprendizado automático a partir de dados.</dd></div>
+        <div class="term-item"><dt>Métricas de TI</dt><dd>Indicadores que avaliam o desempenho de sistemas e processos.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="N">
+    <h2 class="text-custom">N</h2>
+    <dl>
+        <div class="term-item"><dt>NoSQL</dt><dd>Banco de dados não relacional usado para dados não estruturados.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="O">
+    <h2 class="text-custom">O</h2>
+    <dl>
+        <div class="term-item"><dt>Open Source</dt><dd>Software de código aberto, com livre distribuição e modificação.</dd></div>
+        <div class="term-item"><dt>Orquestração</dt><dd>Coordenação automatizada de processos e serviços em TI.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="P">
+    <h2 class="text-custom">P</h2>
+    <dl>
+        <div class="term-item"><dt>Proxy</dt><dd>Servidor intermediário entre usuário e internet.</dd></div>
+        <div class="term-item"><dt>Patch</dt><dd>Correção de software para resolver erros ou vulnerabilidades.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="Q">
+    <h2 class="text-custom">Q</h2>
+    <dl>
+        <div class="term-item"><dt>Query</dt><dd>Instrução usada para buscar dados em bancos SQL.</dd></div>
+        <div class="term-item"><dt>QoS (Quality of Service)</dt><dd>Técnica para priorizar tipos de tráfego em redes.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="R">
+    <h2 class="text-custom">R</h2>
+    <dl>
+        <div class="term-item"><dt>RAM</dt><dd>Memória de acesso aleatório usada em tempo real pelos sistemas.</dd></div>
+        <div class="term-item"><dt>REST</dt><dd>Padrão para APIs web baseado em recursos e métodos HTTP.</dd></div>
+        <div class="term-item"><dt>RAID</dt><dd>Técnica de armazenamento com redundância e/ou desempenho.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="S">
+    <h2 class="text-custom">S</h2>
+    <dl>
+        <div class="term-item"><dt>SaaS</dt><dd>Software como serviço entregue via navegador, como Gmail ou Google Docs.</dd></div>
+        <div class="term-item"><dt>SQL</dt><dd>Linguagem usada para consulta e gerenciamento de dados relacionais.</dd></div>
+        <div class="term-item"><dt>Scrum</dt><dd>Metodologia ágil para gerenciamento de projetos em sprints.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="T">
+    <h2 class="text-custom">T</h2>
+    <dl>
+        <div class="term-item"><dt>TCP/IP</dt><dd>Conjunto de protocolos que conecta computadores na internet.</dd></div>
+        <div class="term-item"><dt>Token</dt><dd>Identificador usado para autenticação segura em sistemas.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="U">
+    <h2 class="text-custom">U</h2>
+    <dl>
+        <div class="term-item"><dt>UI</dt><dd>Interface com a qual o usuário interage em um sistema.</dd></div>
+        <div class="term-item"><dt>URL</dt><dd>Endereço utilizado para acessar recursos online.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="V">
+    <h2 class="text-custom">V</h2>
+    <dl>
+        <div class="term-item"><dt>VPN</dt><dd>Rede privada virtual usada para conexão segura pela internet.</dd></div>
+        <div class="term-item"><dt>Versionamento</dt><dd>Controle de versões de arquivos ou código-fonte.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="W">
+    <h2 class="text-custom">W</h2>
+    <dl>
+        <div class="term-item"><dt>Wi-Fi</dt><dd>Tecnologia que conecta dispositivos sem fio a redes locais.</dd></div>
+        <div class="term-item"><dt>WebSocket</dt><dd>Protocolo de comunicação em tempo real entre cliente e servidor.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="X">
+    <h2 class="text-custom">X</h2>
+    <dl>
+        <div class="term-item"><dt>XML</dt><dd>Formato de dados legível por humanos e máquinas para troca de informações.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="Y">
+    <h2 class="text-custom">Y</h2>
+    <dl>
+        <div class="term-item"><dt>YAML</dt><dd>Formato de arquivo usado para configuração, simples e legível.</dd></div>
+    </dl>
+</section>
+
+<section class="glossary-section" id="Z">
+    <h2 class="text-custom">Z</h2>
+    <dl>
+        <div class="term-item"><dt>Zettabyte</dt><dd>Unidade de medida equivalente a um bilhão de terabytes.</dd></div>
+    </dl>
+</section>
+
+
+        </div>
+
+    <footer class="container mt-5">
+       <div class="row py-4 border-top text-muted">
+        <div class="col-md-3">
+            <h5>Navegação</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5>Futuro Profissional</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5>Busque Ajuda</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3 d-flex flex-column justify-content-between" style="min-height: 100%;">
+            <div>
+                <h5>Sobre o H2N-Tech</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                </ul>
+            </div>
+            <!-- Marca d'água alinhada ao final da coluna -->
+            <p class="mt-5 mb-0">&copy; H2N Technology</p>
+        </div>
+       </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

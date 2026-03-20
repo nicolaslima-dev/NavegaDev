@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UERJ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <style>
+        body {
+         background-color: #ffff;
+         padding-top: 70px; /* Mantém o espaço para a navbar fixa */
+        }
+
+        .nav-bar {
+            background-color: #052442;
+            width: 100%; /* Mudança para 100% para que ocupe toda a largura */
+            height: 70px;
+        }
+
+        .form-control-dark {
+            border-color: var(--bs-gray);
+        }
+
+        .form-control-dark:focus {
+            border-color: #fff;
+            box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+        }
+
+        .text-small {
+            font-size: 85%;
+        }
+
+        .dropdown-toggle:not(:focus) {
+            outline: 0;
+        }
+
+        .texto {
+            line-height: 1.6;
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            color: #004F9F;
+        }
+
+        h2 {
+            padding-bottom: 30px;
+        }
+
+        h5 {
+            padding-bottom: 10px;
+        }
+
+        .btn-secondary {
+            background-color: #0d355e;
+        }
+
+        .voltar {
+            padding-top: 10px;
+            margin-left: 20px; /* Adicionado para alinhar com o padding do .texto */
+        }
+
+        .img {
+            width: 100%; /* Mudança para largura 100% */
+            max-width: 360px; /* Definindo o tamanho máximo */
+            height: auto;
+            margin: 0 auto; /* Centralizar a imagem */
+        }
+
+        /* Media Query para telas menores */
+        @media (max-width: 768px) {
+            .nav-bar {
+                height: auto;
+            }
+
+            .img {
+                max-width: 100%; /* A imagem ocupa toda a largura em telas pequenas */
+            }
+
+            .texto {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+      <div class="nav-bar fixed-top">
+        <div class="nav-bar">
+            <header class="container">
+                <ul class="nav nav-pills justify-content-center py-3">
+                  <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                  <li class="nav-item"><a href="cursos.html" class="nav-link active" aria-current="page">Cursos</a></li>
+                  <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                  <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                  <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                  <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                  <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                </ul>
+              </header>
+        </div>
+      </div>
+        <div class="voltar">
+            <a class="btn btn-secondary btn-s" href="ads.html" role="button">Voltar</a>
+        </div>
+
+        <div class="img">
+            <img src="img/Logo_uerj.svg" class="d-block w-100 h-100" alt="Logo CEFET/RJ">
+        </div>
+
+        <div class="texto">
+    <h4 class="text-#004F9F mt-4">Análise e Desenvolvimento de Sistemas - UERJ</h4>
+    <h5 class="text-#004F9F">O curso de Análise e Desenvolvimento de Sistemas da Universidade do Estado do Rio de Janeiro (UERJ)
+        é uma graduação tecnológica que forma profissionais aptos a atuar de forma prática e inovadora no desenvolvimento,
+        projeto e manutenção de softwares e sistemas computacionais. Com foco nas demandas do mercado de trabalho, a formação
+        prepara os estudantes para criar soluções eficientes e otimizar processos em diversas áreas.</h5>
+    <h5 class="text-#004F9F">A grade curricular do curso abrange desde fundamentos essenciais de programação e lógica,
+        passando por bancos de dados, desenvolvimento web e mobile, até a gestão de projetos de software, segurança
+        da informação e usabilidade. Os alunos são incentivados a desenvolver projetos práticos e a participar de
+        atividades que simulam o ambiente profissional, garantindo uma aplicação direta dos conhecimentos adquiridos.</h5>
+    <h5 class="text-#004F9F">O curso é oferecido em um ambiente acadêmico dinâmico, com professores qualificados e infraestrutura
+        voltada para o aprendizado tecnológico. A UERJ proporciona um ambiente propício para a troca de conhecimentos,
+        com oportunidades de envolvimento em projetos de pesquisa e extensão, além de parcerias com empresas, o que
+        favorece a inserção dos alunos no mercado.</h5>
+    <h5 class="text-#004F9F">Ao concluir o curso de Análise e Desenvolvimento de Sistemas pela UERJ, o profissional estará
+        preparado para atuar em funções como analista de sistemas, desenvolvedor de software, arquiteto de soluções,
+        testador ou consultor de TI, contribuindo ativamente para a transformação digital e a inovação tecnológica.</h5>
+</div>
+        <!-- Seção do Mapa com Legenda -->
+        <div class="container-mapa container mt-5 text-center">
+            <h2 class="texto">Mapa UERJ</h2>
+
+            <!-- Aqui entra o iframe -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235277.5702199789!2d-43.436703183432535!3d-22.86862443634039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e66c5f330ad%3A0x874ed5a98cf472d1!2sUniversidade%20do%20Estado%20do%20Rio%20de%20Janeiro!5e0!3m2!1spt-BR!2sbr!4v1752450323641!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <p class="mt-2 textoGlobalNormal">
+                Este mapa oferece uma visão panorâmica da área, integrando recursos do Google Maps.
+            </p>
+        </div>
+
+        <footer class="container mt-5 footer">
+          <div class="row py-4 border-top text-muted">
+            <div class="col-md-3">
+                <h5>Navegação</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Futuro Profissional</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Busque Ajuda</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column justify-content-between">
+                <div>
+                    <h5>Sobre o H2N-Tech</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                    </ul>
+                </div>
+                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+            </div>
+          </div>
+        </footer>
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
