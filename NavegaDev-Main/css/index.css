@@ -1,0 +1,46 @@
+body {
+    padding-top: 70px;
+}
+ 
+.btn-secondary {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    margin: 5px;
+    padding: 20px;
+}
+ 
+.botao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+}
+ 
+.container {
+    padding-bottom: 10px;
+}
+ 
+.noticia_direcionamento {
+    padding-bottom: 50px;
+}
+ 
+.carousel {
+    padding-top: 50px;
+}
+ 
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 1.2em;
+    }
+ 
+    .carousel-caption p {
+        font-size: 0.9em;
+    }
+ 
+    .btn-secondary {
+        width: 100%;
+    }
+}
