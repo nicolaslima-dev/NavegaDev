@@ -1,0 +1,103 @@
+        body {
+            background-color: #f4f7f6;
+            padding-top: 70px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nav-bar {
+            background-color: #052442;
+            width: 100%;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff !important;
+        }
+
+        .nav-link.header-link {
+            color: #ffffff !important;
+        }
+
+        .text-custom {
+            color: #004F9F;
+        }
+
+        /* Estilo das caixas de conteúdo */
+        .conteudo-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        h2, h4 {
+            color: #052442;
+            padding-bottom: 10px;
+        }
+
+        /* Estilização moderna das Abas (Faculdades) */
+        .nav-pills {
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap; /* Permite que as abas quebrem a linha em telas pequenas */
+        }
+
+        .nav-pills .nav-link {
+            color: #052442;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .nav-pills .nav-link:hover {
+            background-color: #e9ecef;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #004F9F;
+            color: #ffffff;
+            border-color: #004F9F;
+            box-shadow: 0 4px 8px rgba(0, 79, 159, 0.3);
+        }
+
+        .botao {
+            margin-top: 20px;
+        }
+
+        .btn-custom {
+            background-color: #004F9F;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #052442;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #052442;
+            color: #ffffff;
+            padding: 40px 0 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #adb5bd !important;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffffff !important;
+        }
+        
+        footer h5 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }

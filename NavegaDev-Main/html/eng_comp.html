@@ -1,181 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engenharia da Computação</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
-  <style>
-    body {
-           background-color: #ffff;
-           padding-top: 70px; /* Mantém o espaço para a navbar fixa */
-    }
-
-    .nav-bar {
-      background-color: #052442;
-    }
-
-    .text-custom {
-      color: #004F9F;
-    }
-
-    .texto {
-      line-height: 1.6;
-      padding: 20px 15px;
-    }
-
-    h4 {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-
-    .botao {
-      margin-top: 30px;
-    }
-
-    .btn-secondary {
-      background-color: #0d355e;
-    }
-
-    .imagem {
-      padding-top: 50px;
-    }
-    /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
-        .footer .nav-link {
-            text-align: left; /* Garante alinhamento à esquerda */
-        }
-        
-/* Ajuste para garantir que a lista em si não tenha padding que a desloque */
-        .footer .nav {
-            padding-left: 0; /* Remove padding padrão de UL */
-        }
-
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engenharia da Computação - NavegaDev</title>
+    <link rel="stylesheet" href="../css/eng_comp.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    
 </head>
 <body>
 
-  <header class="nav-bar fixed-top"> <div class="container">
-      <ul class="nav nav-pills justify-content-center py-3">
-        <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-        <li class="nav-item"><a href="cursos.html" class="nav-link active" aria-current="page">Cursos</a></li>
-        <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
-        <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
-        <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
-        <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
-        <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
-      </ul>
-      </div>
-    </header>
-  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg nav-bar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">NavegaDev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="./html/cursos.html" class="nav-link text-white">Cursos</a></li>
+                    <li class="nav-item"><a href="./html/carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                    <li class="nav-item"><a href="./html/oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                    <li class="nav-item"><a href="./html/duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="./html/saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="./html/sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Imagem -->
-  <div class="imagem text-center">
-    <img src="img/ENG_COMP IMAGEM.png" class="img-fluid" alt="Imagem Engenharia da Computação" />
-  </div>
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        
+        <!-- Cabeçalho da Página -->
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-custom">Engenharia da Computação</h1>
+                <p class="lead text-muted">A união perfeita entre hardware e software. Conheça o curso e as melhores universidades públicas do estado (CEFET/RJ, UFF e UFRJ).</p>
+            </div>
+        </div>
 
-  <!-- Texto -->
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Engenharia da Computação</h2>
+        <!-- Navegação das Abas (Tabs) -->
+        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-sobre-tab" data-bs-toggle="pill" data-bs-target="#pills-sobre" type="button" role="tab" aria-controls="pills-sobre" aria-selected="true">Sobre o Curso</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cefet-tab" data-bs-toggle="pill" data-bs-target="#pills-cefet" type="button" role="tab" aria-controls="pills-cefet" aria-selected="false">CEFET/RJ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-uff-tab" data-bs-toggle="pill" data-bs-target="#pills-uff" type="button" role="tab" aria-controls="pills-uff" aria-selected="false">UFF</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-ufrj-tab" data-bs-toggle="pill" data-bs-target="#pills-ufrj" type="button" role="tab" aria-controls="pills-ufrj" aria-selected="false">UFRJ</button>
+            </li>
+        </ul>
 
-    <h4 class="text-custom">Sobre o curso</h4>
-    <h5 class="text-custom">
-      O curso de Engenharia da Computação combina conhecimentos de engenharia elétrica e ciência da computação, formando profissionais capazes de projetar e desenvolver tanto hardware (a parte física dos computadores e dispositivos) quanto software (programas e sistemas operacionais).
-    </h5>
-    <h5 class="text-custom">
-      É uma graduação bastante completa e desafiadora, com uma base sólida em matemática, física e lógica. O aluno aprende desde o funcionamento de circuitos eletrônicos, sistemas embarcados e microprocessadores, até o desenvolvimento de softwares e algoritmos complexos.
-    </h5>
-    <h5 class="text-custom">
-      Esse curso é ideal para quem quer trabalhar na criação de tecnologias inovadoras, como dispositivos inteligentes, automação industrial, internet das coisas (IoT), robótica e sistemas computacionais integrados.
-    </h5>
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- ABA 1: Sobre o Curso (Original eng_comp.html) -->
+            <div class="tab-pane fade show active" id="pills-sobre" role="tabpanel" aria-labelledby="pills-sobre-tab" tabindex="0">
+                <div class="conteudo-box">
+                    <h2>O que é Engenharia da Computação?</h2>
+                    <p>A Engenharia da Computação é o ramo que integra a Ciência da Computação com a Engenharia Eletrônica para desenvolver tanto o hardware (peças físicas) quanto o software (sistemas e programas). O engenheiro projeta desde microchips e sistemas embarcados até complexas redes de telecomunicações e inteligências artificiais focadas em robótica.</p>
+                    
+                    <h4>Mercado de Trabalho</h4>
+                    <p>O mercado é vasto e altamente especializado. O engenheiro da computação pode atuar na indústria de automação, telecomunicações, setor automotivo e aeroespacial, fábricas inteligentes (Indústria 4.0) e desenvolvimento de software. É o profissional ideal para liderar projetos de "Internet das Coisas" (IoT) e criar soluções tecnológicas robustas.</p>
+                    
+                    <h4>Duração e Perfil</h4>
+                    <p>Como toda engenharia, o curso dura em média 5 anos e exige uma fortíssima base em matemática (Cálculo) e física. O perfil ideal é de pessoas "mão na massa", que gostam de eletrônica, peças e de entender não só como o programa funciona, mas como a máquina física processa aquela informação.</p>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Mercado de trabalho</h4>
-    <h5 class="text-custom">
-      O engenheiro da computação é um profissional muito versátil e requisitado em setores que demandam soluções inteligentes e integradas entre hardware e software. Pode atuar em indústrias, empresas de tecnologia, centros de pesquisa e desenvolvimento, startups, ou até mesmo seguir carreira empreendedora.
-    </h5>
+            <!-- ABA 2: CEFET/RJ (Original cefet_eng_comp.html) -->
+            <div class="tab-pane fade" id="pills-cefet" role="tabpanel" aria-labelledby="pills-cefet-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-primary">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">Engenharia da Computação no CEFET/RJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Maracanã / Nova Friburgo / Petrópolis (verificar disponibilidade por edital).</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (Sistema de Seleção Unificada) utilizando a nota do ENEM.</p>
+                    <p>O CEFET/RJ tem em seu DNA o ensino tecnológico e industrial. O curso de Engenharia da Computação destaca-se por ter uma abordagem extremamente prática, com o aluno vivenciando o ambiente de laboratórios de eletrônica e automação industrial desde cedo.</p>
+                    
+                    <h4>Grade Curricular em Destaque</h4>
+                    <ul>
+                        <li>Eletrônica Digital, Analógica e de Potência</li>
+                        <li>Sistemas Microprocessados e Microcontroladores</li>
+                        <li>Controle e Automação Industrial</li>
+                        <li>Arquitetura de Redes e Telecomunicações</li>
+                    </ul>
+                    <a href="https://www.cefet-rj.br" target="_blank" class="btn btn-custom botao">Acessar site do CEFET/RJ</a>
+                </div>
+            </div>
 
-    <h2 class="text-center text-custom mt-4">Faculdades</h2>
+            <!-- ABA 3: UFF (Original uff_eng_comp.html) -->
+            <div class="tab-pane fade" id="pills-uff" role="tabpanel" aria-labelledby="pills-uff-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-info">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">Engenharia da Computação na UFF</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Praia Vermelha (Niterói).</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>Ministrado em colaboração entre a Escola de Engenharia (TCE) e o Instituto de Computação (IC), o curso na Universidade Federal Fluminense forma engenheiros com uma visão completa, balanceando a teoria da computação com a densidade da engenharia de hardware.</p>
+                    
+                    <h4>Foco Prático e Inovação</h4>
+                    <p>Há um enorme incentivo para a participação discente em equipes de competição tecnológica (como drones e robótica autônoma) e laboratórios de sistemas inteligentes, proporcionando contato imediato com os desafios atuais da engenharia global.</p>
+                    <a href="https://www.uff.br" target="_blank" class="btn btn-info text-white botao">Acessar site da UFF</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Faculdades Públicas</h4>
-    <h5 class="text-custom">
-      No Rio de Janeiro existem algumas faculdades públicas que possuem este curso. A seguir, uma lista com as principais.
-    </h5>
-  </div>
+            <!-- ABA 4: UFRJ (Original ufrj_eng_comp.html) -->
+            <div class="tab-pane fade" id="pills-ufrj" role="tabpanel" aria-labelledby="pills-ufrj-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-danger">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">Engenharia da Computação na UFRJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Cidade Universitária (Ilha do Fundão) - Rio de Janeiro.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>Vinculado à prestigiada Escola Politécnica (Poli-UFRJ) e com forte atuação em conjunto com o Instituto de Matemática, este é um dos cursos de engenharia mais desafiadores e conceituados do Brasil. O nível de exigência na formação básica (cálculo e física) é altíssimo.</p>
+                    
+                    <h4>Diferenciais da Poli-UFRJ</h4>
+                    <p>O graduando na UFRJ forma-se com uma robusta base de engenharia e mergulha profundamente em projetos de ponta, incluindo desenvolvimento de hardware, processamento de sinais, sistemas embarcados em tempo real e inteligência artificial de alto rendimento.</p>
+                    <a href="https://ufrj.br" target="_blank" class="btn btn-danger botao">Acessar site da UFRJ</a>
+                </div>
+            </div>
 
-  <!-- Botões -->
-  <div class="container botao">
-    <div class="row text-center">
-      <div class="col-12 col-sm-6 col-md-6 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="ufrj_eng_comp.html">UFRJ</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="cefet_eng_comp.html">CEFET/RJ</a>
-      </div>
+        </div>
     </div>
-  </div>
 
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Nota de Corte - ENEM</h2>
-
-    <h4 class="text-center text-custom mt-4">Confira a nota de corte média do curso que você escolheu!</h4>
-  </div>
-
-  <div class="corte">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="notadecorte.html">Nota de Corte</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="container mt-5 footer">
-        <div class="row py-4 border-top text-muted">
-            <div class="col-md-3">
-                <h5>Navegação</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
-                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
-                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
-                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
-                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h5>Futuro Profissional</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
-                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
-                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
-                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
-                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h5>Busque Ajuda</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
-                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 d-flex flex-column justify-content-between">
-                <div>
-                    <h5>Sobre o H2N-Tech</h5>
+    <!-- Footer Unificado -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Navegação</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
-                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Outros Cursos</a></li>
+                        <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                        <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
                     </ul>
                 </div>
-                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+
+                <div class="col-md-3">
+                    <h5>Busque Ajuda</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                        <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5>Sobre a NavegaDev</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                            <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 d-flex flex-column justify-content-end align-items-md-end text-md-end mt-4 mt-md-0">
+                     <p class="mb-0 text-white">&copy; 2026 NavegaDev</p>
+                </div>
             </div>
         </div>
     </footer>
-  
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS (Obrigatório para as abas funcionarem) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

@@ -1,189 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BSI</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
-  <style>
-    body {
-     background-color: #ffff;
-     padding-top: 70px; 
-    }
-
-    .nav-bar {
-      background-color: #052442;
-    }
-
-    .text-custom {
-      color: #004F9F;
-    }
-
-    .texto {
-      line-height: 1.6;
-      padding: 20px 15px;
-    }
-
-    h4 {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-
-    .botao {
-      margin-top: 30px;
-      
-    }
-
-    .btn-secondary {
-      background-color: #0d355e;
-    }
-
-    .imagem {
-      padding-top: 50px;
-    }
-
-    .footer .nav-link {
-     text-align: left; 
-    } 
-
-    .footer .nav {
-     padding-left: 0; 
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas de Informação (BSI) - NavegaDev</title>
+    <link rel="stylesheet" href="../css/bsi.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
     
-  </style>
 </head>
 <body>
 
-  <header class="nav-bar fixed-top"> <div class="container">
-      <ul class="nav nav-pills justify-content-center py-3">
-        <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-        <li class="nav-item"><a href="cursos.html" class="nav-link active" aria-current="page">Cursos</a></li>
-        <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
-        <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
-        <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
-        <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
-        <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
-      </ul>
-      </div>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg nav-bar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">NavegaDev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="./html/cursos.html" class="nav-link text-white">Cursos</a></li>
+                    <li class="nav-item"><a href="./html/carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                    <li class="nav-item"><a href="./html/oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                    <li class="nav-item"><a href="./html/duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="./html/saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="./html/sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        
+        <!-- Cabeçalho da Página -->
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-custom">Bacharelado em Sistemas de Informação</h1>
+                <p class="lead text-muted">Tudo o que precisas de saber sobre o curso (BSI) e as melhores instituições públicas (CEFET/RJ, UNIRIO, UFRRJ e UFF).</p>
+            </div>
+        </div>
 
+        <!-- Navegação das Abas (Tabs) -->
+        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-sobre-tab" data-bs-toggle="pill" data-bs-target="#pills-sobre" type="button" role="tab" aria-controls="pills-sobre" aria-selected="true">Sobre o Curso</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cefet-tab" data-bs-toggle="pill" data-bs-target="#pills-cefet" type="button" role="tab" aria-controls="pills-cefet" aria-selected="false">CEFET/RJ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-unirio-tab" data-bs-toggle="pill" data-bs-target="#pills-unirio" type="button" role="tab" aria-controls="pills-unirio" aria-selected="false">UNIRIO</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-ufrrj-tab" data-bs-toggle="pill" data-bs-target="#pills-ufrrj" type="button" role="tab" aria-controls="pills-ufrrj" aria-selected="false">UFRRJ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-uff-tab" data-bs-toggle="pill" data-bs-target="#pills-uff" type="button" role="tab" aria-controls="pills-uff" aria-selected="false">UFF</button>
+            </li>
+        </ul>
 
-  <!-- Imagem -->
-  <div class="imagem text-center">
-    <img src="img/BSI IMAGEM.png" class="img-fluid" alt="Imagem BSI" />
-  </div>
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- ABA 1: Sobre o Curso (Original bsi.html) -->
+            <div class="tab-pane fade show active" id="pills-sobre" role="tabpanel" aria-labelledby="pills-sobre-tab" tabindex="0">
+                <div class="conteudo-box">
+                    <h2>O que é Sistemas de Informação (BSI)?</h2>
+                    <p>O Bacharelado em Sistemas de Informação (BSI) alia a tecnologia da informação à gestão de negócios. O profissional formado nesta área é responsável por aplicar soluções tecnológicas (como o desenvolvimento de software e a gestão de bases de dados) para resolver problemas empresariais e otimizar processos nas organizações.</p>
+                    
+                    <h4>Mercado de Trabalho</h4>
+                    <p>O mercado é muito amplo. O bacharel em Sistemas de Informação pode atuar como Analista de Sistemas, Engenheiro de Software, Gestor de Projetos de TI, Cientista de Dados ou Consultor de Tecnologia. Diferente de outros cursos, o BSI traz uma forte base de empreendedorismo e administração, ideal para quem quer liderar equipas ou criar a sua própria startup.</p>
+                    
+                    <h4>Duração e Perfil</h4>
+                    <p>O curso tem a duração média de 4 anos. O perfil do aluno requer afinidade com tecnologia, raciocínio lógico e, acima de tudo, visão de negócios e capacidade de comunicação, pois será a "ponte" entre o setor técnico (programadores) e o setor estratégico (diretores e clientes).</p>
+                </div>
+            </div>
 
-  <!-- Texto -->
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Sistemas de Informação</h2>
+            <!-- ABA 2: CEFET/RJ (Original cefet_bsi.html) -->
+            <div class="tab-pane fade" id="pills-cefet" role="tabpanel" aria-labelledby="pills-cefet-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-primary">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">BSI no CEFET/RJ</h2>
+                    </div>
+                    <p><strong>Forma de Ingresso:</strong> SISU (Sistema de Seleção Unificada) com a nota do ENEM.</p>
+                    <p>O curso de Sistemas de Informação no CEFET/RJ (verifique os campus com oferta vigente, como Nova Friburgo ou Maracanã) tem uma forte inclinação para o desenvolvimento tecnológico aliado à gestão industrial e comercial. A instituição destaca-se pela excelente infraestrutura e proximidade com o setor produtivo.</p>
+                    
+                    <h4>Destaques do Curso</h4>
+                    <ul>
+                        <li>Forte base de programação e engenharia de software.</li>
+                        <li>Integração com projetos de pesquisa aplicada.</li>
+                        <li>Foco no desenvolvimento de soluções inovadoras.</li>
+                    </ul>
+                    <a href="https://www.cefet-rj.br" target="_blank" class="btn btn-custom botao">Acessar o site do CEFET/RJ</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom">Bacharelado em Sistema de Informação</h4>
-    <h5 class="text-custom">
-      O curso de Sistemas de Informação une conhecimentos de tecnologia, gestão e negócios para formar profissionais capazes de desenvolver, gerenciar e otimizar sistemas computacionais que apoiam os processos de uma organização.
-    </h5>
-    <h5 class="text-custom">
-      Durante a graduação, o aluno aprende tanto a parte técnica — como programação, bancos de dados, redes de computadores e engenharia de software — quanto disciplinas voltadas à administração, como gestão de projetos, análise organizacional e tomada de decisão com base em dados.
-    </h5>
-    <h5 class="text-custom">
-      O profissional formado nessa área atua como ponte entre a tecnologia e os objetivos estratégicos das empresas. Ele pode trabalhar no desenvolvimento de softwares, na análise e melhoria de sistemas, no suporte à decisão empresarial, ou ainda na área de segurança da informação.
-    </h5>
+            <!-- ABA 3: UNIRIO (Original unirio_bsi.html) -->
+            <div class="tab-pane fade" id="pills-unirio" role="tabpanel" aria-labelledby="pills-unirio-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-success">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">BSI na UNIRIO</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Urca (CCET) - Rio de Janeiro.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>A Universidade Federal do Estado do Rio de Janeiro (UNIRIO) possui um dos cursos de Sistemas de Informação mais conceituados do estado. O curso na UNIRIO é reconhecido pelo rigor académico e pela excelência do seu corpo docente, formando profissionais altamente competitivos no mercado nacional e internacional.</p>
+                    
+                    <h4>Diferenciais</h4>
+                    <p>Localizado num dos bairros mais agradáveis do Rio de Janeiro, o curso da UNIRIO possui forte estímulo à iniciação científica, parcerias internacionais e grupos de desenvolvimento de software reconhecidos.</p>
+                    <a href="http://www.unirio.br/" target="_blank" class="btn btn-success botao">Acessar o site da UNIRIO</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Mercado de trabalho</h4>
-    <h5 class="text-custom">
-      Com o crescimento da digitalização nas empresas, a demanda por profissionais de Sistemas de Informação segue em alta. O curso é ideal para quem quer atuar na interseção entre tecnologia e gestão, e tem espaço tanto em grandes corporações quanto em startups e órgãos públicos.
-    </h5>
+            <!-- ABA 4: UFRRJ (Original ufrrj_bsi.html) -->
+            <div class="tab-pane fade" id="pills-ufrrj" role="tabpanel" aria-labelledby="pills-ufrrj-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4" style="border-color: #ff9800 !important;">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">BSI na UFRRJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Nova Iguaçu / Seropédica.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>A Universidade Federal Rural do Rio de Janeiro (UFRRJ) oferece uma excelente estrutura universitária. O curso foca-se na interdisciplinaridade, preparando o aluno para resolver problemas sociotécnicos de grande escala e fomentando o desenvolvimento regional.</p>
+                    
+                    <h4>Apostando na Inovação</h4>
+                    <p>Os alunos têm acesso a laboratórios modernos e grande vivência universitária, participando em empresas juniores, hackathons regionais e desenvolvimento de projetos práticos que beneficiam a comunidade externa.</p>
+                    <a href="https://portal.ufrrj.br/" target="_blank" class="btn text-white botao" style="background-color: #ff9800;">Acessar o site da UFRRJ</a>
+                </div>
+            </div>
 
-    <h2 class="text-center text-custom mt-4">Faculdades</h2>
+            <!-- ABA 5: UFF (Original uff_bsi.html) -->
+            <div class="tab-pane fade" id="pills-uff" role="tabpanel" aria-labelledby="pills-uff-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-info">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">BSI na UFF</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Instituto de Computação (Niterói) / Polos Regionais.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>A Universidade Federal Fluminense (UFF) destaca-se na área de exatas e tecnologias. O Instituto de Computação da UFF é referência, e o curso de BSI herda essa forte base técnica aliada à perspetiva administrativa, formando gestores de TI de alto nível.</p>
+                    
+                    <h4>Integração Tecnológica</h4>
+                    <p>O ambiente da UFF favorece o networking, com intensa atividade de alunos em laboratórios de inteligência artificial, computação gráfica e gestão da informação.</p>
+                    <a href="https://www.uff.br/" target="_blank" class="btn btn-info text-white botao">Acessar o site da UFF</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Faculdades Públicas</h4>
-    <h5 class="text-custom">
-      No Rio de Janeiro existem algumas faculdades públicas que possuem este curso. A seguir, uma lista com as principais.
-    </h5>
-  </div>
-  
-  
-
-  <!-- Botões -->
-  <div class="container botao">
-    <div class="row text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="unirio_bsi.html">UNIRIO</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="uff_bsi.html">UFF</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="ufrrj_bsi.html">UFRRJ</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="cefet_bsi.html">CEFET/RJ</a>
-      </div>
+        </div>
     </div>
-  </div>
 
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Nota de Corte - ENEM</h2>
-
-    <h4 class="text-center text-custom mt-4">Confira a nota de corte média do curso que você escolheu!</h4>
-  </div>
-
-  <div class="corte">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="notadecorte.html">Nota de Corte</a>
-      </div>
-    </div>
-  </div>
-  
-
-  <!-- Footer -->
-  <footer class="container mt-5 footer">
-        <div class="row py-4 border-top text-muted">
-            <div class="col-md-3">
-                <h5>Navegação</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
-                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
-                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
-                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
-                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h5>Futuro Profissional</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
-                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
-                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
-                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
-                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h5>Busque Ajuda</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
-                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 d-flex flex-column justify-content-between">
-                <div>
-                    <h5>Sobre o H2N-Tech</h5>
+    <!-- Footer Unificado -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Navegação</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
-                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Outros Cursos</a></li>
+                        <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                        <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
                     </ul>
                 </div>
-                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+
+                <div class="col-md-3">
+                    <h5>Busque Ajuda</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                        <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5>Sobre a NavegaDev</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                            <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 d-flex flex-column justify-content-end align-items-md-end text-md-end mt-4 mt-md-0">
+                     <p class="mb-0 text-white">&copy; 2026 NavegaDev</p>
+                </div>
             </div>
         </div>
     </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS (Obrigatório para as abas funcionarem) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

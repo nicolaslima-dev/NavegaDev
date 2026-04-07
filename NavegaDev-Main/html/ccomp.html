@@ -1,185 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CCOMP</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
-  <style>
-    body {
-           background-color: #ffff;
-           padding-top: 70px; /* Mantém o espaço para a navbar fixa */
-    }
-
-
-    .nav-bar {
-      background-color: #052442;
-    }
-
-    .text-custom {
-      color: #004F9F;
-    }
-
-    .texto {
-      line-height: 1.6;
-      padding: 20px 15px;
-    }
-
-    h4 {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-
-    .botao {
-      margin-top: 30px;
-    }
-
-    .btn-secondary {
-      background-color: #0d355e;
-    }
-
-    .imagem {
-      padding-top: 50px;
-    }
-    /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
-        .footer .nav-link {
-            text-align: left; /* Garante alinhamento à esquerda */
-        }
-        
-/* Ajuste para garantir que a lista em si não tenha padding que a desloque */
-        .footer .nav {
-            padding-left: 0; /* Remove padding padrão de UL */
-        }
-
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciência da Computação (CCOMP) - NavegaDev</title>
+    <link rel="stylesheet" href="../css/ccomp.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    
 </head>
 <body>
 
- <header class="nav-bar fixed-top"> <div class="container">
-      <ul class="nav nav-pills justify-content-center py-3">
-        <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-        <li class="nav-item"><a href="cursos.html" class="nav-link active" aria-current="page">Cursos</a></li>
-        <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
-        <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
-        <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
-        <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
-        <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
-      </ul>
-      </div>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg nav-bar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">NavegaDev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="./html/cursos.html" class="nav-link text-white">Cursos</a></li>
+                    <li class="nav-item"><a href="./html/carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                    <li class="nav-item"><a href="./html/oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                    <li class="nav-item"><a href="./html/duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="./html/saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="./html/sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Imagem -->
-  <div class="imagem text-center">
-    <img src="img/CCOMP IMAGEM.png" class="img-fluid" alt="Imagem CCOMP" />
-  </div>
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        
+        <!-- Cabeçalho da Página -->
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-custom">Bacharelado em Ciência da Computação</h1>
+                <p class="lead text-muted">Descubra tudo sobre o curso (CCOMP) e compare as oportunidades nas principais instituições públicas (CEFET/RJ, UFF, UFRJ e UFRRJ).</p>
+            </div>
+        </div>
 
-  <!-- Texto -->
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Ciência da Computação</h2>
+        <!-- Navegação das Abas (Tabs) -->
+        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-sobre-tab" data-bs-toggle="pill" data-bs-target="#pills-sobre" type="button" role="tab" aria-controls="pills-sobre" aria-selected="true">Sobre o Curso</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cefet-tab" data-bs-toggle="pill" data-bs-target="#pills-cefet" type="button" role="tab" aria-controls="pills-cefet" aria-selected="false">CEFET/RJ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-uff-tab" data-bs-toggle="pill" data-bs-target="#pills-uff" type="button" role="tab" aria-controls="pills-uff" aria-selected="false">UFF</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-ufrj-tab" data-bs-toggle="pill" data-bs-target="#pills-ufrj" type="button" role="tab" aria-controls="pills-ufrj" aria-selected="false">UFRJ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-ufrrj-tab" data-bs-toggle="pill" data-bs-target="#pills-ufrrj" type="button" role="tab" aria-controls="pills-ufrrj" aria-selected="false">UFRRJ</button>
+            </li>
+        </ul>
 
-    <h4 class="text-custom">Sobre o curso</h4>
-    <h5 class="text-custom">
-      O curso de Ciência da Computação é voltado para quem deseja entender a fundo os fundamentos da computação e desenvolver soluções tecnológicas inovadoras.
-    </h5>
-    <h5 class="text-custom">
-      Ao longo da graduação, o aluno mergulha em disciplinas que exigem raciocínio lógico, pensamento abstrato e criatividade.
-    </h5>
-    <h5 class="text-custom">
-      O profissional formado em Ciência da Computação tem um perfil técnico e analítico, preparado para atuar na pesquisa, desenvolvimento de software, otimização de sistemas e criação de novas tecnologias.
-    </h5>
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- ABA 1: Sobre o Curso (Original ccomp.html) -->
+            <div class="tab-pane fade show active" id="pills-sobre" role="tabpanel" aria-labelledby="pills-sobre-tab" tabindex="0">
+                <div class="conteudo-box">
+                    <h2>O que é Ciência da Computação?</h2>
+                    <p>O Bacharelado em Ciência da Computação (CCOMP) é o curso com a base teórica mais profunda e matemática na área de tecnologia. O profissional formado nesta área entende o funcionamento dos computadores em seu nível mais baixo e é treinado não apenas para usar tecnologias existentes, mas para criar novas ferramentas, linguagens e algoritmos complexos.</p>
+                    
+                    <h4>Mercado de Trabalho</h4>
+                    <p>O mercado é altamente aquecido e globalizado. O cientista da computação pode atuar no desenvolvimento de softwares complexos, pesquisa em Inteligência Artificial, segurança da informação, criação de arquiteturas de sistemas de larga escala e no meio acadêmico. As grandes "Big Techs" (Google, Microsoft, Amazon) têm forte preferência por este perfil analítico.</p>
+                    
+                    <h4>Duração e Perfil</h4>
+                    <p>O curso dura em média 4 anos. O perfil ideal é de pessoas com forte afinidade pela matemática, lógica, resolução de quebra-cabeças complexos e que gostam de entender o "porquê" das coisas, tendo disposição para muito estudo teórico aliado à prática de programação.</p>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Mercado de trabalho</h4>
-    <h5 class="text-custom">
-      A Ciência da Computação forma profissionais muito valorizados no mercado, especialmente em áreas de alta complexidade técnica.
-    </h5>
+            <!-- ABA 2: CEFET/RJ (Original cefet_ccomp.html) -->
+            <div class="tab-pane fade" id="pills-cefet" role="tabpanel" aria-labelledby="pills-cefet-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-primary">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">CCOMP no CEFET/RJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Maracanã / Nova Friburgo / Petrópolis (verificar edital vigente).</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (Sistema de Seleção Unificada) utilizando a nota do ENEM.</p>
+                    <p>No CEFET/RJ, a tradição no ensino técnico e tecnológico reflete-se na Ciência da Computação, mesclando um forte embasamento científico com aplicações práticas e experimentação em laboratórios muito bem equipados.</p>
+                    
+                    <h4>Grade Curricular em Destaque</h4>
+                    <ul>
+                        <li>Cálculo, Álgebra Linear e Geometria Analítica</li>
+                        <li>Estruturas de Dados Avançadas e Análise de Algoritmos</li>
+                        <li>Inteligência Artificial e Aprendizado de Máquina</li>
+                        <li>Arquitetura de Computadores e Sistemas Operacionais</li>
+                    </ul>
+                    <a href="https://www.cefet-rj.br" target="_blank" class="btn btn-custom botao">Acessar site do CEFET/RJ</a>
+                </div>
+            </div>
 
-    <h2 class="text-center text-custom mt-4">Faculdades</h2>
+            <!-- ABA 3: UFF (Original uff_ccomp.html) -->
+            <div class="tab-pane fade" id="pills-uff" role="tabpanel" aria-labelledby="pills-uff-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-info">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">CCOMP na UFF</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Praia Vermelha (Niterói) / Rio das Ostras.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>A Universidade Federal Fluminense possui o prestigioso Instituto de Computação (IC), que é referência nacional. A graduação em Ciência da Computação na UFF prepara o aluno tanto para a excelência na pesquisa quanto para a vanguarda do mercado de trabalho mundial.</p>
+                    
+                    <h4>Diferenciais da UFF</h4>
+                    <p>Destaque forte para os laboratórios de Computação Visual, Otimização e Inteligência Artificial. A universidade possui excelentes convênios internacionais e incentiva pesadamente a pesquisa científica desde os primeiros períodos.</p>
+                    <a href="https://www.uff.br" target="_blank" class="btn btn-info text-white botao">Acessar site da UFF</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Faculdades Públicas</h4>
-    <h5 class="text-custom">
-      No Rio de Janeiro existem algumas faculdades públicas que possuem este curso. A seguir, uma lista com as principais.
-    </h5>
-  </div>
+            <!-- ABA 4: UFRJ (Original ufrj_ccomp.html) -->
+            <div class="tab-pane fade" id="pills-ufrj" role="tabpanel" aria-labelledby="pills-ufrj-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-danger">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">CCOMP na UFRJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Cidade Universitária (Ilha do Fundão) - Rio de Janeiro.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>Vinculado ao renomado Instituto de Matemática (IM) e ao Departamento de Ciência da Computação (DCC), o curso da UFRJ é considerado um dos melhores e mais desafiadores do Brasil. Possui uma base lógico-matemática excepcionalmente rigorosa.</p>
+                    
+                    <h4>Foco Prático e Científico</h4>
+                    <p>Com forte influência de programas de pós-graduação como a COPPE, o graduando em Ciência da Computação na UFRJ é exposto a pesquisas de ponta, algoritmos complexos, sistemas distribuídos e criptografia, formando uma verdadeira elite intelectual em tecnologia.</p>
+                    <a href="https://ufrj.br" target="_blank" class="btn btn-danger botao">Acessar site da UFRJ</a>
+                </div>
+            </div>
 
-  <!-- Botões -->
-  <div class="container botao">
-    <div class="row text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="uff_ccomp.html">UFF</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="ufrj_ccomp.html">UFRJ</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="ufrrj_ccomp.html">UFRRJ</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="cefet_ccomp.html">CEFET/RJ</a>
-      </div>
+            <!-- ABA 5: UFRRJ (Original ufrrj_ccomp.html) -->
+            <div class="tab-pane fade" id="pills-ufrrj" role="tabpanel" aria-labelledby="pills-ufrrj-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4" style="border-color: #ff9800 !important;">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">CCOMP na UFRRJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Seropédica / Nova Iguaçu.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>A Universidade Federal Rural do Rio de Janeiro entrega uma formação sólida em exatas. O curso busca capacitar profissionais inovadores, aptos a desenvolver modelos e sistemas computacionais para resolver problemas de todos os setores da sociedade.</p>
+                    
+                    <h4>Foco do Curso</h4>
+                    <p>O curso oferece grande incentivo ao Software Livre, participação em maratonas de programação e projetos de iniciação científica voltados à inovação, permitindo aos estudantes interagir intensamente com a comunidade acadêmica num dos maiores e mais verdes campi da América Latina.</p>
+                    <a href="https://portal.ufrrj.br" target="_blank" class="btn text-white botao" style="background-color: #ff9800;">Acessar site da UFRRJ</a>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Nota de Corte - ENEM</h2>
 
-    <h4 class="text-center text-custom mt-4">Confira a nota de corte média do curso que você escolheu!</h4>
-  </div>
-
-  <div class="corte">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="notadecorte.html">Nota de Corte</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="container mt-5 footer">
-        <div class="row py-4 border-top text-muted">
-            <div class="col-md-3">
-                <h5>Navegação</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
-                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
-                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
-                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
-                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h5>Futuro Profissional</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
-                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
-                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
-                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
-                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h5>Busque Ajuda</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
-                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 d-flex flex-column justify-content-between">
-                <div>
-                    <h5>Sobre o H2N-Tech</h5>
+    <!-- Footer Unificado -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Navegação</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
-                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Outros Cursos</a></li>
+                        <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                        <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
                     </ul>
                 </div>
-                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+
+                <div class="col-md-3">
+                    <h5>Busque Ajuda</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                        <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5>Sobre a NavegaDev</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                            <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 d-flex flex-column justify-content-end align-items-md-end text-md-end mt-4 mt-md-0">
+                     <p class="mb-0 text-white">&copy; 2026 NavegaDev</p>
+                </div>
             </div>
         </div>
     </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS (Obrigatório para as abas funcionarem) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

@@ -1,185 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ADS</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
-  <style>
-   
-    body {
-           background-color: #ffff;
-           padding-top: 70px; /* Mantém o espaço para a navbar fixa */
-    }
-    .nav-bar {
-      background-color: #052442;
-    }
-
-    .text-custom {
-      color: #004F9F;
-    }
-
-    .texto {
-      line-height: 1.6;
-      padding: 20px 15px;
-    }
-
-    h4 {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-
-    .botao {
-      margin-top: 30px;
-    }
-
-    .btn-secondary {
-      background-color: #0d355e;
-    }
-
-    .imagem {
-      padding-top: 50px;
-    }
-    /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
-        .footer .nav-link {
-            text-align: left; /* Garante alinhamento à esquerda */
-        }
-        
-/* Ajuste para garantir que a lista em si não tenha padding que a desloque */
-        .footer .nav {
-            padding-left: 0; /* Remove padding padrão de UL */
-        }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Análise e Desenvolvimento de Sistemas (ADS) - NavegaDev</title>
+    <link rel="stylesheet" href="../css/ads.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    
 </head>
 <body>
 
-  
-   <header class="nav-bar fixed-top"> <div class="container">
-      <ul class="nav nav-pills justify-content-center py-3">
-        <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-        <li class="nav-item"><a href="cursos.html" class="nav-link active" aria-current="page">Cursos</a></li>
-        <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
-        <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
-        <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
-        <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
-        <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
-      </ul>
-      </div>
-    </header>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg nav-bar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">NavegaDev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="./html/cursos.html" class="nav-link text-white">Cursos</a></li>
+                    <li class="nav-item"><a href="./html/carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                    <li class="nav-item"><a href="./html/oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
+                    <li class="nav-item"><a href="./html/duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="./html/saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                    <li class="nav-item"><a href="./html/sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Imagem -->
-  <div class="imagem text-center">
-    <img src="img/ADS IMAGEM.png" class="img-fluid" alt="Imagem ADS" />
-  </div>
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        
+        <!-- Cabeçalho da Página -->
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-custom">Análise e Desenvolvimento de Sistemas</h1>
+                <p class="lead text-muted">Descubra tudo sobre o curso e compare as melhores instituições públicas (CEFET/RJ, UERJ e FAETERJ).</p>
+            </div>
+        </div>
 
-  <!-- Texto -->
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Análise e Desenvolvimento de Sistemas (ADS)</h2>
+        <!-- Navegação das Abas (Tabs) -->
+        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-sobre-tab" data-bs-toggle="pill" data-bs-target="#pills-sobre" type="button" role="tab" aria-controls="pills-sobre" aria-selected="true">Sobre o Curso</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cefet-tab" data-bs-toggle="pill" data-bs-target="#pills-cefet" type="button" role="tab" aria-controls="pills-cefet" aria-selected="false">CEFET/RJ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-uerj-tab" data-bs-toggle="pill" data-bs-target="#pills-uerj" type="button" role="tab" aria-controls="pills-uerj" aria-selected="false">UERJ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-faeterj-tab" data-bs-toggle="pill" data-bs-target="#pills-faeterj" type="button" role="tab" aria-controls="pills-faeterj" aria-selected="false">FAETERJ</button>
+            </li>
+        </ul>
 
-    <h4 class="text-custom">Sobre o curso</h4>
-    <h5 class="text-custom">
-      O curso de Análise e Desenvolvimento de Sistemas é uma formação de nível superior focada no desenvolvimento de softwares e sistemas para resolver problemas do dia a dia de empresas e usuários.
-    </h5>
-    <h5 class="text-custom">
-      De forma prática e direta, prepara o aluno para analisar, projetar, implementar e manter sistemas computacionais, com forte ênfase em programação.
-    </h5>
-    <h5 class="text-custom">
-      Os estudantes aprendem sobre linguagens de programação, banco de dados, engenharia de software, testes, segurança da informação e desenvolvimento de aplicações web e mobile.
-    </h5>
-    <h5 class="text-custom">
-      Ideal para quem quer entrar mais rápido no mercado de tecnologia, o ADS forma profissionais prontos para desenvolver soluções e atuar em projetos de software de diversos tipos.
-    </h5>
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- ABA 1: Sobre o Curso (Original ads.html) -->
+            <div class="tab-pane fade show active" id="pills-sobre" role="tabpanel" aria-labelledby="pills-sobre-tab" tabindex="0">
+                <div class="conteudo-box">
+                    <h2>O que é Análise e Desenvolvimento de Sistemas?</h2>
+                    <p>O curso superior de tecnologia em Análise e Desenvolvimento de Sistemas (ADS) forma profissionais capazes de projetar, testar, implantar e manter sistemas computacionais de informação. O aluno aprende a criar softwares para computadores, dispositivos móveis e sistemas web.</p>
+                    
+                    <h4>Mercado de Trabalho</h4>
+                    <p>A área de TI é uma das que mais crescem no Brasil e no mundo. O tecnólogo em ADS pode atuar como programador, analista de sistemas, engenheiro de software, administrador de banco de dados, entre outras funções. A taxa de empregabilidade é altíssima logo após a formação.</p>
+                    
+                    <h4>Duração e Perfil</h4>
+                    <p>Geralmente, o curso dura de 2,5 a 3 anos. O perfil ideal é de pessoas que gostam de tecnologia, têm raciocínio lógico bem desenvolvido e interesse em resolver problemas complexos através de códigos.</p>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Mercado de trabalho</h4>
-    <h5 class="text-custom">
-      A área de desenvolvimento está em constante expansão, e o curso de ADS é um dos caminhos mais rápidos para ingressar no setor de TI. Empresas de todos os tamanhos e segmentos buscam profissionais com esse perfil, especialmente em startups e consultorias de tecnologia.
-    </h5>
+            <!-- ABA 2: CEFET/RJ (Original cefet_ads.html) -->
+            <div class="tab-pane fade" id="pills-cefet" role="tabpanel" aria-labelledby="pills-cefet-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-primary">
+                    <div class="d-flex align-items-center mb-3">
+                        <!-- Espaço para logo do Cefet se quiser: <img src="logo_cefet.png" width="50" class="me-3"> -->
+                        <h2 class="mb-0">ADS no CEFET/RJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Maracanã / Nova Iguaçu (Verificar edital vigente).</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (Sistema de Seleção Unificada) utilizando a nota do ENEM.</p>
+                    <p>O curso de Análise e Desenvolvimento de Sistemas no Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ) é reconhecido pela sua forte base técnica e prática. A instituição possui excelentes laboratórios e um corpo docente altamente qualificado.</p>
+                    
+                    <h4>Grade Curricular em Destaque</h4>
+                    <ul>
+                        <li>Algoritmos e Estruturas de Dados</li>
+                        <li>Engenharia de Software</li>
+                        <li>Desenvolvimento Web e Mobile</li>
+                        <li>Banco de Dados Relacionais e Não Relacionais</li>
+                    </ul>
+                    <a href="https://www.cefet-rj.br" target="_blank" class="btn btn-custom botao">Acessar site do CEFET/RJ</a>
+                </div>
+            </div>
 
-    <h2 class="text-center text-custom mt-4">Faculdades</h2>
+            <!-- ABA 3: UERJ (Original uerj_ads.html) -->
+            <div class="tab-pane fade" id="pills-uerj" role="tabpanel" aria-labelledby="pills-uerj-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-success">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">ADS na UERJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Maracanã / Zona Oeste (Antiga UEZO).</p>
+                    <p><strong>Forma de Ingresso:</strong> Vestibular Estadual da UERJ.</p>
+                    <p>A Universidade do Estado do Rio de Janeiro oferece uma formação robusta com forte integração com o mercado e com projetos de pesquisa. O curso foca não apenas na programação, mas na gestão de projetos de TI.</p>
+                    
+                    <h4>Diferenciais da UERJ</h4>
+                    <p>A UERJ conta com parcerias com diversas empresas de tecnologia do Rio de Janeiro, facilitando o ingresso do estudante no mercado de trabalho através de estágios e projetos de extensão.</p>
+                    <a href="https://www.uerj.br" target="_blank" class="btn btn-success botao">Acessar site da UERJ</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Faculdades Públicas</h4>
-    <h5 class="text-custom">
-      No Rio de Janeiro existem algumas faculdades públicas que possuem este curso. A seguir, uma lista com as principais.
-    </h5>
-  </div>
+            <!-- ABA 4: FAETERJ (Original faeterj_ads.html) -->
+            <div class="tab-pane fade" id="pills-faeterj" role="tabpanel" aria-labelledby="pills-faeterj-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-info">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">ADS na FAETERJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Rio de Janeiro (Quintino), Petrópolis, Paracambi, entre outros.</p>
+                    <p><strong>Forma de Ingresso:</strong> Vestibular próprio da FAETEC / FAETERJ ou ENEM.</p>
+                    <p>A Faculdade de Educação Tecnológica do Estado do Rio de Janeiro (FAETERJ) é especializada em cursos superiores de tecnologia. O curso de ADS é altamente focado nas demandas reais do mercado de trabalho.</p>
+                    
+                    <h4>Foco Prático</h4>
+                    <p>Os alunos da FAETERJ têm grande vivência em laboratório desde o primeiro período, desenvolvendo sistemas completos como trabalho de conclusão de curso e projetos integradores.</p>
+                    <a href="https://www.faetec.rj.gov.br" target="_blank" class="btn btn-info text-white botao">Acessar site da FAETERJ</a>
+                </div>
+            </div>
 
-  <!-- Botões -->
-  <div class="container botao">
-    <div class="row text-center">
-      <div class="col-12 col-sm-6 col-md-4 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="uerj_ads.html">UERJ</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="cefet_ads.html">CEFET/RJ</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="faeterj_ads.html">FAETERJ</a>
-      </div>
+        </div>
     </div>
-  </div>
 
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Nota de Corte - ENEM</h2>
-
-    <h4 class="text-center text-custom mt-4">Confira a nota de corte média do curso que você escolheu!</h4>
-  </div>
-
-  <div class="corte">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="notadecorte.html">Nota de Corte</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="container mt-5 footer">
-        <div class="row py-4 border-top text-muted">
-            <div class="col-md-3">
-                <h5>Navegação</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
-                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
-                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
-                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
-                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h5>Futuro Profissional</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
-                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
-                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
-                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
-                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h5>Busque Ajuda</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
-                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 d-flex flex-column justify-content-between">
-                <div>
-                    <h5>Sobre o H2N-Tech</h5>
+    <!-- Footer Unificado -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Navegação</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
-                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Outros Cursos</a></li>
+                        <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                        <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
                     </ul>
                 </div>
-                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
+
+                <div class="col-md-3">
+                    <h5>Busque Ajuda</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                        <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5>Sobre o NavegaDev</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                            <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 d-flex flex-column justify-content-end align-items-md-end text-md-end mt-4 mt-md-0">
+                     <p class="mb-0 text-white">&copy; 2026 NavegaDev</p>
+                </div>
             </div>
         </div>
     </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS (Obrigatório para as abas funcionarem) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
