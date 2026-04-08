@@ -1,0 +1,56 @@
+ body {
+            background-color: #fff;
+        }
+
+        .nav-bar {
+            background-color: #052442;
+        }
+
+        .text-custom {
+            color: #004F9F;
+        }
+
+        .texto {
+            line-height: 1.6;
+            padding: 20px 15px;
+            padding-top: 100px;
+        }
+
+        h4 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .btn-secondary {
+            margin-right: 10px;
+            background-color: #0d355e;
+            padding: 10px 15px; 
+            font-size: 0.9rem; 
+        }
+
+        .btn-secondary:hover {
+            background-color: #092a4a; 
+        }
+
+        .card-actions img {
+            width: 24px; 
+            height: 24px;
+            margin-left: 5px; 
+            vertical-align: middle; 
+        }
+
+        .footer .nav-link {
+            text-align: left; 
+        }
+
+        .footer .nav {
+            padding-left: 0;
+        }
+
+    
+        .card-actions {
+            display: flex; 
+            align-items: center;
+            margin-top: auto; 
+            padding-top: 15px;
+        }

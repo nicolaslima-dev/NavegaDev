@@ -1,6 +1,5 @@
         body {
-            background-color: #f4f7f6; /* Fundo levemente cinza para destacar os blocos brancos */
-            padding-top: 70px; /* Espaço para a navbar fixa */
+            background-color: #f4f7f6; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -11,18 +10,17 @@
 
         .navbar-brand {
             font-weight: bold;
-            color: #ffffff !important;
+            color: #ffffff;
         }
 
         .nav-link.header-link {
-            color: #ffffff !important;
+            color: #ffffff;
         }
 
         .text-custom {
             color: #004F9F;
         }
 
-        /* Estilo das caixas de conteúdo */
         .conteudo-box {
             background-color: #ffffff;
             border-radius: 12px;
@@ -37,7 +35,6 @@
             padding-bottom: 10px;
         }
 
-        /* Estilização moderna das Abas (Faculdades) */
         .nav-pills {
             gap: 10px;
             margin-bottom: 25px;
@@ -86,13 +83,13 @@
         }
 
         footer a {
-            color: #adb5bd !important;
+            color: #adb5bd;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         footer a:hover {
-            color: #ffffff !important;
+            color: #ffffff;
         }
         
         footer h5 {

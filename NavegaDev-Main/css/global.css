@@ -1,7 +1,3 @@
-/* ===========================
-   GLOBAL STYLES - H2N Technology
-   Compartilhado por todas as páginas
-   =========================== */
 
 body {
     background-color: #ffffff;
@@ -14,7 +10,6 @@ body {
     height: 70px;
 }
 
-/* Texto e cores padrão */
 .text-custom {
     color: #004F9F;
 }
@@ -37,29 +32,26 @@ body {
 }
 
 .btn-primary {
-    background-color: #0d355e !important;
-    border-color: #0d355e !important;
-    color: #fff !important;
+    background-color: #0d355e;
+    color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #092a4a !important;
-    border-color: #092a4a !important;
+    background-color: #092a4a;
+    border-color: #092a4a;
 }
 
-/* Headings */
 h4 {
     padding-top: 20px;
     padding-bottom: 10px;
 }
 
-/* Botão voltar */
+
 .voltar {
     padding-top: 10px;
     padding-left: 10px;
 }
 
-/* Footer */
 .footer .nav-link {
     text-align: left;
 }
@@ -69,8 +61,8 @@ h4 {
 }
 
 .nav-link.px-0 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
     text-align: left;
 }
 

@@ -1,34 +1,105 @@
-body {
-    padding-top: 80px;
-}
+        body {
+            background-color: #fff;
+            padding-top: 80px; 
+        }
 
-.accordion {
-    margin-top: 20px;
-}
+        .nav-bar {
+            background-color: #052442;
+        }
 
-#mensagem-feedback {
-    margin-top: 10px;
-    display: block;
-}
+        .text-custom {
+            color: #004F9F;
+        }
 
-.quiz-section {
-    background-color: #e9ecef;
-    border-radius: 10px;
-    padding: 30px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-}
+        .texto {
+            line-height: 1.6;
+            padding: 20px 15px;
+        }
 
-.quiz-section .form-check { margin-bottom: 10px; }
-.quiz-section .form-check-label { font-size: 1.1em; color: #333; }
-.quiz-section button { margin-top: 20px; }
+        h4 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
 
-#quizResult {
-    margin-top: 25px;
-    padding: 20px;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: bold;
-    display: none;
-}
+        .botao {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn-secondary {
+            background-color: #0d355e;
+            border-color: #0d355e;
+            margin-bottom: 20px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #004F9F;
+            border-color: #004F9F;
+        }
+
+        .imagem {
+            padding-top: 50px;
+        }
+
+        .pergunta {
+            margin-bottom: 20px;
+        }
+
+        .resultado {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .quiz-section {
+            background-color: #e9ecef;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .quiz-section .form-check {
+            margin-bottom: 10px;
+        }
+
+        .quiz-section .form-check-label {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .quiz-section button {
+            margin-top: 20px;
+        }
+
+        .voltar {
+            padding-top: 10px;
+            margin-left: 10px;
+        }
+        
+        .footer .nav-link {
+            text-align: left;
+        }
+        
+        .footer .nav {
+            padding-left: 0; 
+        }
+
+        #quizResult {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            display: none; 
+        }
+
+        .accordion {
+            margin-top: 20px;
+        }
+        #mensagem-feedback {
+            margin-top: 10px;
+            display: block; 
+        }
