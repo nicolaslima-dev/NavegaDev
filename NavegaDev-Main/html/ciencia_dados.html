@@ -5,54 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DADOS</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
-  <style>
-
-    body {
-           background-color: #ffff;
-           padding-top: 70px; /* Mantém o espaço para a navbar fixa */
-    }
-
-    .nav-bar {
-      background-color: #052442;
-    }
-
-    .text-custom {
-      color: #004F9F;
-    }
-
-    .texto {
-      line-height: 1.6;
-      padding: 20px 15px;
-    }
-
-    h4 {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-
-    .botao {
-      margin-top: 30px;
-
-    }
-
-    .btn-secondary {
-      background-color: #0d355e;
-    }
-
-    .imagem {
-      padding-top: 50px;
-    }
-    /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
-        .footer .nav-link {
-            text-align: left; /* Garante alinhamento à esquerda */
-        }
-
-/* Ajuste para garantir que a lista em si não tenha padding que a desloque */
-        .footer .nav {
-            padding-left: 0; /* Remove padding padrão de UL */
-        }
-
-  </style>
+  <link rel="stylesheet" href="../css/ciendados.css">
 </head>
 <body>
 
@@ -76,55 +29,120 @@
             </div>
         </div>
     </nav>
-  <div class="imagem text-center">
-    <img src="img/curso_dados.png" class="img-fluid" alt="Imagem BSI" />
-  </div>
+  <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        
+        <!-- Cabeçalho da Página -->
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-custom">Bacharelado em Ciência de Dados</h1>
+                <p class="lead text-muted">Tudo o que precisas de saber sobre o curso (CD) e as melhores instituições(MACKENZIE-RJ, UNICARIOCA, FGV e IBMEC).</p>
+            </div>
+        </div>
 
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Ciência de Dados</h2>
+        <!-- Navegação das Abas (Tabs) -->
+        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-sobre-tab" data-bs-toggle="pill" data-bs-target="#pills-sobre" type="button" role="tab" aria-controls="pills-sobre" aria-selected="true">Sobre o Curso</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cefet-tab" data-bs-toggle="pill" data-bs-target="#pills-cefet" type="button" role="tab" aria-controls="pills-cefet" aria-selected="false">MACKENZIE-RJ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-ufrrj-tab" data-bs-toggle="pill" data-bs-target="#pills-ufrrj" type="button" role="tab" aria-controls="pills-ufrrj" aria-selected="false">IBMEC</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-uff-tab" data-bs-toggle="pill" data-bs-target="#pills-uff" type="button" role="tab" aria-controls="pills-uff" aria-selected="false">FGV</button>
+            </li>
+        </ul>
 
-    <h4 class="text-custom">Bacharelado em Ciência de Dados</h4>
-    <h5 class="text-custom">
-        O curso de Ciência de Dados combina conhecimentos em matemática, estatística, programação e análise de dados para formar profissionais capazes de extrair insights valiosos a partir de grandes volumes
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- ABA 1: Sobre o Curso (Original bsi.html) -->
+            <div class="tab-pane fade show active" id="pills-sobre" role="tabpanel" aria-labelledby="pills-sobre-tab" tabindex="0">
+                <div class="conteudo-box">
+                    <h2>O que é Ciência de Dados(CD)?</h2>
+                    <p> O curso de Ciência de Dados combina conhecimentos em matemática, estatística, programação e análise de dados para formar profissionais capazes de extrair insights valiosos a partir de grandes volumes
         de informações. Durante a graduação, o aluno aprende técnicas de manipulação, modelagem e visualização de dados, além de disciplinas relacionadas à inteligência artificial, machine learning, e ética no
-        no uso de dados. O profissional formado nessa área atua no processamento e interpretação de dados para apoiar a tomada de decisões estratégicas em diferentes setores, como finanças, saúde, marketing e tecnologia. </h5>
+        no uso de dados. O profissional formado nessa área atua no processamento e interpretação de dados para apoiar a tomada de decisões estratégicas em diferentes setores, como finanças, saúde, marketing e tecnologia.</p>
+                    
+                    <h4>Mercado de Trabalho</h4>
+                    <p>        Com a explosão do volume de dados gerados por empresas e dispositivos, a demanda por cientistas de dados cresce rapidamente. O curso é ideal para quem gosta de matemática, programação e tem interesse em resolver problemas complexos usando dados. Os profissionais encontram oportunidades em startups, grandes empresas de tecnologia, consultorias e órgãos governamentais. </h5>
+</p>
+                    
+                    <h4>Duração e Perfil</h4>
+                    <p>O curso de Ciência de Dados possui duração média de 4 anos, podendo variar conforme a instituição. O perfil ideal do estudante inclui interesse por tecnologia, raciocínio lógico, curiosidade e facilidade com matemática e análise de informações. Também é importante ter disposição para aprender continuamente, devido à constante evolução da área.</p>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Mercado de trabalho</h4>
-    <h5 class="text-custom">
-        Com a explosão do volume de dados gerados por empresas e dispositivos, a demanda por cientistas de dados cresce rapidamente. O curso é ideal para quem gosta de matemática, programação e tem interesse em resolver problemas complexos usando dados. Os profissionais encontram oportunidades em startups, grandes empresas de tecnologia, consultorias e órgãos governamentais. </h5>
+            <!-- ABA 2: CEFET/RJ (Original cefet_bsi.html) -->
+            <div class="tab-pane fade" id="pills-cefet" role="tabpanel" aria-labelledby="pills-cefet-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-primary">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">CD na MACKENZIE-RJ</h2>
+                    </div>
+                    <p><strong>Forma de Ingresso:</strong> As principais formas são o vestibular próprio da instituição e o uso da nota do ENEM(PROUNI).</p>
+                    <p>O curso de Ciência de Dados da Faculdade Presbiteriana Mackenzie Rio é uma graduação tecnológica com foco prático e voltada para as demandas atuais do mercado. A formação combina teoria e prática, permitindo que o aluno desenvolva habilidades em programação, estatística e análise de dados, utilizando ferramentas como Python, R e SQL.</p>
+                    
+                    <h4>Destaques do Curso</h4>
+                    <ul>
+                        <li>Curso com nota máxima no MEC.</li>
+                        <li>Currículo com uma formação mais adequada para fornecer uma base sólida em conceitos estatísticos, matemáticos e de ciência da computação juntamente com  oportunidades práticas para aplicar esses conceitos em projetos do mundo real.</li>
+                        <li>Incentivo ao bom desempenho acadêmico com distinção e concessão de bolsas de estudos integrais nos cursos de Pós-graduação da Instituição aos alunos com os mais  altos coeficientes de rendimento (CR).</li>
+                    </ul>
+                    <a href="https://www.mackenzie.br/portal-mackenzie/graduacao/rio/ciencia-de-dados" target="_blank" class="btn btn-primary botao">Acessar o site dA MACKENZIE-RJ</a>
+                </div>
+            </div>
 
-    <h2 class="text-center text-custom mt-4">Faculdades</h2>
+            <!-- ABA 3: UNIRIO (Original unirio_bsi.html) -->
+            <div class="tab-pane fade" id="pills-unirio" role="tabpanel" aria-labelledby="pills-unirio-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-success">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">CD na IBMEC</h2>
+                    </div>
+                    <p><strong>Forma de Ingresso:</strong> PROUNI(ENEM) e vestibular da própria faculdade.</p>
+                    <p>O curso forma profissionais qualificados para liderar a gestão estratégica orientada por dados e desenvolver soluções inovadoras para problemas complexos utilizando a IA. Desenvolve a conexão entre ciência de dados e o mundo dos negócios, com aplicações práticas em Big data e Machine Learning.</p>
+                    
+                    <h4>Diferenciais</h4>
+                    <p>Além do conhecimento técnico de computação e estatística, inerentes a um Cientista de Dados, por meio de projetos práticos os alunos desenvolvem softskills essenciais como pensamento crítico, adaptabilidade e trabalho em equipe.</p>
+                    <a href="https://www.ibmec.br/graduacao/ciencia-de-dados-e-inteligencia-artificial" target="_blank" class="btn btn-success botao">Acessar o site da IBMEC</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Faculdades Públicas</h4>
-    <h5 class="text-custom">
-      No Rio de Janeiro não existem faculdades públicas que possuem este curso.
-    </h5>
+            <!-- ABA 4: UFRRJ (Original ufrrj_bsi.html) -->
+            <div class="tab-pane fade" id="pills-ufrrj" role="tabpanel" aria-labelledby="pills-ufrrj-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4" style="border-color: #ff9800 !important;">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">CD na FGV</h2>
+                    </div>
+                    <p><strong>Forma de Ingresso:</strong> PROUNI(ENEM) e vestibular da própria faculdade.</p>
+                    <p>O curso forma profissionais qualificados para liderar a gestão estratégica orientada por dados e desenvolver soluções inovadoras para problemas complexos utilizando a IA. Desenvolve a conexão entre ciência de dados e o mundo dos negócios, com aplicações práticas em Big data e Machine Learning.</p>
+                    
+                    
+                    <h4>Diferenciais</h4>
+                    <p>Além do conhecimento técnico de computação e estatística, inerentes a um Cientista de Dados, por meio de projetos práticos os alunos desenvolvem softskills essenciais como pensamento crítico, adaptabilidade e trabalho em equipe.</p>
+                    <a href="https://www.ibmec.br/graduacao/ciencia-de-dados-e-inteligencia-artificial" target="_blank" class="btn btn-success botao">Acessar o site da IBMEC</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Faculdades Particulares</h4>
-    <h5 class="text-custom">
-        No Rio de Janeiro existem algumas faculdades particulares que possuem este curso. A seguir, uma lista com as principais.
-    </h5>
-  </div>
+            <!-- ABA 5: UFF (Original uff_bsi.html) -->
+            <div class="tab-pane fade" id="pills-uff" role="tabpanel" aria-labelledby="pills-uff-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-info">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">CD na FGV</h2>
+                    </div>
+                    <p><strong>Forma de Ingresso:</strong> PROUNI(ENEM) e vestibular da própria faculdade.</p>
+                    <p>O curso de Ciência de Dados e Inteligência Artificial da Escola de Matemática Aplicada da FGV EMAp foi desenvolvido para impulsionar a trajetória profissional de estudantes brasileiros interessados em uma carreira inovadora e impactante no mundo atual. </p>
+                    
+                    <h4>Destaques</h4>
+                    <p>O curso inclui workshops que visam desenvolver habilidades e competências profissionais, métodos participativos em sala de aula e oportunidades de intercâmbio no exterior. Além disso, conta com um corpo docente composto por professores de renomadas instituições internacionais e nacionais. </p>
+                    <a href="https://vestibular.fgv.br/cursos/rio-de-janeiro/ciencia-de-dados-e-inteligencia-artificial/" target="_blank" class="btn btn-info text-white botao">Acessar o site da FGV</a>
+                </div>
+            </div>
 
-
-
-
-  <div class="container botao">
-    <div class="row text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="https://www.mackenzie.br/portal-mackenzie/graduacao/rio/ciencia-de-dados?utm_source=.com" target="_blank">MACKENZIE RIO</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="https://www.puc-rio.br/ensinopesq/ccg/matematica-aplicada/?utm_source=.com" target="_blank">PUC-RIO</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="https://unicarioca.edu.br/cursos/pos-graduacao/ciencia-de-dados/" target="_blank">UNICARIOCA</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="https://www.uva.br/cursos/graduacao-em-ciencias-de-dados-e-inteligencia-artificial/?utm_source=google&utm_medium=cpc&utm_campaign=psq_geral_uva_cursos_a&utm_term=ciencias_de_dados_e_inteligencia_artificial&utm_content=ciencias_de_dados_e_inteligencia_artificial&utm_term=gradua%C3%A7%C3%A3o%20ci%C3%AAncias%20de%20dados%20e%20ia&utm_campaign=%5BPSQ%5D+-+UVA+-+Cursos+A&utm_source=adwords&utm_medium=ppc&hsa_acc=8146352273&hsa_cam=15583730378&hsa_grp=181483194472&hsa_ad=761530790390&hsa_src=g&hsa_tgt=kwd-2427141397146&hsa_kw=gradua%C3%A7%C3%A3o%20ci%C3%AAncias%20de%20dados%20e%20ia&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=15583730378&gbraid=0AAAAADRu1_mjwBUEF6W85nCWaGbZyGsRR&gclid=CjwKCAjw1dLDBhBoEiwAQNRiQbA_VXnRD1IOfPwpE0bhc0nBgIPeo9AOSIAFzUnWjJOBYqu8TZqlURoCbDEQAvD_BwE" target="_blank">UVA</a>
-      </div>
+        </div>
     </div>
-  </div>
 
    <footer class="container mt footer">
         <div class="row py border-top text-muted">
