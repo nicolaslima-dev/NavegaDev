@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado de Trabalho em TI - H2N Technology</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/mercado_trabalho.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/glossario.css">
+
+</head>
+<body>
+    <div class="nav-bar fixed-top"> <header class="container">
+            <ul class="nav nav-pills justify-content-center py-3">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link text-white">Cursos</a></li>
+                <li class="nav-item"><a href="carreiras.html" class="nav-link text-white">Carreiras</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link text-white">Oportunidades</a></li> 
+                <li class="nav-item"><a href="duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                
+            </ul>
+        </header>
+    </div>
+    <div class="voltar">
+        <a class="btn btn-secondary btn-s" href="saibamais.html" role="button">Voltar</a>
+    </div>
+
+    <main class="container my-5">
+        <div class="titulo-site">
+        <h1 class="text-center section-title mb-2"> Compreendendo as Etapas do Processo Seletivo</h1>
+        <h5 class="text-center texto mt-1 mb-5">
+            Bem-vindo à sua jornada no dinâmico mercado de trabalho em Tecnologia da Informação!
+            Aqui você encontrará as ferramentas e informações essenciais para impulsionar sua carreira. 
+            Entender as etapas do processo seletivo e se preparar adequadamente é fundamental para alcançar seus objetivos.
+        </h5>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <ul class="nav nav-tabs justify-content-center" id="jobMarketTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="resume-tab" data-bs-toggle="tab" data-bs-target="#resume-content" type="button" role="tab" aria-controls="resume-content" aria-selected="true">Análise de Currículos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="technical-tab" data-bs-toggle="tab" data-bs-target="#technical-content" type="button" role="tab" aria-controls="technical-content" aria-selected="false">Teste Técnico</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="behavioral-tab" data-bs-toggle="tab" data-bs-target="#behavioral-content" type="button" role="tab" aria-controls="behavioral-content" aria-selected="false">Entrevista Comportamental</button>
+                    </li>
+                </ul>
+                <div class="tab-content border border-top-0 p-3" id="jobMarketTabContent">
+                    <div class="tab-pane fade show active" id="resume-content" role="tabpanel" aria-labelledby="resume-tab">
+                        <h3 class="text-center section-title mb-2">Otimizando Seu Currículo para o Mercado de TI</h3>
+                        <p class="mb-3">Seu currículo é seu cartão de visitas! Aprenda a destacá-lo com as informações certas e as palavras-chave que os recrutadores de TI buscam.</p>
+                        
+                        <h5>Recursos Interativos:</h5>
+                        <div class="accordion" id="accordionResume">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingResume1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResume1" aria-expanded="false" aria-controls="collapseResume1">
+                                        Checklist para um Currículo Vencedor
+                                    </button>
+                                </h2>
+                                <div id="collapseResume1" class="accordion-collapse collapse" aria-labelledby="headingResume1" data-bs-parent="#accordionResume">
+                                    <div class="accordion-body">
+                                        <p>Marque os itens que você já incluiu no seu currículo:</p>
+                                        <form>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkKeyword">
+                                                <label class="form-check-label" for="checkKeyword">
+                                                    Palavras-chave da área (ex: Python, Java, Cloud, Agile)?
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkObjective">
+                                                <label class="form-check-label" for="checkObjective">
+                                                    Objetivo profissional claro e alinhado à vaga?
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkProjects">
+                                                <label class="form-check-label" for="checkProjects">
+                                                    Projetos pessoais ou acadêmicos relevantes com links (GitHub, portfólio)?
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkMetrics">
+                                                <label class="form-check-label" for="checkMetrics">
+                                                    Resultados e conquistas quantificáveis (se possível)?
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="checkFormat">
+                                                <label class="form-check-label" for="checkFormat">
+                                                    Formato limpo, organizado e fácil de ler?
+                                                </label>
+                                            </div>
+                                            <button type="button" class="btn btn-primary mt-3" onclick="generateChecklistFeedback()">Ver Feedback</button>
+                                            <div id="feedbackResult" class="mt-3"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingResume2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResume2" aria-expanded="false" aria-controls="collapseResume2">
+                                        Exemplos de Currículos (Antes e Depois)
+                                    </button>
+                                </h2>
+                                <div id="collapseResume2" class="accordion-collapse collapse" aria-labelledby="headingResume2" data-bs-parent="#accordionResume">
+                                    <div class="accordion-body">
+                                        <div class="row text-start">
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-danger">❌ Antes (Currículo Fraco)</h5>
+                                                        <ul>
+                                                            <li>Sem palavras-chave técnicas</li>
+                                                            <li>Objetivo genérico: “Buscar uma oportunidade na empresa”</li>
+                                                            <li>Sem projetos ou links</li>
+                                                            <li>Texto denso, pouco espaçamento</li>
+                                                            <li>Layout confuso e desorganizado</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-success">✅ Depois (Currículo Ideal)</h5>
+                                                        <ul>
+                                                            <li>Inclui termos técnicos como “Python”, “MySQL”, “HTML5”</li>
+                                                            <li>Objetivo: “Atuar como estagiário em desenvolvimento backend, contribuindo com projetos em Python”</li>
+                                                            <li>Projetos com links: GitHub e portfólio</li>
+                                                            <li>Resultados claros: “Reduzi tempo de resposta em 30%”</li>
+                                                            <li>Layout limpo, com boa hierarquia e organização</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row text-start mt-4">
+                                            
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-danger">❌ Antes: Experiência genérica</h5>
+                                                        <ul>
+                                                            <li>“Trabalhei com TI por 2 anos”</li>
+                                                            <li>Sem detalhamento de funções</li>
+                                                            <li>Sem tecnologias ou ferramentas mencionadas</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-success">✅ Depois: Experiência estratégica</h5>
+                                                        <ul>
+                                                            <li>“Desenvolvi APIs REST com Node.js e MongoDB em projeto de integração”</li>
+                                                            <li>Descreve impacto e entregas</li>
+                                                            <li>Mostra ferramentas reais utilizadas</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-danger">❌ Antes: Curso citado de forma vaga</h5>
+                                                        <ul>
+                                                            <li>“Curso de Informática”</li>
+                                                            <li>Sem carga horária ou instituição</li>
+                                                            <li>Sem vínculo com a área desejada</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-success">✅ Depois: Formação com contexto</h5>
+                                                        <ul>
+                                                            <li>“Curso de HTML5, CSS3 e JavaScript – 40h (SENAI)”</li>
+                                                            <li>Apresenta instituição reconhecida</li>
+                                                            <li>Relaciona com a área de atuação (front-end)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-danger">❌ Antes: Layout desorganizado</h5>
+                                                        <ul>
+                                                            <li>Sem margens ou espaçamento</li>
+                                                            <li>Fonte pequena e poluída</li>
+                                                            <li>Informações mal divididas</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-success">✅ Depois: Visual profissional</h5>
+                                                        <ul>
+                                                            <li>Boas margens, uso de espaçamento e hierarquia</li>
+                                                            <li>Fontes claras, 1 página (ou 2 no máx.)</li>
+                                                            <li>Dividido por tópicos: Perfil, Experiência, Projetos, etc.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="technical-content" role="tabpanel" aria-labelledby="technical-tab">
+                        <h4 class="text-center mt-3 mb-4 texto">Preparação para Testes Técnicos em TI</h4>
+                        <p class="mb-3">Os testes técnicos avaliam suas habilidades na prática. Prepare-se para desafios de lógica, programação e conhecimento específico da área.</p>
+                        
+                        <h5>Recursos Interativos:</h5>
+                        <div class="accordion" id="accordionTechnical">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTechnical1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTechnical1" aria-expanded="false" aria-controls="collapseTechnical1">
+                                        Miniquizzes de Autoavaliação
+                                    </button>
+                                </h2>
+                                <div id="collapseTechnical1" class="accordion-collapse collapse" aria-labelledby="headingTechnical1" data-bs-parent="#accordionTechnical">
+                                    <div class="accordion-body">
+                                        <p>Teste seus conhecimentos com nossos miniquizzes:</p>
+                                        <ul>
+                                            
+                                            <li><a href="#" class="texto" data-bs-toggle="modal" data-bs-target="#logicQuizModal">Quiz de Lógica de Programação</a></li>
+                                            <li><a href="#" class="texto" data-bs-toggle="modal" data-bs-target="#sqlQuizModal">Quiz de SQL Básico</a></li>
+                                            <li><a href="#" class="texto" data-bs-toggle="modal" data-bs-target="#networksQuizModal">Quiz de Conceitos de Redes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTechnical2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTechnical2" aria-expanded="false" aria-controls="collapseTechnical2">
+                                        Plataformas para Prática de Código
+                                    </button>
+                                </h2>
+                                <div id="collapseTechnical2" class="accordion-collapse collapse" aria-labelledby="headingTechnical2" data-bs-parent="#accordionTechnical">
+                                    <div class="accordion-body">
+                                        <p>Recomendamos as seguintes plataformas para você praticar e aprimorar suas habilidades:</p>
+                                        <ul>
+                                            <li><a href="https://scratchbrasil.org.br/" target="_blank" class="texto">Scratch</a> - Aprenda linguagem de programação de uma maneira gamificada.</li>
+                                            <li><a href="https://www.hackerrank.com/" target="_blank" class="texto">HackerRank</a> - Plataforma com diversos desafios e tutoriais.</li>
+                                            <li><a href="https://www.codewars.com/" target="_blank" class="texto">Codewars</a> - Aprenda e pratique com desafios divertidos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="behavioral-content" role="tabpanel" aria-labelledby="behavioral-tab">
+                        <h4 class="text-center mt-3 mb-4 texto">Dominando a Entrevista Comportamental</h4>
+                        <p class="mb-3">Soft skills são tão importantes quanto as técnicas! Prepare-se para demonstrar suas habilidades de comunicação, trabalho em equipe e resolução de problemas.</p>
+                        
+                        <h5>Recursos Interativos:</h5>
+                        <div class="accordion" id="accordionBehavioral">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBehavioral1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBehavioral1" aria-expanded="false" aria-controls="collapseBehavioral1">
+                                        Simulador de Perguntas STAR
+                                    </button>
+                                </h2>
+                                 <div id="collapseBehavioral1" class="accordion-collapse collapse" aria-labelledby="headingBehavioral1" data-bs-parent="#accordionBehavioral">
+    <div class="accordion-body">
+        <p>Pratique suas respostas usando o método STAR (Situação, Tarefa, Ação, Resultado).</p>
+        <div class="card p-3 mb-3">
+            <p><strong>Pergunta Exemplo:</strong> "Descreva uma situação em que você teve que lidar com um prazo apertado."</p>
+            <textarea id="behavioralResponseTextarea" class="form-control" rows="4" placeholder="Sua resposta usando o método STAR"></textarea>
+            <button type="button" class="btn btn-primary mt-2" onclick="analyzeBehavioralResponse()">Analisar Resposta</button>
+            <div id="behavioralFeedback" class="mt-3">
+                </div>
+        </div>
+        <p><small><strong>Dica STAR:</strong> Estruture sua resposta descrevendo a Situação, a Tarefa que você tinha, as Ações que tomou e os Resultados alcançados.</small></p>
+    </div>
+      </div>
+                            </div>
+                            <div class="accordion-item">
+    <h2 class="accordion-header" id="headingBehavioral2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBehavioral2" aria-expanded="false" aria-controls="collapseBehavioral2">
+            Flashcards de Perguntas Frequentes
+        </button>
+    </h2>
+    <div id="collapseBehavioral2" class="accordion-collapse collapse" aria-labelledby="headingBehavioral2" data-bs-parent="#accordionBehavioral">
+        <div class="accordion-body">
+            <h5 class="text-center mb-3">Pratique suas respostas para as perguntas mais comuns!</h5>
+            <div class="card p-4 shadow-sm flashcard-container">
+                <div id="flashcardQuestion" class="h5 text-center mb-4"></div>
+                <div id="flashcardAnswer" class="text-center mb-4" style="display: none;"></div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="button" class="btn btn-info" id="revealAnswerBtn">Revelar Resposta</button>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-secondary" id="prevFlashcardBtn" disabled>Anterior</button>
+                    <span class="align-self-center"><span id="currentFlashcardIndex">1</span>/<span id="totalFlashcards"></span></span>
+                    <button type="button" class="btn btn-primary" id="nextFlashcardBtn">Próximo</button>
+                </div>
+            </div>
+            <p class="text-center mt-3"><small>Clique em "Revelar Resposta" para ver um exemplo de abordagem.</small></p>
+        </div>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+             <h3 class="text-center section-title mb-2">Assista a dicas e exemplos de Entrevistas</h3>
+             <p class="text-center mb-3">Aprenda na prática! Assista a simulações de entrevistas e analise as melhores abordagens.</p>
+
+            <div class="col-lg-10">
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="text-center card-title texto">Entrevista real para uma vaga de programador</h5>
+            <p class="text-center card-text">Veja como funciona uma entrevista técnica e comportamental para uma vaga de Programador.</p>
+            
+            <div class="d-flex justify-content-center">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zgWLE39vBww?si=-s22GmVr23nP9xVC" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <h6 class="text-center mt-3 texto">Análise e Feedback:</h6>
+            <p class="text-center card-text">Este vídeo demonstra a importância de articular bem suas experiências. <br>Observe como o candidato explica seus projetos pessoais e lida com perguntas sobre trabalho em equipe.</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="text-center card-title texto"> Dicas para passar em uma entrevista</h5>
+            <p class="text-center card-text">Acompanhe dicas sobre o que os recrutadores avaliam e maneiras<br> ideais para se comportar em uma entrevista.</p>
+            
+            <div class="d-flex justify-content-center">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YxmGKWf7RqU?si=Pis_KXgka3VBFK7D" 
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                </div>
+            </div>
+            
+            <h6 class="text-center mt-3 texto">Análise e Feedback:</h6>
+            <p class="text-center card-text">Observe a clareza nas explicações e a forma como o candidato aborda problemas complexos. <br>A comunicação técnica é crucial nesta área.</p>
+        </div>
+    </div>
+</div>
+        </div>
+
+    
+    <div class="modal fade" id="logicQuizModal" tabindex="-1" aria-labelledby="logicQuizModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logicQuizModalLabel">Quiz de Lógica de Programação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="logicQuizContent">
+                        <h4 id="logicQuestionText"></h4>
+                        <div id="logicOptionsContainer" class="mt-3">
+                            
+                        </div>
+                        <div id="logicFeedbackContainer" class="mt-3">
+                            
+                        </div>
+                    </div>
+                    <div id="logicQuizResult" style="display: none;">
+                        <h4 class="text-center">Quiz Concluído!</h4>
+                        <p class="text-center">Sua pontuação: <span id="logicScoreDisplay"></span> de <span id="logicTotalQuestionsDisplay"></span></p>
+                        <div id="logicResultFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="logicNextQuestionBtn">Próxima Pergunta</button>
+                    <button type="button" class="btn btn-success" id="logicRestartQuizBtn" style="display: none;">Reiniciar Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="sqlQuizModal" tabindex="-1" aria-labelledby="sqlQuizModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sqlQuizModalLabel">Quiz de SQL Básico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="sqlQuizContent">
+                        <h4 id="sqlQuestionText"></h4>
+                        <div id="sqlOptionsContainer" class="mt-3">
+                            
+                        </div>
+                        <div id="sqlFeedbackContainer" class="mt-3">
+                            
+                        </div>
+                    </div>
+                    <div id="sqlQuizResult" style="display: none;">
+                        <h4 class="text-center">Quiz Concluído!</h4>
+                        <p class="text-center">Sua pontuação: <span id="sqlScoreDisplay"></span> de <span id="sqlTotalQuestionsDisplay"></span></p>
+                        <div id="sqlResultFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="sqlNextQuestionBtn">Próxima Pergunta</button>
+                    <button type="button" class="btn btn-success" id="sqlRestartQuizBtn" style="display: none;">Reiniciar Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="networksQuizModal" tabindex="-1" aria-labelledby="networksQuizModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="networksQuizModalLabel">Quiz de Conceitos de Redes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="networksQuizContent">
+                        <h4 id="networksQuestionText"></h4>
+                        <div id="networksOptionsContainer" class="mt-3">
+                            
+                        </div>
+                        <div id="networksFeedbackContainer" class="mt-3">
+                            
+                        </div>
+                    </div>
+                    <div id="networksQuizResult" style="display: none;">
+                        <h4 class="text-center">Quiz Concluído!</h4>
+                        <p class="text-center">Sua pontuação: <span id="networksScoreDisplay"></span> de <span id="networksTotalQuestionsDisplay"></span></p>
+                        <div id="networksResultFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="networksNextQuestionBtn">Próxima Pergunta</button>
+                    <button type="button" class="btn btn-success" id="networksRestartQuizBtn" style="display: none;">Reiniciar Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer class="container mt-5">
+    <div class="row py-4 border-top text-muted">
+        <div class="col-md-3">
+            <h5 class="titulo-footer">Navegação</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
+                <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
+                <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5 class="titulo-footer">Futuro Profissional</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
+                <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
+                <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5 class="titulo-footer">Busque Ajuda</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
+                <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5 class="titulo-footer">Sobre o H2N-Tech</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
+                <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row pt-3 pb-2 text-center text-muted border-top mt-3">
+        <div class="col-12">
+            <p class="mb-0">&copy; H2N Technology</p>
+        </div>
+    </div>
+</footer>  
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/mercado_trabalho.js"></script>
+</body>
+</html>
