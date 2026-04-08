@@ -5,52 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SOFTWARE</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
-  <style>
-     body {
-           background-color: #ffff;
-           padding-top: 70px; /* Mantém o espaço para a navbar fixa */
-    }
-    .nav-bar {
-      background-color: #052442;
-    }
 
-    .text-custom {
-      color: #004F9F;
-    }
-
-    .texto {
-      line-height: 1.6;
-      padding: 20px 15px;
-    }
-
-    h4 {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-
-    .botao {
-      margin-top: 30px;
-      
-    }
-
-    .btn-secondary {
-      background-color: #0d355e;
-    }
-
-    .imagem {
-      padding-top: 50px;
-    }
-    /* Garantir que os links de navegação do footer estejam alinhados à esquerda */
-        .footer .nav-link {
-            text-align: left; /* Garante alinhamento à esquerda */
-        }
-        
-/* Ajuste para garantir que a lista em si não tenha padding que a desloque */
-        .footer .nav {
-            padding-left: 0; /* Remove padding padrão de UL */
-        }
-    
-  </style>
+  <link rel="stylesheet" href="../css/engsoftware.css">
+  
 </head>
 <body>
 
@@ -63,13 +20,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="./html/cursos.html" class="nav-link text-white">Cursos</a></li>
-                    <li class="nav-item"><a href="./html/carreiras.html" class="nav-link text-white">Carreiras</a></li>
-                    <li class="nav-item"><a href="./html/oportunidades.html" class="nav-link text-white">Oportunidades</a></li>
-                    <li class="nav-item"><a href="./html/duvidas.html" class="nav-link text-white">Dúvidas Frequentes</a></li>
-                    <li class="nav-item"><a href="./html/saibamais.html" class="nav-link text-white">Saiba Mais</a></li>
-                    <li class="nav-item"><a href="./html/sobre.html" class="nav-link text-white">Sobre Nós</a></li>
+                   <li class="nav-item"><a href="../index.html" class="nav-link text-white active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="../html/cursos.html" class="nav-link text-white" style="text-align: center;">Cursos</a></li>
+                    <li class="nav-item"><a href="../html/carreiras.html" class="nav-link text-white" style="text-align: center;">Carreiras</a></li>
+                    <li class="nav-item"><a href="../html/oportunidades.html" class="nav-link text-white" style="text-align: center;">Oportunidades</a></li>
+                    <li class="nav-item"><a href="../html/duvidas.html" class="nav-link text-white" style="text-align: center;">Dúvidas Frequentes</a></li>
+                    <li class="nav-item"><a href="../html/saibamais.html" class="nav-link text-white" style="text-align: center;">Saiba Mais</a></li>
+                   
                 </ul>
             </div>
         </div>
@@ -77,114 +34,153 @@
   
 
   <!-- Imagem -->
-  <div class="imagem text-center">
-    <img src="img/curso_software.png" class="img-fluid" alt="Imagem BSI" />
-  </div>
+ 
+  <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        
+        <!-- Cabeçalho da Página -->
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-custom">Bacharelado em Engenharia de Software</h1>
+                <p class="lead text-muted">Tudo o que precisas de saber sobre o curso (EngDeSoftware) e as melhores instituições que oferecem esse curso (UVA, IBMEC e IFNET).</p>
+            </div>
+        </div>
 
-  <!-- Texto -->
-  <div class="texto container">
-    <h2 class="text-center text-custom mt-4">Engenharia de Software</h2>
+        <!-- Navegação das Abas (Tabs) -->
+        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-sobre-tab" data-bs-toggle="pill" data-bs-target="#pills-sobre" type="button" role="tab" aria-controls="pills-sobre" aria-selected="true">Sobre o Curso</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cefet-tab" data-bs-toggle="pill" data-bs-target="#pills-cefet" type="button" role="tab" aria-controls="pills-cefet" aria-selected="false">UVA</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-unirio-tab" data-bs-toggle="pill" data-bs-target="#pills-unirio" type="button" role="tab" aria-controls="pills-unirio" aria-selected="false">IBMEC</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-ufrrj-tab" data-bs-toggle="pill" data-bs-target="#pills-ufrrj" type="button" role="tab" aria-controls="pills-ufrrj" aria-selected="false">IFNET</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-uff-tab" data-bs-toggle="pill" data-bs-target="#pills-uff" type="button" role="tab" aria-controls="pills-uff" aria-selected="false">UFF</button>
+            </li>
+        </ul>
 
-    <h4 class="text-custom">Bacharelado em Engenharia de Software</h4>
-    <h5 class="text-custom">O curso de Engenharia de Software forma profissionais especializados no desenvolvimento, manutenção e gestão de sistemas de software complexos, garantindo qualidade, eficiência e alinhamento às necessidades dos usuários e das
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- ABA 1: Sobre o Curso (Original bsi.html) -->
+            <div class="tab-pane fade show active" id="pills-sobre" role="tabpanel" aria-labelledby="pills-sobre-tab" tabindex="0">
+                <div class="conteudo-box">
+                    <h2>O que é Engenharia de Software (EG)?</h2>
+                    <p>O curso de Engenharia de Software forma profissionais especializados no desenvolvimento, manutenção e gestão de sistemas de software complexos, garantindo qualidade, eficiência e alinhamento às necessidades dos usuários e das
         organizações. Durante a graduação, o aluno aprende técnicas avançadas de programação, arquitetura de software, testes, métodos ágeis, engenharia de requisitos, design de sistemas e garantia de qualidade, além de disciplinas relacionadas à gestão de projetos e processos de desenvolvimento.
         O engenheiro de software é responsável por planejar, projetar, implementar e validar sistemas que suportem processos de negócios e soluções tecnológicas, trabalhando em equipes multidisciplinares para entregar produtos confiáveis, escaláveis e seguros.
-    </h5>
+                    </p>
+                    
+                    <h4>Mercado de Trabalho</h4>
+                    <p>Com a crescente dependência das organizações por soluções digitais, a demanda por engenheiros de software qualificados está em constante expansão. O profissional dessa área encontra oportunidades em empresas de tecnologia, consultorias, startups, indústria de software, órgãos públicos e diversos setores que precisam de sistemas robustos e inovadores. </p>
+                    
+                    <h4>Duração e Perfil</h4>
+                    <p>Em muitas universidades, especialmente privadas, ele dura 4 anos (8 semestres) , enquanto algumas instituições adotam uma formação mais longa, próxima de 5 anos, seguindo um modelo mais tradicional de engenharia .O curso exige um perfil mais técnico e analítico. </p>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Mercado de trabalho</h4>
-    <h5 class="text-custom">Com a crescente dependência das organizações por soluções digitais, a demanda por engenheiros de software qualificados está em constante expansão. O profissional dessa área encontra oportunidades em empresas de tecnologia, consultorias, startups, indústria de software, órgãos públicos e diversos setores que precisam de sistemas robustos e inovadores.  
-    </h5>
+            <!-- ABA 2: CEFET/RJ (Original cefet_bsi.html) -->
+            <div class="tab-pane fade" id="pills-cefet" role="tabpanel" aria-labelledby="pills-cefet-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-primary">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">EGS na UVA</h2>
+                    </div>
+                    <p><strong>Forma de Ingresso:</strong> PROUNI(Programa Universidade para Todos) via ENEM ou prestar o Vestibular da instituição.</p>
+                    <p>A graduação combina conteúdos teóricos com atividades “mão na massa”, abordando temas como programação, desenvolvimento de sistemas, banco de dados e engenharia de software. A metodologia prioriza projetos práticos e aproxima o estudante do mercado de trabalho, preparando-o para atuar como desenvolvedor, analista ou engenheiro de software em diferentes áreas da tecnologia.</p>
+                    
+                    <h4>Destaques do Curso</h4>
+                    <p>O curso utiliza metodologias “mão na massa”, com desenvolvimento de projetos reais, além de contar com uma estrutura moderna e professores qualificados. Outro diferencial é a organização das disciplinas em períodos intensivos, permitindo maior foco no aprendizado. Também se destacam as oportunidades de estágio, atividades complementares e a preparação do aluno para atuar rapidamente na área de tecnologia.</p>
+                    <a href="https://uva.br/cursos/graduacao-em-engenharia-de-software/" target="_blank" class="btn btn-primary botao">Acessar o site da UVA</a>
+                </div>
+            </div>
 
-    <h2 class="text-center text-custom mt-4">Faculdades</h2>
+            <!-- ABA 3: UNIRIO (Original unirio_bsi.html) -->
+            <div class="tab-pane fade" id="pills-unirio" role="tabpanel" aria-labelledby="pills-unirio-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-success">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">BSI na UNIRIO</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Urca (CCET) - Rio de Janeiro.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>A Universidade Federal do Estado do Rio de Janeiro (UNIRIO) possui um dos cursos de Sistemas de Informação mais conceituados do estado. O curso na UNIRIO é reconhecido pelo rigor académico e pela excelência do seu corpo docente, formando profissionais altamente competitivos no mercado nacional e internacional.</p>
+                    
+                    <h4>Diferenciais</h4>
+                    <p>Localizado num dos bairros mais agradáveis do Rio de Janeiro, o curso da UNIRIO possui forte estímulo à iniciação científica, parcerias internacionais e grupos de desenvolvimento de software reconhecidos.</p>
+                    <a href="http://www.unirio.br/" target="_blank" class="btn btn-success botao">Acessar o site da UNIRIO</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Faculdades Públicas</h4>
-    <h5 class="text-custom">
-      No Rio de Janeiro não existem faculdades públicas que possuem este curso.
-    </h5>
+            <!-- ABA 4: UFRRJ (Original ufrrj_bsi.html) -->
+            <div class="tab-pane fade" id="pills-ufrrj" role="tabpanel" aria-labelledby="pills-ufrrj-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4" style="border-color: #ff9800 !important;">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">BSI na UFRRJ</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Nova Iguaçu / Seropédica.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>A Universidade Federal Rural do Rio de Janeiro (UFRRJ) oferece uma excelente estrutura universitária. O curso foca-se na interdisciplinaridade, preparando o aluno para resolver problemas sociotécnicos de grande escala e fomentando o desenvolvimento regional.</p>
+                    
+                    <h4>Apostando na Inovação</h4>
+                    <p>Os alunos têm acesso a laboratórios modernos e grande vivência universitária, participando em empresas juniores, hackathons regionais e desenvolvimento de projetos práticos que beneficiam a comunidade externa.</p>
+                    <a href="https://portal.ufrrj.br/" target="_blank" class="btn text-white botao" style="background-color: #ff9800;">Acessar o site da UFRRJ</a>
+                </div>
+            </div>
 
-    <h4 class="text-custom mt-4">Faculdades Particulares</h4>
-    <h5 class="text-custom">
-        No Rio de Janeiro existem algumas faculdades particulares que possuem este curso. A seguir, uma lista com as principais.
-    </h5>
-  </div>
-  
-  
-  
+            <!-- ABA 5: UFF (Original uff_bsi.html) -->
+            <div class="tab-pane fade" id="pills-uff" role="tabpanel" aria-labelledby="pills-uff-tab" tabindex="0">
+                <div class="conteudo-box border-top border-4 border-info">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="mb-0">BSI na UFF</h2>
+                    </div>
+                    <p><strong>Campus:</strong> Instituto de Computação (Niterói) / Polos Regionais.</p>
+                    <p><strong>Forma de Ingresso:</strong> SISU (ENEM).</p>
+                    <p>A Universidade Federal Fluminense (UFF) destaca-se na área de exatas e tecnologias. O Instituto de Computação da UFF é referência, e o curso de BSI herda essa forte base técnica aliada à perspetiva administrativa, formando gestores de TI de alto nível.</p>
+                    
+                    <h4>Integração Tecnológica</h4>
+                    <p>O ambiente da UFF favorece o networking, com intensa atividade de alunos em laboratórios de inteligência artificial, computação gráfica e gestão da informação.</p>
+                    <a href="https://www.uff.br/" target="_blank" class="btn btn-info text-white botao">Acessar o site da UFF</a>
+                </div>
+            </div>
 
-  <!-- Botões -->
-  <div class="container botao">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="https://uva.br/cursos/graduacao-em-engenharia-de-software/?utm_source=google&utm_medium=cpc&utm_campaign=psq_geral_uva_cursos_a&utm_term=engenharia_de_software&utm_content=cursos_a_engenharia_de_software&utm_term=faculdade%20engenharia%20de%20software&utm_campaign=%5BPSQ%5D+-+UVA+-+Cursos+A&utm_source=adwords&utm_medium=ppc&hsa_acc=8146352273&hsa_cam=15583730378&hsa_grp=178725239166&hsa_ad=761530790372&hsa_src=g&hsa_tgt=kwd-300400841728&hsa_kw=faculdade%20engenharia%20de%20software&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=15583730378&gbraid=0AAAAADRu1_mjwBUEF6W85nCWaGbZyGsRR&gclid=CjwKCAjw1dLDBhBoEiwAQNRiQXizZ9g03nU1Tf3vU9i11ODTZdx5wFWhKhhHwtHDzmzQJOoASinGvhoCgawQAvD_BwE" target="_blank">UVA</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="https://www.ibmec.br/graduacao/engenharia-de-software?utm_source=google&utm_medium=cpc&utm_campaign=ca_ibmec_grad_fundo_conv_geral_net_google_search_curso_na_cursos_a&utm=content=br_key_engenharia-software&gad_source=1&gad_campaignid=20949070526&gbraid=0AAAAADvJSOjQu524nCR9RICSncm_6VTqP&gclid=CjwKCAjw1dLDBhBoEiwAQNRiQWahPWi6_ftCj2Cyo6Adm8HsOP5SJyxWyuPuryQt2LIMF0MWDfSNhBoCoTcQAvD_BwE&gclsrc=aw.ds" target="_blank">IBMEC</a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="https://faculdadeinfnet.com.br/faculdade/engenharia-software/?utm_campaign=10040743-%5BCapta%C3%A7%C3%A3o%2025.3%5D%20Gradua%C3%A7%C3%A3o%20Presencial&utm_source=ppc&utm_medium=pesquisa&utm_content=eds&utm_campaign=10040743-%5BCapta%C3%A7%C3%A3o%2025.3%5D%20Gradua%C3%A7%C3%A3o%20Presencial&utm_source=ppc&utm_medium=pesquisa&utm_content=eds&gad_source=1&gad_campaignid=22423137089&gbraid=0AAAAAD9_eFbHF1A0ljK3dXmU-2OjAhab5&gclid=CjwKCAjw1dLDBhBoEiwAQNRiQUggPL_drkzyEH5tsB2-L7vAkZ-BrJLq7E6VDTUKY5uI-o25_8pLpBoCrsMQAvD_BwE" target="_blank">IFNET</a>
-      </div>
+        </div>
     </div>
-  </div>
-
-  <!--<div class="texto container">
-    <h2 class="text-center text-custom mt-4">Nota de Corte - ENEM</h2>
-
-    <h4 class="text-center text-custom mt-4">Confira a nota de corte média do curso que você escolheu!</h4>
-  </div>
-
-  <div class="corte">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-sm-6 col-md-3 mb-3">
-        <a class="btn btn-secondary w-100 py-3" href="notadecorte.html">Nota de Corte</a>
-      </div>
-    </div>
-  </div> -->
-  
 
   <!-- Footer -->
-  <footer class="container mt-5 footer">
-        <div class="row py-4 border-top text-muted">
-            <div class="col-md-3">
+   <footer class="container mt footer">
+        <div class="row py border-top text-muted">
+            <div class="col-md-3 ms-auto">
                 <h5>Navegação</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item"><a href="index.html" class="nav-link px-0">Home</a></li>
-                    <li class="nav-item"><a href="cursos.html" class="nav-link px-0">Cursos</a></li>
-                    <li class="nav-item"><a href="noticias.html" class="nav-link px-0">Notícias</a></li>
-                    <li class="nav-item"><a href="saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
-                    <li class="nav-item"><a href="notadecorte.html" class="nav-link px-0">Nota de Corte</a></li>
+                    <li class="nav-item"><a href="./html/cursos.html" class="nav-link px-0">Cursos</a></li>
+                    <li class="nav-item"><a href="./html/noticias.html" class="nav-link px-0">Notícias</a></li>
+                    <li class="nav-item"><a href="./html/saibamais.html" class="nav-link px-0">Saiba Mais</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3 ms-auto">
                 <h5>Futuro Profissional</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a href="carreiras.html" class="nav-link px-0">Carreiras</a></li>
-                    <li class="nav-item"><a href="questionario.html" class="nav-link px-0">Questionário</a></li>
-                    <li class="nav-item"><a href="oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
-                    <li class="nav-item"><a href="mercado_trabalho.html" class="nav-link px-0">Mercado de Trabalho</a></li>
-                    <li class="nav-item"><a href="programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
+                    <li class="nav-item"><a href="./html/carreiras.html" class="nav-link px-0">Carreiras</a></li>
+                    <li class="nav-item"><a href="./html/oportunidades.html" class="nav-link px-0">Oportunidades</a></li>
+                    <li class="nav-item"><a href="./html/programas.html" class="nav-link px-0">Programas mais utilizados</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3 ms-auto">
                 <h5>Busque Ajuda</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a href="duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
-                    <li class="nav-item"><a href="glossario.html" class="nav-link px-0">Glossário</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link px-0">Contato</a></li>
+                    <li class="nav-item"><a href="./html/duvidas.html" class="nav-link px-0">Dúvidas Frequentes</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-3 d-flex flex-column justify-content-between">
-                <div>
-                    <h5>Sobre o H2N-Tech</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a href="sobre.html" class="nav-link px-0">Sobre Nós</a></li>
-                        <li class="nav-item"><a href="avaliacao.html" class="nav-link px-0">Avaliação</a></li>
-                    </ul>
-                </div>
-                <p class="mb-0 text-md-end">&copy; H2N Technology</p>
-            </div>
+            
         </div>
     </footer>
 
