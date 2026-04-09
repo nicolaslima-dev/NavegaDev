@@ -2,7 +2,19 @@ body {
     padding-top: 70px;
     background-color:  #092a4a;
 }
- 
+        .nav-bar {
+            background-color: #052442;
+            width: 100%;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff !important;
+        }
+
+        .nav-link.header-link {
+            color: #ffffff !important;
+        }   
 .btn-secondary {
     text-align: center;
     width: 100%;
@@ -10,8 +22,9 @@ body {
     height: 200px;
     margin: 5px;
     padding: 20px;
+    background-color:  #092a4a !important;
 }
- 
+
 .botao {
     display: flex;
     flex-wrap: wrap;

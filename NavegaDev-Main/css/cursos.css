@@ -7,7 +7,14 @@ body {
             width: 100%;
             height: 70px;
         }
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff !important;
+        }
 
+        .nav-link.header-link {
+            color: #ffffff !important;
+        }
         .form-control-dark {
             border-color: var(--bs-gray);
         }

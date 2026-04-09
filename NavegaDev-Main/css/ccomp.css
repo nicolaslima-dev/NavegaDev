@@ -11,11 +11,11 @@
 
         .navbar-brand {
             font-weight: bold;
-            color: #ffffff;
+            color: #ffffff !important;
         }
 
         .nav-link.header-link {
-            color: #ffffff;
+            color: #ffffff !important;
         }
 
         .text-custom {
@@ -76,26 +76,25 @@
             color: white;
         }
 
-        /* Footer */
         footer {
-            background-color: #052442;
-            color: #ffffff;
+            background-color: #fff;
+            color: #052442;
             padding: 40px 0 20px 0;
             margin-top: 50px;
         }
 
         footer a {
-            color: #adb5bd !important;
+            color: #020c1589;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         footer a:hover {
-            color: #ffffff !important;
+            color: #052442;
         }
         
         footer h5 {
-            color: #ffffff;
+            color: #052442;
             margin-bottom: 15px;
             font-weight: bold;
         }

@@ -9,7 +9,19 @@
             top: 0;
             z-index: 1020;
         }
+        .nav-bar {
+            background-color: #052442;
+            width: 100%;
+        }
 
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff !important;
+        }
+
+        .nav-link.header-link {
+            color: #ffffff !important;
+        }
         .text-custom {
             color: #004F9F;
         }
